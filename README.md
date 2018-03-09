@@ -19,7 +19,14 @@ The file "prepare_run.py" can prepare the commands to run over a long list of fi
 Third step
 ==========
 
-Making the datacards. This happens in the "Analyze" directory.
+Making the datacards. This happens in the "Analyze" directory. You need to checkout "https://github.com/CMS-HTT/LeptonEfficiencies".
+
+To run for example for the MVA T WP:  
+
+python replace_submit.py --input replace_mvis.sh --etamin 0 --etamax 3 --ptmin 20 --ptmax 10000 --iso MVAoldT --dm all --decaymodefinding old --nvtxmin 0 --nvtxmax 1000
+
+sh submit.sh 
+
 
 Fourth step
 ==========
