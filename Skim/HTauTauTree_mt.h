@@ -16,7 +16,7 @@ public :
 
    Float_t         EmbPtWeight;
    Float_t         Eta;
-   Float_t         Flag_BadChargedCandidateFilter;
+/*   Float_t         Flag_BadChargedCandidateFilter;
    Float_t         Flag_BadPFMuonFilter;
    Float_t         Flag_EcalDeadCellTriggerPrimitiveFilter;
    Float_t         Flag_HBHENoiseFilter;
@@ -26,6 +26,7 @@ public :
    Float_t         Flag_eeBadScFilter;
    Float_t         Flag_globalTightHalo2016Filter;
    Float_t         Flag_goodVertices;
+*/
    Float_t         GenWeight;
    Float_t         Ht;
    Float_t         LT;
@@ -46,7 +47,8 @@ public :
    Float_t         bjetCISVVeto30Medium;
    Float_t         bjetCISVVeto30Tight;
    Float_t         charge;
-   Float_t         dielectronVeto;
+/*   Float_t         dielectronVeto;
+*/
    Float_t         dimuonVeto;
    Float_t         doubleEGroup;
    Float_t         doubleEPass;
@@ -72,7 +74,7 @@ public :
    Float_t         doubleTau40Group;
    Float_t         doubleTau40Pass;
    Float_t         doubleTau40Prescale;
-   Float_t         doubleTauCmbIso35RegGroup;
+/*   Float_t         doubleTauCmbIso35RegGroup;
    Float_t         doubleTauCmbIso35RegPass;
    Float_t         doubleTauCmbIso35RegPrescale;
    Float_t         doubleTauCmbIso40Group;
@@ -81,21 +83,23 @@ public :
    Float_t         doubleTauCmbIso40RegGroup;
    Float_t         doubleTauCmbIso40RegPass;
    Float_t         doubleTauCmbIso40RegPrescale;
+*/
    Float_t         eVetoMVAIso;
    Float_t         eVetoMVAIsoVtx;
    Float_t         eVetoZTTp001dxyz;
    Float_t         eVetoZTTp001dxyzR0;
    ULong64_t       evt;
-   Float_t         genEta;
+/*   Float_t         genEta;
+ */
    Float_t         genHTT;
    Float_t         genM;
    Float_t         genMass;
-   Float_t         genPhi;
+//   Float_t         genPhi;
    Float_t         genpT;
    Float_t         genpX;
    Float_t         genpY;
    Float_t         isGtautau;
-   Float_t         isWenu;
+//   Float_t         isWenu;
    Float_t         isWmunu;
    Float_t         isWtaunu;
    Float_t         isZee;
@@ -104,36 +108,43 @@ public :
    Int_t           isdata;
    Float_t         j1csv;
    Float_t         j1eta;
-   Float_t         j1hadronflavor;
+/*   Float_t         j1hadronflavor;
    Float_t         j1partonflavor;
+*/
    Float_t         j1phi;
    Float_t         j1pt;
-   Float_t         j1ptDown;
+/*   Float_t         j1ptDown;
    Float_t         j1ptUp;
    Float_t         j1pu;
    Float_t         j1rawf;
+*/
    Float_t         j2csv;
    Float_t         j2eta;
-   Float_t         j2hadronflavor;
+/*   Float_t         j2hadronflavor;
    Float_t         j2partonflavor;
+*/
    Float_t         j2phi;
    Float_t         j2pt;
-   Float_t         j2ptDown;
+/*   Float_t         j2ptDown;
    Float_t         j2ptUp;
    Float_t         j2pu;
    Float_t         j2rawf;
+*/
    Float_t         jb1csv;
-   Float_t         jb1csv_CSVL;
+//   Float_t         jb1csv_CSVL;
    Float_t         jb1eta;
-   Float_t         jb1eta_CSVL;
+/*   Float_t         jb1eta_CSVL;
    Float_t         jb1hadronflavor;
    Float_t         jb1hadronflavor_CSVL;
    Float_t         jb1partonflavor;
    Float_t         jb1partonflavor_CSVL;
+*/
+
    Float_t         jb1phi;
-   Float_t         jb1phi_CSVL;
+//   Float_t         jb1phi_CSVL;
+
    Float_t         jb1pt;
-   Float_t         jb1ptDown;
+/*   Float_t         jb1ptDown;
    Float_t         jb1ptDown_CSVL;
    Float_t         jb1ptUp;
    Float_t         jb1ptUp_CSVL;
@@ -142,18 +153,21 @@ public :
    Float_t         jb1pu_CSVL;
    Float_t         jb1rawf;
    Float_t         jb1rawf_CSVL;
+*/
    Float_t         jb2csv;
-   Float_t         jb2csv_CSVL;
+//   Float_t         jb2csv_CSVL;
    Float_t         jb2eta;
-   Float_t         jb2eta_CSVL;
+/*   Float_t         jb2eta_CSVL;
    Float_t         jb2hadronflavor;
    Float_t         jb2hadronflavor_CSVL;
    Float_t         jb2partonflavor;
    Float_t         jb2partonflavor_CSVL;
+*/
    Float_t         jb2phi;
-   Float_t         jb2phi_CSVL;
+/*   Float_t         jb2phi_CSVL;
+*/
    Float_t         jb2pt;
-   Float_t         jb2ptDown;
+/*   Float_t         jb2ptDown;
    Float_t         jb2ptDown_CSVL;
    Float_t         jb2ptUp;
    Float_t         jb2ptUp_CSVL;
@@ -162,11 +176,12 @@ public :
    Float_t         jb2pu_CSVL;
    Float_t         jb2rawf;
    Float_t         jb2rawf_CSVL;
+*/
    Float_t         jetVeto20;
    Float_t         jetVeto20_JetEnDown;
    Float_t         jetVeto20_JetEnUp;
    Float_t         jetVeto30;
-   Float_t         jetVeto30_JetAbsoluteFlavMapDown;
+/*   Float_t         jetVeto30_JetAbsoluteFlavMapDown;
    Float_t         jetVeto30_JetAbsoluteFlavMapUp;
    Float_t         jetVeto30_JetAbsoluteMPFBiasDown;
    Float_t         jetVeto30_JetAbsoluteMPFBiasUp;
@@ -176,9 +191,10 @@ public :
    Float_t         jetVeto30_JetAbsoluteStatUp;
    Float_t         jetVeto30_JetClosureDown;
    Float_t         jetVeto30_JetClosureUp;
+*/
    Float_t         jetVeto30_JetEnDown;
    Float_t         jetVeto30_JetEnUp;
-   Float_t         jetVeto30_JetFlavorQCDDown;
+/*   Float_t         jetVeto30_JetFlavorQCDDown;
    Float_t         jetVeto30_JetFlavorQCDUp;
    Float_t         jetVeto30_JetFragmentationDown;
    Float_t         jetVeto30_JetFragmentationUp;
@@ -238,13 +254,14 @@ public :
    Float_t         jetVeto30_JetTimePtEtaUp;
    Float_t         jetVeto30_JetTotalDown;
    Float_t         jetVeto30_JetTotalUp;
+*/
    Int_t           lumi;
    Float_t         mAbsEta;
    Float_t         mBestTrackType;
    Float_t         mCharge;
    Float_t         mChi2LocalPosition;
    Float_t         mComesFromHiggs;
-   Float_t         mDPhiToPfMet_ElectronEnDown;
+/*   Float_t         mDPhiToPfMet_ElectronEnDown;
    Float_t         mDPhiToPfMet_ElectronEnUp;
    Float_t         mDPhiToPfMet_JetEnDown;
    Float_t         mDPhiToPfMet_JetEnUp;
@@ -258,18 +275,20 @@ public :
    Float_t         mDPhiToPfMet_TauEnUp;
    Float_t         mDPhiToPfMet_UnclusteredEnDown;
    Float_t         mDPhiToPfMet_UnclusteredEnUp;
+*/
    Float_t         mDPhiToPfMet_type1;
    Float_t         mEcalIsoDR03;
    Float_t         mEffectiveArea2011;
    Float_t         mEffectiveArea2012;
-   Float_t         mErsatzGenEta;
+/*   Float_t         mErsatzGenEta;
    Float_t         mErsatzGenM;
    Float_t         mErsatzGenPhi;
    Float_t         mErsatzGenpT;
    Float_t         mErsatzGenpX;
-   Float_t         mErsatzGenpY;
-   Float_t         mErsatzVispX;
+   Float_t         mErsatzGenpY; Float_t         mErsatzVispX;
+talUp
    Float_t         mErsatzVispY;
+*/
    Float_t         mEta;
    Float_t         mEta_MuonEnDown;
    Float_t         mEta_MuonEnUp;
@@ -300,17 +319,18 @@ public :
    Float_t         mIsoMu22Filter;
    Float_t         mIsoMu22eta2p1Filter;
    Float_t         mIsoMu24Filter;
-   Float_t         mIsoMu24eta2p1Filter;
+/*   Float_t         mIsoMu24eta2p1Filter;
+*/
    Float_t         mIsoTkMu22Filter;
    Float_t         mIsoTkMu22eta2p1Filter;
    Float_t         mIsoTkMu24Filter;
-   Float_t         mIsoTkMu24eta2p1Filter;
+//   Float_t         mIsoTkMu24eta2p1Filter;
    Float_t         mJetArea;
    Float_t         mJetBtag;
    Float_t         mJetEtaEtaMoment;
    Float_t         mJetEtaPhiMoment;
    Float_t         mJetEtaPhiSpread;
-   Float_t         mJetHadronFlavour;
+//   Float_t         mJetHadronFlavour;
    Float_t         mJetPFCISVBtag;
    Float_t         mJetPartonFlavour;
    Float_t         mJetPhiPhiMoment;
@@ -324,11 +344,12 @@ public :
    Float_t         mMatchesIsoMu22Path;
    Float_t         mMatchesIsoMu22eta2p1Path;
    Float_t         mMatchesIsoMu24Path;
-   Float_t         mMatchesIsoMu24eta2p1Path;
+/*   Float_t         mMatchesIsoMu24eta2p1Path;
+*/
    Float_t         mMatchesIsoTkMu22Path;
    Float_t         mMatchesIsoTkMu22eta2p1Path;
    Float_t         mMatchesIsoTkMu24Path;
-   Float_t         mMatchesIsoTkMu24eta2p1Path;
+/*   Float_t         mMatchesIsoTkMu24eta2p1Path;
    Float_t         mMatchesMu19Tau20Filter;
    Float_t         mMatchesMu19Tau20Path;
    Float_t         mMatchesMu19Tau20sL1Filter;
@@ -336,8 +357,9 @@ public :
    Float_t         mMatchesMu21Tau20sL1Filter;
    Float_t         mMatchesMu21Tau20sL1Path;
    Float_t         mMatchesMu23Ele12DZPath;
+*/
    Float_t         mMatchesMu23Ele12Path;
-   Float_t         mMatchesMu8Ele23DZPath;
+//   Float_t         mMatchesMu8Ele23DZPath;
    Float_t         mMatchesMu8Ele23Path;
    Float_t         mMatchesSingleESingleMu;
    Float_t         mMatchesSingleMu;
@@ -349,7 +371,7 @@ public :
    Float_t         mMatchesSingleMu_leg2;
    Float_t         mMatchesSingleMu_leg2_noiso;
    Float_t         mMatchesTripleMu;
-   Float_t         mMtToPfMet_ElectronEnDown;
+/*   Float_t         mMtToPfMet_ElectronEnDown;
    Float_t         mMtToPfMet_ElectronEnUp;
    Float_t         mMtToPfMet_JetEnDown;
    Float_t         mMtToPfMet_JetEnUp;
@@ -363,7 +385,7 @@ public :
    Float_t         mMtToPfMet_TauEnDown;
    Float_t         mMtToPfMet_TauEnUp;
    Float_t         mMtToPfMet_UnclusteredEnDown;
-   Float_t         mMtToPfMet_UnclusteredEnUp;
+   Float_t         mMtToPfMet_UnclusteredEnUp;*/
    Float_t         mMtToPfMet_type1;
    Float_t         mMu23Ele12DZFilter;
    Float_t         mMu23Ele12Filter;
@@ -419,12 +441,13 @@ public :
    Float_t         m_t_MtTotal;
    Float_t         m_t_Mt_TauEnDown;
    Float_t         m_t_Mt_TauEnUp;
-   Float_t         m_t_MvaMet;
+/*   Float_t         m_t_MvaMet;
    Float_t         m_t_MvaMetCovMatrix00;
    Float_t         m_t_MvaMetCovMatrix01;
    Float_t         m_t_MvaMetCovMatrix10;
    Float_t         m_t_MvaMetCovMatrix11;
    Float_t         m_t_MvaMetPhi;
+*/
    Float_t         m_t_PZeta;
    Float_t         m_t_PZetaLess0p85PZetaVis;
    Float_t         m_t_PZetaVis;
@@ -433,18 +456,19 @@ public :
    Float_t         m_t_SS;
    Float_t         m_t_ToMETDPhi_Ty1;
    Float_t         m_t_collinearmass;
-   Float_t         m_t_collinearmass_EleEnDown;
+/*   Float_t         m_t_collinearmass_EleEnDown;
    Float_t         m_t_collinearmass_EleEnUp;
+*/
    Float_t         m_t_collinearmass_JetEnDown;
    Float_t         m_t_collinearmass_JetEnUp;
-   Float_t         m_t_collinearmass_MuEnDown;
-   Float_t         m_t_collinearmass_MuEnUp;
+//   Float_t         m_t_collinearmass_MuEnDown;
+//   Float_t         m_t_collinearmass_MuEnUp;
    Float_t         m_t_collinearmass_TauEnDown;
    Float_t         m_t_collinearmass_TauEnUp;
    Float_t         m_t_collinearmass_UnclusteredEnDown;
    Float_t         m_t_collinearmass_UnclusteredEnUp;
    Float_t         m_t_pt_tt;
-   Float_t         metSig;
+/*   Float_t         metSig;
    Float_t         metcov00;
    Float_t         metcov01;
    Float_t         metcov10;
@@ -453,6 +477,7 @@ public :
    Float_t         metcov01_DESYlike;
    Float_t         metcov10_DESYlike;
    Float_t         metcov11_DESYlike;
+*/
    Float_t         muGlbIsoVetoPt10;
    Float_t         muVetoPt15IsoIdVtx;
    Float_t         muVetoPt5;
@@ -463,8 +488,8 @@ public :
    Float_t         numGenJets;
    Float_t         nvtx;
    Float_t         processID;
-   Float_t         puppiMetEt;
-   Float_t         puppiMetPhi;
+//   Float_t         puppiMetEt;
+//   Float_t         puppiMetPhi;
    Float_t         pvChi2;
    Float_t         pvDX;
    Float_t         pvDY;
@@ -477,8 +502,8 @@ public :
    Float_t         pvY;
    Float_t         pvZ;
    Float_t         pvndof;
-   Float_t         raw_pfMetEt;
-   Float_t         raw_pfMetPhi;
+//   Float_t         raw_pfMetEt;
+//   Float_t         raw_pfMetPhi;
    Float_t         recoilDaught;
    Float_t         recoilWithMet;
    Float_t         rho;
@@ -486,7 +511,7 @@ public :
    Float_t         singleE17SingleMu8Group;
    Float_t         singleE17SingleMu8Pass;
    Float_t         singleE17SingleMu8Prescale;
-   Float_t         singleE20SingleTau28Group;
+/*   Float_t         singleE20SingleTau28Group;
    Float_t         singleE20SingleTau28Pass;
    Float_t         singleE20SingleTau28Prescale;
    Float_t         singleE22SingleTau20SingleL1Group;
@@ -495,10 +520,11 @@ public :
    Float_t         singleE22SingleTau29Group;
    Float_t         singleE22SingleTau29Pass;
    Float_t         singleE22SingleTau29Prescale;
+*/
    Float_t         singleE23SingleMu8Group;
    Float_t         singleE23SingleMu8Pass;
    Float_t         singleE23SingleMu8Prescale;
-   Float_t         singleE24SingleTau20Group;
+/*   Float_t         singleE24SingleTau20Group;
    Float_t         singleE24SingleTau20Pass;
    Float_t         singleE24SingleTau20Prescale;
    Float_t         singleE24SingleTau20SingleL1Group;
@@ -507,10 +533,11 @@ public :
    Float_t         singleE24SingleTau30Group;
    Float_t         singleE24SingleTau30Pass;
    Float_t         singleE24SingleTau30Prescale;
+*/
    Float_t         singleE25eta2p1TightGroup;
    Float_t         singleE25eta2p1TightPass;
    Float_t         singleE25eta2p1TightPrescale;
-   Float_t         singleE27SingleTau20SingleL1Group;
+/*   Float_t         singleE27SingleTau20SingleL1Group;
    Float_t         singleE27SingleTau20SingleL1Pass;
    Float_t         singleE27SingleTau20SingleL1Prescale;
    Float_t         singleE27TightGroup;
@@ -528,6 +555,7 @@ public :
    Float_t         singleE36SingleTau30Group;
    Float_t         singleE36SingleTau30Pass;
    Float_t         singleE36SingleTau30Prescale;
+*/
    Float_t         singleESingleMuGroup;
    Float_t         singleESingleMuPass;
    Float_t         singleESingleMuPrescale;
@@ -546,12 +574,13 @@ public :
    Float_t         singleIsoMu22eta2p1Group;
    Float_t         singleIsoMu22eta2p1Pass;
    Float_t         singleIsoMu22eta2p1Prescale;
-   Float_t         singleIsoMu24Group;
+//   Float_t         singleIsoMu24Group;
    Float_t         singleIsoMu24Pass;
-   Float_t         singleIsoMu24Prescale;
+/*   Float_t         singleIsoMu24Prescale;
    Float_t         singleIsoMu24eta2p1Group;
    Float_t         singleIsoMu24eta2p1Pass;
    Float_t         singleIsoMu24eta2p1Prescale;
+*/
    Float_t         singleIsoMu27Group;
    Float_t         singleIsoMu27Pass;
    Float_t         singleIsoMu27Prescale;
@@ -561,19 +590,22 @@ public :
    Float_t         singleIsoTkMu22Group;
    Float_t         singleIsoTkMu22Pass;
    Float_t         singleIsoTkMu22Prescale;
-   Float_t         singleIsoTkMu22eta2p1Group;
+/*   Float_t         singleIsoTkMu22eta2p1Group;
+*/
    Float_t         singleIsoTkMu22eta2p1Pass;
-   Float_t         singleIsoTkMu22eta2p1Prescale;
+/*   Float_t         singleIsoTkMu22eta2p1Prescale;
    Float_t         singleIsoTkMu24Group;
+*/
    Float_t         singleIsoTkMu24Pass;
-   Float_t         singleIsoTkMu24Prescale;
+/*   Float_t         singleIsoTkMu24Prescale;
    Float_t         singleIsoTkMu24eta2p1Group;
    Float_t         singleIsoTkMu24eta2p1Pass;
    Float_t         singleIsoTkMu24eta2p1Prescale;
+*/
    Float_t         singleMu17SingleE12Group;
    Float_t         singleMu17SingleE12Pass;
    Float_t         singleMu17SingleE12Prescale;
-   Float_t         singleMu19eta2p1LooseTau20Group;
+/*   Float_t         singleMu19eta2p1LooseTau20Group;
    Float_t         singleMu19eta2p1LooseTau20Pass;
    Float_t         singleMu19eta2p1LooseTau20Prescale;
    Float_t         singleMu19eta2p1LooseTau20singleL1Group;
@@ -585,15 +617,17 @@ public :
    Float_t         singleMu23SingleE12DZGroup;
    Float_t         singleMu23SingleE12DZPass;
    Float_t         singleMu23SingleE12DZPrescale;
+*/
    Float_t         singleMu23SingleE12Group;
    Float_t         singleMu23SingleE12Pass;
    Float_t         singleMu23SingleE12Prescale;
-   Float_t         singleMu23SingleE8Group;
+/*   Float_t         singleMu23SingleE8Group;
    Float_t         singleMu23SingleE8Pass;
    Float_t         singleMu23SingleE8Prescale;
    Float_t         singleMu8SingleE23DZGroup;
    Float_t         singleMu8SingleE23DZPass;
    Float_t         singleMu8SingleE23DZPrescale;
+*/
    Float_t         singleMuGroup;
    Float_t         singleMuPass;
    Float_t         singleMuPrescale;
@@ -612,12 +646,13 @@ public :
    Float_t         singleMu_leg2_noisoGroup;
    Float_t         singleMu_leg2_noisoPass;
    Float_t         singleMu_leg2_noisoPrescale;
-   Float_t         singleTau140Group;
+/*   Float_t         singleTau140Group;
    Float_t         singleTau140Pass;
    Float_t         singleTau140Prescale;
    Float_t         singleTau140Trk50Group;
    Float_t         singleTau140Trk50Pass;
    Float_t         singleTau140Trk50Prescale;
+*/
    Float_t         tAbsEta;
    Float_t         tAgainstElectronLooseMVA6;
    Float_t         tAgainstElectronMVA6Raw;
@@ -679,7 +714,7 @@ public :
    Float_t         tChargedIsoPtSum;
    Float_t         tChargedIsoPtSumdR03;
    Float_t         tComesFromHiggs;
-   Float_t         tDPhiToPfMet_ElectronEnDown;
+/*   Float_t         tDPhiToPfMet_ElectronEnDown;
    Float_t         tDPhiToPfMet_ElectronEnUp;
    Float_t         tDPhiToPfMet_JetEnDown;
    Float_t         tDPhiToPfMet_JetEnUp;
@@ -693,6 +728,7 @@ public :
    Float_t         tDPhiToPfMet_TauEnUp;
    Float_t         tDPhiToPfMet_UnclusteredEnDown;
    Float_t         tDPhiToPfMet_UnclusteredEnUp;
+*/
    Float_t         tDPhiToPfMet_type1;
    Float_t         tDecayMode;
    Float_t         tDecayModeFinding;
@@ -725,7 +761,7 @@ public :
    Float_t         tJetEtaEtaMoment;
    Float_t         tJetEtaPhiMoment;
    Float_t         tJetEtaPhiSpread;
-   Float_t         tJetHadronFlavour;
+//   Float_t         tJetHadronFlavour;
    Float_t         tJetPFCISVBtag;
    Float_t         tJetPartonFlavour;
    Float_t         tJetPhiPhiMoment;
@@ -741,7 +777,7 @@ public :
    Float_t         tMatchesDoubleTau35Path;
    Float_t         tMatchesDoubleTau40Filter;
    Float_t         tMatchesDoubleTau40Path;
-   Float_t         tMatchesDoubleTauCmbIso35RegFilter;
+/*   Float_t         tMatchesDoubleTauCmbIso35RegFilter;
    Float_t         tMatchesDoubleTauCmbIso35RegPath;
    Float_t         tMatchesDoubleTauCmbIso40Filter;
    Float_t         tMatchesDoubleTauCmbIso40Path;
@@ -759,7 +795,8 @@ public :
    Float_t         tMatchesMu19Tau20sL1Path;
    Float_t         tMatchesMu21Tau20sL1Filter;
    Float_t         tMatchesMu21Tau20sL1Path;
-   Float_t         tMtToPfMet_ElectronEnDown;
+*/
+/*   Float_t         tMtToPfMet_ElectronEnDown;
    Float_t         tMtToPfMet_ElectronEnUp;
    Float_t         tMtToPfMet_JetEnDown;
    Float_t         tMtToPfMet_JetEnUp;
@@ -773,7 +810,7 @@ public :
    Float_t         tMtToPfMet_TauEnDown;
    Float_t         tMtToPfMet_TauEnUp;
    Float_t         tMtToPfMet_UnclusteredEnDown;
-   Float_t         tMtToPfMet_UnclusteredEnUp;
+   Float_t         tMtToPfMet_UnclusteredEnUp;*/
    Float_t         tMtToPfMet_type1;
    Float_t         tMuOverlap;
    Float_t         tMuonIdIsoStdVtxOverlap;
@@ -815,10 +852,11 @@ public :
    Float_t         tZTTGenPhi;
    Float_t         tZTTGenPt;
    Float_t         t_m_collinearmass;
-   Float_t         t_m_collinearmass_JetEnDown;
+/*   Float_t         t_m_collinearmass_JetEnDown;
    Float_t         t_m_collinearmass_JetEnUp;
    Float_t         t_m_collinearmass_UnclusteredEnDown;
    Float_t         t_m_collinearmass_UnclusteredEnUp;
+*/
    Float_t         tauVetoPt20Loose3HitsVtx;
    Float_t         tauVetoPt20TightMVALTVtx;
    Float_t         topQuarkPt1;
@@ -887,7 +925,7 @@ public :
    Float_t         vbfMVA_JetEnDown;
    Float_t         vbfMVA_JetEnUp;
    Float_t         vbfMass;
-   Float_t         vbfMass_JetAbsoluteFlavMapDown;
+/*   Float_t         vbfMass_JetAbsoluteFlavMapDown;
    Float_t         vbfMass_JetAbsoluteFlavMapUp;
    Float_t         vbfMass_JetAbsoluteMPFBiasDown;
    Float_t         vbfMass_JetAbsoluteMPFBiasUp;
@@ -897,9 +935,10 @@ public :
    Float_t         vbfMass_JetAbsoluteStatUp;
    Float_t         vbfMass_JetClosureDown;
    Float_t         vbfMass_JetClosureUp;
+*/
    Float_t         vbfMass_JetEnDown;
    Float_t         vbfMass_JetEnUp;
-   Float_t         vbfMass_JetFlavorQCDDown;
+/*   Float_t         vbfMass_JetFlavorQCDDown;
    Float_t         vbfMass_JetFlavorQCDUp;
    Float_t         vbfMass_JetFragmentationDown;
    Float_t         vbfMass_JetFragmentationUp;
@@ -965,6 +1004,7 @@ public :
    Float_t         vbfNJets30;
    Float_t         vbfNJets30_JetEnDown;
    Float_t         vbfNJets30_JetEnUp;
+*/
    Float_t         vbfVispt;
    Float_t         vbfVispt_JetEnDown;
    Float_t         vbfVispt_JetEnUp;
@@ -991,7 +1031,7 @@ public :
    
    TBranch        *b_EmbPtWeight;   //!
    TBranch        *b_Eta;   //!
-   TBranch        *b_Flag_BadChargedCandidateFilter;   //!
+/*   TBranch        *b_Flag_BadChargedCandidateFilter;   //!
    TBranch        *b_Flag_BadPFMuonFilter;   //!
    TBranch        *b_Flag_EcalDeadCellTriggerPrimitiveFilter;   //!
    TBranch        *b_Flag_HBHENoiseFilter;   //!
@@ -1001,6 +1041,7 @@ public :
    TBranch        *b_Flag_eeBadScFilter;   //!
    TBranch        *b_Flag_globalTightHalo2016Filter;   //!
    TBranch        *b_Flag_goodVertices;   //!
+*/
    TBranch        *b_GenWeight;   //!
    TBranch        *b_Ht;   //!
    TBranch        *b_LT;   //!
@@ -1021,7 +1062,8 @@ public :
    TBranch        *b_bjetCISVVeto30Medium;   //!
    TBranch        *b_bjetCISVVeto30Tight;   //!
    TBranch        *b_charge;   //!
-   TBranch        *b_dielectronVeto;   //!
+/*   TBranch        *b_dielectronVeto;   //!
+*/
    TBranch        *b_dimuonVeto;   //!
    TBranch        *b_doubleEGroup;   //!
    TBranch        *b_doubleEPass;   //!
@@ -1047,7 +1089,7 @@ public :
    TBranch        *b_doubleTau40Group;   //!
    TBranch        *b_doubleTau40Pass;   //!
    TBranch        *b_doubleTau40Prescale;   //!
-   TBranch        *b_doubleTauCmbIso35RegGroup;   //!
+/*   TBranch        *b_doubleTauCmbIso35RegGroup;   //!
    TBranch        *b_doubleTauCmbIso35RegPass;   //!
    TBranch        *b_doubleTauCmbIso35RegPrescale;   //!
    TBranch        *b_doubleTauCmbIso40Group;   //!
@@ -1056,21 +1098,22 @@ public :
    TBranch        *b_doubleTauCmbIso40RegGroup;   //!
    TBranch        *b_doubleTauCmbIso40RegPass;   //!
    TBranch        *b_doubleTauCmbIso40RegPrescale;   //!
+*/
    TBranch        *b_eVetoMVAIso;   //!
    TBranch        *b_eVetoMVAIsoVtx;   //!
    TBranch        *b_eVetoZTTp001dxyz;   //!
    TBranch        *b_eVetoZTTp001dxyzR0;   //!
    TBranch        *b_evt;   //!
-   TBranch        *b_genEta;   //!
+//   TBranch        *b_genEta;   //!
    TBranch        *b_genHTT;   //!
    TBranch        *b_genM;   //!
    TBranch        *b_genMass;   //!
-   TBranch        *b_genPhi;   //!
+//   TBranch        *b_genPhi;   //!
    TBranch        *b_genpT;   //!
    TBranch        *b_genpX;   //!
    TBranch        *b_genpY;   //!
    TBranch        *b_isGtautau;   //!
-   TBranch        *b_isWenu;   //!
+//   TBranch        *b_isWenu;   //!
    TBranch        *b_isWmunu;   //!
    TBranch        *b_isWtaunu;   //!
    TBranch        *b_isZee;   //!
@@ -1079,36 +1122,41 @@ public :
    TBranch        *b_isdata;   //!
    TBranch        *b_j1csv;   //!
    TBranch        *b_j1eta;   //!
-   TBranch        *b_j1hadronflavor;   //!
+/*   TBranch        *b_j1hadronflavor;   //!
    TBranch        *b_j1partonflavor;   //!
+*/
    TBranch        *b_j1phi;   //!
    TBranch        *b_j1pt;   //!
-   TBranch        *b_j1ptDown;   //!
+/*   TBranch        *b_j1ptDown;   //!
    TBranch        *b_j1ptUp;   //!
    TBranch        *b_j1pu;   //!
    TBranch        *b_j1rawf;   //!
+*/
    TBranch        *b_j2csv;   //!
    TBranch        *b_j2eta;   //!
-   TBranch        *b_j2hadronflavor;   //!
+/*   TBranch        *b_j2hadronflavor;   //!
    TBranch        *b_j2partonflavor;   //!
+*/
    TBranch        *b_j2phi;   //!
    TBranch        *b_j2pt;   //!
-   TBranch        *b_j2ptDown;   //!
+/*   TBranch        *b_j2ptDown;   //!
    TBranch        *b_j2ptUp;   //!
    TBranch        *b_j2pu;   //!
    TBranch        *b_j2rawf;   //!
+*/
    TBranch        *b_jb1csv;   //!
-   TBranch        *b_jb1csv_CSVL;   //!
+//   TBranch        *b_jb1csv_CSVL;   //!
    TBranch        *b_jb1eta;   //!
-   TBranch        *b_jb1eta_CSVL;   //!
-   TBranch        *b_jb1hadronflavor;   //!
+//   TBranch        *b_jb1eta_CSVL;   //!
+/*   TBranch        *b_jb1hadronflavor;   //!
    TBranch        *b_jb1hadronflavor_CSVL;   //!
    TBranch        *b_jb1partonflavor;   //!
    TBranch        *b_jb1partonflavor_CSVL;   //!
+*/
    TBranch        *b_jb1phi;   //!
-   TBranch        *b_jb1phi_CSVL;   //!
+//   TBranch        *b_jb1phi_CSVL;   //!
    TBranch        *b_jb1pt;   //!
-   TBranch        *b_jb1ptDown;   //!
+/*   TBranch        *b_jb1ptDown;   //!
    TBranch        *b_jb1ptDown_CSVL;   //!
    TBranch        *b_jb1ptUp;   //!
    TBranch        *b_jb1ptUp_CSVL;   //!
@@ -1117,18 +1165,20 @@ public :
    TBranch        *b_jb1pu_CSVL;   //!
    TBranch        *b_jb1rawf;   //!
    TBranch        *b_jb1rawf_CSVL;   //!
+*/
    TBranch        *b_jb2csv;   //!
-   TBranch        *b_jb2csv_CSVL;   //!
+//   TBranch        *b_jb2csv_CSVL;   //!
    TBranch        *b_jb2eta;   //!
-   TBranch        *b_jb2eta_CSVL;   //!
-   TBranch        *b_jb2hadronflavor;   //!
+//   TBranch        *b_jb2eta_CSVL;   //!
+/*   TBranch        *b_jb2hadronflavor;   //!
    TBranch        *b_jb2hadronflavor_CSVL;   //!
    TBranch        *b_jb2partonflavor;   //!
    TBranch        *b_jb2partonflavor_CSVL;   //!
+*/
    TBranch        *b_jb2phi;   //!
-   TBranch        *b_jb2phi_CSVL;   //!
+//   TBranch        *b_jb2phi_CSVL;   //!
    TBranch        *b_jb2pt;   //!
-   TBranch        *b_jb2ptDown;   //!
+/*   TBranch        *b_jb2ptDown;   //!
    TBranch        *b_jb2ptDown_CSVL;   //!
    TBranch        *b_jb2ptUp;   //!
    TBranch        *b_jb2ptUp_CSVL;   //!
@@ -1137,11 +1187,12 @@ public :
    TBranch        *b_jb2pu_CSVL;   //!
    TBranch        *b_jb2rawf;   //!
    TBranch        *b_jb2rawf_CSVL;   //!
+*/
    TBranch        *b_jetVeto20;   //!
    TBranch        *b_jetVeto20_JetEnDown;   //!
    TBranch        *b_jetVeto20_JetEnUp;   //!
    TBranch        *b_jetVeto30;   //!
-   TBranch        *b_jetVeto30_JetAbsoluteFlavMapDown;   //!
+/*   TBranch        *b_jetVeto30_JetAbsoluteFlavMapDown;   //!
    TBranch        *b_jetVeto30_JetAbsoluteFlavMapUp;   //!
    TBranch        *b_jetVeto30_JetAbsoluteMPFBiasDown;   //!
    TBranch        *b_jetVeto30_JetAbsoluteMPFBiasUp;   //!
@@ -1151,9 +1202,10 @@ public :
    TBranch        *b_jetVeto30_JetAbsoluteStatUp;   //!
    TBranch        *b_jetVeto30_JetClosureDown;   //!
    TBranch        *b_jetVeto30_JetClosureUp;   //!
+*/
    TBranch        *b_jetVeto30_JetEnDown;   //!
    TBranch        *b_jetVeto30_JetEnUp;   //!
-   TBranch        *b_jetVeto30_JetFlavorQCDDown;   //!
+/*   TBranch        *b_jetVeto30_JetFlavorQCDDown;   //!
    TBranch        *b_jetVeto30_JetFlavorQCDUp;   //!
    TBranch        *b_jetVeto30_JetFragmentationDown;   //!
    TBranch        *b_jetVeto30_JetFragmentationUp;   //!
@@ -1213,13 +1265,14 @@ public :
    TBranch        *b_jetVeto30_JetTimePtEtaUp;   //!
    TBranch        *b_jetVeto30_JetTotalDown;   //!
    TBranch        *b_jetVeto30_JetTotalUp;   //!
+*/
    TBranch        *b_lumi;   //!
    TBranch        *b_mAbsEta;   //!
    TBranch        *b_mBestTrackType;   //!
    TBranch        *b_mCharge;   //!
    TBranch        *b_mChi2LocalPosition;   //!
    TBranch        *b_mComesFromHiggs;   //!
-   TBranch        *b_mDPhiToPfMet_ElectronEnDown;   //!
+/*   TBranch        *b_mDPhiToPfMet_ElectronEnDown;   //!
    TBranch        *b_mDPhiToPfMet_ElectronEnUp;   //!
    TBranch        *b_mDPhiToPfMet_JetEnDown;   //!
    TBranch        *b_mDPhiToPfMet_JetEnUp;   //!
@@ -1232,12 +1285,12 @@ public :
    TBranch        *b_mDPhiToPfMet_TauEnDown;   //!
    TBranch        *b_mDPhiToPfMet_TauEnUp;   //!
    TBranch        *b_mDPhiToPfMet_UnclusteredEnDown;   //!
-   TBranch        *b_mDPhiToPfMet_UnclusteredEnUp;   //!
+   TBranch        *b_mDPhiToPfMet_UnclusteredEnUp;   //!*/
    TBranch        *b_mDPhiToPfMet_type1;   //!
    TBranch        *b_mEcalIsoDR03;   //!
    TBranch        *b_mEffectiveArea2011;   //!
    TBranch        *b_mEffectiveArea2012;   //!
-   TBranch        *b_mErsatzGenEta;   //!
+/*   TBranch        *b_mErsatzGenEta;   //!
    TBranch        *b_mErsatzGenM;   //!
    TBranch        *b_mErsatzGenPhi;   //!
    TBranch        *b_mErsatzGenpT;   //!
@@ -1245,6 +1298,7 @@ public :
    TBranch        *b_mErsatzGenpY;   //!
    TBranch        *b_mErsatzVispX;   //!
    TBranch        *b_mErsatzVispY;   //!
+*/
    TBranch        *b_mEta;   //!
    TBranch        *b_mEta_MuonEnDown;   //!
    TBranch        *b_mEta_MuonEnUp;   //!
@@ -1275,17 +1329,19 @@ public :
    TBranch        *b_mIsoMu22Filter;   //!
    TBranch        *b_mIsoMu22eta2p1Filter;   //!
    TBranch        *b_mIsoMu24Filter;   //!
-   TBranch        *b_mIsoMu24eta2p1Filter;   //!
+/*   TBranch        *b_mIsoMu24eta2p1Filter;   //!
+*/
    TBranch        *b_mIsoTkMu22Filter;   //!
    TBranch        *b_mIsoTkMu22eta2p1Filter;   //!
    TBranch        *b_mIsoTkMu24Filter;   //!
-   TBranch        *b_mIsoTkMu24eta2p1Filter;   //!
+//   TBranch        *b_mIsoTkMu24eta2p1Filter;   //!
+
    TBranch        *b_mJetArea;   //!
    TBranch        *b_mJetBtag;   //!
    TBranch        *b_mJetEtaEtaMoment;   //!
    TBranch        *b_mJetEtaPhiMoment;   //!
    TBranch        *b_mJetEtaPhiSpread;   //!
-   TBranch        *b_mJetHadronFlavour;   //!
+//   TBranch        *b_mJetHadronFlavour;   //!
    TBranch        *b_mJetPFCISVBtag;   //!
    TBranch        *b_mJetPartonFlavour;   //!
    TBranch        *b_mJetPhiPhiMoment;   //!
@@ -1299,11 +1355,13 @@ public :
    TBranch        *b_mMatchesIsoMu22Path;   //!
    TBranch        *b_mMatchesIsoMu22eta2p1Path;   //!
    TBranch        *b_mMatchesIsoMu24Path;   //!
-   TBranch        *b_mMatchesIsoMu24eta2p1Path;   //!
+/*   TBranch        *b_mMatchesIsoMu24eta2p1Path;   //!
+*/
    TBranch        *b_mMatchesIsoTkMu22Path;   //!
+
    TBranch        *b_mMatchesIsoTkMu22eta2p1Path;   //!
    TBranch        *b_mMatchesIsoTkMu24Path;   //!
-   TBranch        *b_mMatchesIsoTkMu24eta2p1Path;   //!
+/*   TBranch        *b_mMatchesIsoTkMu24eta2p1Path;   //!
    TBranch        *b_mMatchesMu19Tau20Filter;   //!
    TBranch        *b_mMatchesMu19Tau20Path;   //!
    TBranch        *b_mMatchesMu19Tau20sL1Filter;   //!
@@ -1311,8 +1369,10 @@ public :
    TBranch        *b_mMatchesMu21Tau20sL1Filter;   //!
    TBranch        *b_mMatchesMu21Tau20sL1Path;   //!
    TBranch        *b_mMatchesMu23Ele12DZPath;   //!
+*/
    TBranch        *b_mMatchesMu23Ele12Path;   //!
-   TBranch        *b_mMatchesMu8Ele23DZPath;   //!
+/*   TBranch        *b_mMatchesMu8Ele23DZPath;   //!
+*/
    TBranch        *b_mMatchesMu8Ele23Path;   //!
    TBranch        *b_mMatchesSingleESingleMu;   //!
    TBranch        *b_mMatchesSingleMu;   //!
@@ -1324,7 +1384,7 @@ public :
    TBranch        *b_mMatchesSingleMu_leg2;   //!
    TBranch        *b_mMatchesSingleMu_leg2_noiso;   //!
    TBranch        *b_mMatchesTripleMu;   //!
-   TBranch        *b_mMtToPfMet_ElectronEnDown;   //!
+/*   TBranch        *b_mMtToPfMet_ElectronEnDown;   //!
    TBranch        *b_mMtToPfMet_ElectronEnUp;   //!
    TBranch        *b_mMtToPfMet_JetEnDown;   //!
    TBranch        *b_mMtToPfMet_JetEnUp;   //!
@@ -1338,7 +1398,7 @@ public :
    TBranch        *b_mMtToPfMet_TauEnDown;   //!
    TBranch        *b_mMtToPfMet_TauEnUp;   //!
    TBranch        *b_mMtToPfMet_UnclusteredEnDown;   //!
-   TBranch        *b_mMtToPfMet_UnclusteredEnUp;   //!
+   TBranch        *b_mMtToPfMet_UnclusteredEnUp;   //!*/
    TBranch        *b_mMtToPfMet_type1;   //!
    TBranch        *b_mMu23Ele12DZFilter;   //!
    TBranch        *b_mMu23Ele12Filter;   //!
@@ -1394,12 +1454,13 @@ public :
    TBranch        *b_m_t_MtTotal;   //!
    TBranch        *b_m_t_Mt_TauEnDown;   //!
    TBranch        *b_m_t_Mt_TauEnUp;   //!
-   TBranch        *b_m_t_MvaMet;   //!
+/*   TBranch        *b_m_t_MvaMet;   //!
    TBranch        *b_m_t_MvaMetCovMatrix00;   //!
    TBranch        *b_m_t_MvaMetCovMatrix01;   //!
    TBranch        *b_m_t_MvaMetCovMatrix10;   //!
    TBranch        *b_m_t_MvaMetCovMatrix11;   //!
    TBranch        *b_m_t_MvaMetPhi;   //!
+*/
    TBranch        *b_m_t_PZeta;   //!
    TBranch        *b_m_t_PZetaLess0p85PZetaVis;   //!
    TBranch        *b_m_t_PZetaVis;   //!
@@ -1408,19 +1469,20 @@ public :
    TBranch        *b_m_t_SS;   //!
    TBranch        *b_m_t_ToMETDPhi_Ty1;   //!
    TBranch        *b_m_t_collinearmass;   //!
-   TBranch        *b_m_t_collinearmass_EleEnDown;   //!
+/*   TBranch        *b_m_t_collinearmass_EleEnDown;   //!
    TBranch        *b_m_t_collinearmass_EleEnUp;   //!
+*/
    TBranch        *b_m_t_collinearmass_JetEnDown;   //!
    TBranch        *b_m_t_collinearmass_JetEnUp;   //!
-   TBranch        *b_m_t_collinearmass_MuEnDown;   //!
-   TBranch        *b_m_t_collinearmass_MuEnUp;   //!
+//   TBranch        *b_m_t_collinearmass_MuEnDown;   //!
+//   TBranch        *b_m_t_collinearmass_MuEnUp;   //!
    TBranch        *b_m_t_collinearmass_TauEnDown;   //!
    TBranch        *b_m_t_collinearmass_TauEnUp;   //!
    TBranch        *b_m_t_collinearmass_UnclusteredEnDown;   //!
    TBranch        *b_m_t_collinearmass_UnclusteredEnUp;   //!
    TBranch        *b_m_t_pt_tt;   //!
-   TBranch        *b_metSig;   //!
-   TBranch        *b_metcov00;   //!
+//   TBranch        *b_metSig;   //!
+/*   TBranch        *b_metcov00;   //!
    TBranch        *b_metcov01;   //!
    TBranch        *b_metcov10;   //!
    TBranch        *b_metcov11;   //!
@@ -1428,6 +1490,7 @@ public :
    TBranch        *b_metcov01_DESYlike;   //!
    TBranch        *b_metcov10_DESYlike;   //!
    TBranch        *b_metcov11_DESYlike;   //!
+*/
    TBranch        *b_muGlbIsoVetoPt10;   //!
    TBranch        *b_muVetoPt15IsoIdVtx;   //!
    TBranch        *b_muVetoPt5;   //!
@@ -1438,8 +1501,8 @@ public :
    TBranch        *b_numGenJets;   //!
    TBranch        *b_nvtx;   //!
    TBranch        *b_processID;   //!
-   TBranch        *b_puppiMetEt;   //!
-   TBranch        *b_puppiMetPhi;   //!
+//   TBranch        *b_puppiMetEt;   //!
+//   TBranch        *b_puppiMetPhi;   //!
    TBranch        *b_pvChi2;   //!
    TBranch        *b_pvDX;   //!
    TBranch        *b_pvDY;   //!
@@ -1452,8 +1515,8 @@ public :
    TBranch        *b_pvY;   //!
    TBranch        *b_pvZ;   //!
    TBranch        *b_pvndof;   //!
-   TBranch        *b_raw_pfMetEt;   //!
-   TBranch        *b_raw_pfMetPhi;   //!
+//   TBranch        *b_raw_pfMetEt;   //!
+//   TBranch        *b_raw_pfMetPhi;   //!
    TBranch        *b_recoilDaught;   //!
    TBranch        *b_recoilWithMet;   //!
    TBranch        *b_rho;   //!
@@ -1461,7 +1524,7 @@ public :
    TBranch        *b_singleE17SingleMu8Group;   //!
    TBranch        *b_singleE17SingleMu8Pass;   //!
    TBranch        *b_singleE17SingleMu8Prescale;   //!
-   TBranch        *b_singleE20SingleTau28Group;   //!
+/*   TBranch        *b_singleE20SingleTau28Group;   //!
    TBranch        *b_singleE20SingleTau28Pass;   //!
    TBranch        *b_singleE20SingleTau28Prescale;   //!
    TBranch        *b_singleE22SingleTau20SingleL1Group;   //!
@@ -1470,10 +1533,12 @@ public :
    TBranch        *b_singleE22SingleTau29Group;   //!
    TBranch        *b_singleE22SingleTau29Pass;   //!
    TBranch        *b_singleE22SingleTau29Prescale;   //!
+*/
    TBranch        *b_singleE23SingleMu8Group;   //!
    TBranch        *b_singleE23SingleMu8Pass;   //!
    TBranch        *b_singleE23SingleMu8Prescale;   //!
-   TBranch        *b_singleE24SingleTau20Group;   //!
+
+/*   TBranch        *b_singleE24SingleTau20Group;   //!
    TBranch        *b_singleE24SingleTau20Pass;   //!
    TBranch        *b_singleE24SingleTau20Prescale;   //!
    TBranch        *b_singleE24SingleTau20SingleL1Group;   //!
@@ -1482,10 +1547,12 @@ public :
    TBranch        *b_singleE24SingleTau30Group;   //!
    TBranch        *b_singleE24SingleTau30Pass;   //!
    TBranch        *b_singleE24SingleTau30Prescale;   //!
+*/
    TBranch        *b_singleE25eta2p1TightGroup;   //!
    TBranch        *b_singleE25eta2p1TightPass;   //!
    TBranch        *b_singleE25eta2p1TightPrescale;   //!
-   TBranch        *b_singleE27SingleTau20SingleL1Group;   //!
+
+/*   TBranch        *b_singleE27SingleTau20SingleL1Group;   //!
    TBranch        *b_singleE27SingleTau20SingleL1Pass;   //!
    TBranch        *b_singleE27SingleTau20SingleL1Prescale;   //!
    TBranch        *b_singleE27TightGroup;   //!
@@ -1503,6 +1570,7 @@ public :
    TBranch        *b_singleE36SingleTau30Group;   //!
    TBranch        *b_singleE36SingleTau30Pass;   //!
    TBranch        *b_singleE36SingleTau30Prescale;   //!
+*/
    TBranch        *b_singleESingleMuGroup;   //!
    TBranch        *b_singleESingleMuPass;   //!
    TBranch        *b_singleESingleMuPrescale;   //!
@@ -1521,12 +1589,14 @@ public :
    TBranch        *b_singleIsoMu22eta2p1Group;   //!
    TBranch        *b_singleIsoMu22eta2p1Pass;   //!
    TBranch        *b_singleIsoMu22eta2p1Prescale;   //!
-   TBranch        *b_singleIsoMu24Group;   //!
+/*   TBranch        *b_singleIsoMu24Group;   //!
+*/
    TBranch        *b_singleIsoMu24Pass;   //!
-   TBranch        *b_singleIsoMu24Prescale;   //!
+/*   TBranch        *b_singleIsoMu24Prescale;   //!
    TBranch        *b_singleIsoMu24eta2p1Group;   //!
    TBranch        *b_singleIsoMu24eta2p1Pass;   //!
    TBranch        *b_singleIsoMu24eta2p1Prescale;   //!
+*/
    TBranch        *b_singleIsoMu27Group;   //!
    TBranch        *b_singleIsoMu27Pass;   //!
    TBranch        *b_singleIsoMu27Prescale;   //!
@@ -1536,19 +1606,24 @@ public :
    TBranch        *b_singleIsoTkMu22Group;   //!
    TBranch        *b_singleIsoTkMu22Pass;   //!
    TBranch        *b_singleIsoTkMu22Prescale;   //!
-   TBranch        *b_singleIsoTkMu22eta2p1Group;   //!
+
+
+/*   TBranch        *b_singleIsoTkMu22eta2p1Group;   //!
+*/
    TBranch        *b_singleIsoTkMu22eta2p1Pass;   //!
-   TBranch        *b_singleIsoTkMu22eta2p1Prescale;   //!
+/*   TBranch        *b_singleIsoTkMu22eta2p1Prescale;   //!
    TBranch        *b_singleIsoTkMu24Group;   //!
+*/
    TBranch        *b_singleIsoTkMu24Pass;   //!
-   TBranch        *b_singleIsoTkMu24Prescale;   //!
+/*   TBranch        *b_singleIsoTkMu24Prescale;   //!
    TBranch        *b_singleIsoTkMu24eta2p1Group;   //!
    TBranch        *b_singleIsoTkMu24eta2p1Pass;   //!
    TBranch        *b_singleIsoTkMu24eta2p1Prescale;   //!
+*/
    TBranch        *b_singleMu17SingleE12Group;   //!
    TBranch        *b_singleMu17SingleE12Pass;   //!
    TBranch        *b_singleMu17SingleE12Prescale;   //!
-   TBranch        *b_singleMu19eta2p1LooseTau20Group;   //!
+/*   TBranch        *b_singleMu19eta2p1LooseTau20Group;   //!
    TBranch        *b_singleMu19eta2p1LooseTau20Pass;   //!
    TBranch        *b_singleMu19eta2p1LooseTau20Prescale;   //!
    TBranch        *b_singleMu19eta2p1LooseTau20singleL1Group;   //!
@@ -1560,15 +1635,18 @@ public :
    TBranch        *b_singleMu23SingleE12DZGroup;   //!
    TBranch        *b_singleMu23SingleE12DZPass;   //!
    TBranch        *b_singleMu23SingleE12DZPrescale;   //!
+
+*/
    TBranch        *b_singleMu23SingleE12Group;   //!
    TBranch        *b_singleMu23SingleE12Pass;   //!
    TBranch        *b_singleMu23SingleE12Prescale;   //!
-   TBranch        *b_singleMu23SingleE8Group;   //!
+/*   TBranch        *b_singleMu23SingleE8Group;   //!
    TBranch        *b_singleMu23SingleE8Pass;   //!
    TBranch        *b_singleMu23SingleE8Prescale;   //!
    TBranch        *b_singleMu8SingleE23DZGroup;   //!
    TBranch        *b_singleMu8SingleE23DZPass;   //!
    TBranch        *b_singleMu8SingleE23DZPrescale;   //!
+*/
    TBranch        *b_singleMuGroup;   //!
    TBranch        *b_singleMuPass;   //!
    TBranch        *b_singleMuPrescale;   //!
@@ -1587,12 +1665,13 @@ public :
    TBranch        *b_singleMu_leg2_noisoGroup;   //!
    TBranch        *b_singleMu_leg2_noisoPass;   //!
    TBranch        *b_singleMu_leg2_noisoPrescale;   //!
-   TBranch        *b_singleTau140Group;   //!
+/*   TBranch        *b_singleTau140Group;   //!
    TBranch        *b_singleTau140Pass;   //!
    TBranch        *b_singleTau140Prescale;   //!
    TBranch        *b_singleTau140Trk50Group;   //!
    TBranch        *b_singleTau140Trk50Pass;   //!
    TBranch        *b_singleTau140Trk50Prescale;   //!
+*/
    TBranch        *b_tAbsEta;   //!
    TBranch        *b_tAgainstElectronLooseMVA6;   //!
    TBranch        *b_tAgainstElectronMVA6Raw;   //!
@@ -1654,7 +1733,7 @@ public :
    TBranch        *b_tChargedIsoPtSum;   //!
    TBranch        *b_tChargedIsoPtSumdR03;   //!
    TBranch        *b_tComesFromHiggs;   //!
-   TBranch        *b_tDPhiToPfMet_ElectronEnDown;   //!
+/*   TBranch        *b_tDPhiToPfMet_ElectronEnDown;   //!
    TBranch        *b_tDPhiToPfMet_ElectronEnUp;   //!
    TBranch        *b_tDPhiToPfMet_JetEnDown;   //!
    TBranch        *b_tDPhiToPfMet_JetEnUp;   //!
@@ -1667,7 +1746,7 @@ public :
    TBranch        *b_tDPhiToPfMet_TauEnDown;   //!
    TBranch        *b_tDPhiToPfMet_TauEnUp;   //!
    TBranch        *b_tDPhiToPfMet_UnclusteredEnDown;   //!
-   TBranch        *b_tDPhiToPfMet_UnclusteredEnUp;   //!
+   TBranch        *b_tDPhiToPfMet_UnclusteredEnUp;   //!*/
    TBranch        *b_tDPhiToPfMet_type1;   //!
    TBranch        *b_tDecayMode;   //!
    TBranch        *b_tDecayModeFinding;   //!
@@ -1700,7 +1779,7 @@ public :
    TBranch        *b_tJetEtaEtaMoment;   //!
    TBranch        *b_tJetEtaPhiMoment;   //!
    TBranch        *b_tJetEtaPhiSpread;   //!
-   TBranch        *b_tJetHadronFlavour;   //!
+//   TBranch        *b_tJetHadronFlavour;   //!
    TBranch        *b_tJetPFCISVBtag;   //!
    TBranch        *b_tJetPartonFlavour;   //!
    TBranch        *b_tJetPhiPhiMoment;   //!
@@ -1716,7 +1795,7 @@ public :
    TBranch        *b_tMatchesDoubleTau35Path;   //!
    TBranch        *b_tMatchesDoubleTau40Filter;   //!
    TBranch        *b_tMatchesDoubleTau40Path;   //!
-   TBranch        *b_tMatchesDoubleTauCmbIso35RegFilter;   //!
+/*   TBranch        *b_tMatchesDoubleTauCmbIso35RegFilter;   //!
    TBranch        *b_tMatchesDoubleTauCmbIso35RegPath;   //!
    TBranch        *b_tMatchesDoubleTauCmbIso40Filter;   //!
    TBranch        *b_tMatchesDoubleTauCmbIso40Path;   //!
@@ -1734,7 +1813,8 @@ public :
    TBranch        *b_tMatchesMu19Tau20sL1Path;   //!
    TBranch        *b_tMatchesMu21Tau20sL1Filter;   //!
    TBranch        *b_tMatchesMu21Tau20sL1Path;   //!
-   TBranch        *b_tMtToPfMet_ElectronEnDown;   //!
+*/
+/*   TBranch        *b_tMtToPfMet_ElectronEnDown;   //!
    TBranch        *b_tMtToPfMet_ElectronEnUp;   //!
    TBranch        *b_tMtToPfMet_JetEnDown;   //!
    TBranch        *b_tMtToPfMet_JetEnUp;   //!
@@ -1748,7 +1828,7 @@ public :
    TBranch        *b_tMtToPfMet_TauEnDown;   //!
    TBranch        *b_tMtToPfMet_TauEnUp;   //!
    TBranch        *b_tMtToPfMet_UnclusteredEnDown;   //!
-   TBranch        *b_tMtToPfMet_UnclusteredEnUp;   //!
+   TBranch        *b_tMtToPfMet_UnclusteredEnUp;   //!*/
    TBranch        *b_tMtToPfMet_type1;   //!
    TBranch        *b_tMuOverlap;   //!
    TBranch        *b_tMuonIdIsoStdVtxOverlap;   //!
@@ -1790,10 +1870,11 @@ public :
    TBranch        *b_tZTTGenPhi;   //!
    TBranch        *b_tZTTGenPt;   //!
    TBranch        *b_t_m_collinearmass;   //!
-   TBranch        *b_t_m_collinearmass_JetEnDown;   //!
+/*   TBranch        *b_t_m_collinearmass_JetEnDown;   //!
    TBranch        *b_t_m_collinearmass_JetEnUp;   //!
    TBranch        *b_t_m_collinearmass_UnclusteredEnDown;   //!
    TBranch        *b_t_m_collinearmass_UnclusteredEnUp;   //!
+*/
    TBranch        *b_tauVetoPt20Loose3HitsVtx;   //!
    TBranch        *b_tauVetoPt20TightMVALTVtx;   //!
    TBranch        *b_topQuarkPt1;   //!
@@ -1862,7 +1943,7 @@ public :
    TBranch        *b_vbfMVA_JetEnDown;   //!
    TBranch        *b_vbfMVA_JetEnUp;   //!
    TBranch        *b_vbfMass;   //!
-   TBranch        *b_vbfMass_JetAbsoluteFlavMapDown;   //!
+/*   TBranch        *b_vbfMass_JetAbsoluteFlavMapDown;   //!
    TBranch        *b_vbfMass_JetAbsoluteFlavMapUp;   //!
    TBranch        *b_vbfMass_JetAbsoluteMPFBiasDown;   //!
    TBranch        *b_vbfMass_JetAbsoluteMPFBiasUp;   //!
@@ -1872,9 +1953,10 @@ public :
    TBranch        *b_vbfMass_JetAbsoluteStatUp;   //!
    TBranch        *b_vbfMass_JetClosureDown;   //!
    TBranch        *b_vbfMass_JetClosureUp;   //!
+*/
    TBranch        *b_vbfMass_JetEnDown;   //!
    TBranch        *b_vbfMass_JetEnUp;   //!
-   TBranch        *b_vbfMass_JetFlavorQCDDown;   //!
+/*   TBranch        *b_vbfMass_JetFlavorQCDDown;   //!
    TBranch        *b_vbfMass_JetFlavorQCDUp;   //!
    TBranch        *b_vbfMass_JetFragmentationDown;   //!
    TBranch        *b_vbfMass_JetFragmentationUp;   //!
@@ -1940,6 +2022,7 @@ public :
    TBranch        *b_vbfNJets30;   //!
    TBranch        *b_vbfNJets30_JetEnDown;   //!
    TBranch        *b_vbfNJets30_JetEnUp;   //!
+*/
    TBranch        *b_vbfVispt;   //!
    TBranch        *b_vbfVispt_JetEnDown;   //!
    TBranch        *b_vbfVispt_JetEnUp;   //!
@@ -1990,7 +2073,7 @@ void HTauTauTree_mt::Init(TTree* tree)
 
    _tree->SetBranchAddress("EmbPtWeight", &EmbPtWeight, &b_EmbPtWeight);
    _tree->SetBranchAddress("Eta", &Eta, &b_Eta);
-   _tree->SetBranchAddress("Flag_BadChargedCandidateFilter", &Flag_BadChargedCandidateFilter, &b_Flag_BadChargedCandidateFilter);
+/*   _tree->SetBranchAddress("Flag_BadChargedCandidateFilter", &Flag_BadChargedCandidateFilter, &b_Flag_BadChargedCandidateFilter);
    _tree->SetBranchAddress("Flag_BadPFMuonFilter", &Flag_BadPFMuonFilter, &b_Flag_BadPFMuonFilter);
    _tree->SetBranchAddress("Flag_EcalDeadCellTriggerPrimitiveFilter", &Flag_EcalDeadCellTriggerPrimitiveFilter, &b_Flag_EcalDeadCellTriggerPrimitiveFilter);
    _tree->SetBranchAddress("Flag_HBHENoiseFilter", &Flag_HBHENoiseFilter, &b_Flag_HBHENoiseFilter);
@@ -2000,6 +2083,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("Flag_eeBadScFilter", &Flag_eeBadScFilter, &b_Flag_eeBadScFilter);
    _tree->SetBranchAddress("Flag_globalTightHalo2016Filter", &Flag_globalTightHalo2016Filter, &b_Flag_globalTightHalo2016Filter);
    _tree->SetBranchAddress("Flag_goodVertices", &Flag_goodVertices, &b_Flag_goodVertices);
+*/
    _tree->SetBranchAddress("GenWeight", &GenWeight, &b_GenWeight);
    _tree->SetBranchAddress("Ht", &Ht, &b_Ht);
    _tree->SetBranchAddress("LT", &LT, &b_LT);
@@ -2020,7 +2104,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("bjetCISVVeto30Medium", &bjetCISVVeto30Medium, &b_bjetCISVVeto30Medium);
    _tree->SetBranchAddress("bjetCISVVeto30Tight", &bjetCISVVeto30Tight, &b_bjetCISVVeto30Tight);
    _tree->SetBranchAddress("charge", &charge, &b_charge);
-   _tree->SetBranchAddress("dielectronVeto", &dielectronVeto, &b_dielectronVeto);
+//   _tree->SetBranchAddress("dielectronVeto", &dielectronVeto, &b_dielectronVeto);
    _tree->SetBranchAddress("dimuonVeto", &dimuonVeto, &b_dimuonVeto);
    _tree->SetBranchAddress("doubleEGroup", &doubleEGroup, &b_doubleEGroup);
    _tree->SetBranchAddress("doubleEPass", &doubleEPass, &b_doubleEPass);
@@ -2046,7 +2130,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("doubleTau40Group", &doubleTau40Group, &b_doubleTau40Group);
    _tree->SetBranchAddress("doubleTau40Pass", &doubleTau40Pass, &b_doubleTau40Pass);
    _tree->SetBranchAddress("doubleTau40Prescale", &doubleTau40Prescale, &b_doubleTau40Prescale);
-   _tree->SetBranchAddress("doubleTauCmbIso35RegGroup", &doubleTauCmbIso35RegGroup, &b_doubleTauCmbIso35RegGroup);
+/*   _tree->SetBranchAddress("doubleTauCmbIso35RegGroup", &doubleTauCmbIso35RegGroup, &b_doubleTauCmbIso35RegGroup);
    _tree->SetBranchAddress("doubleTauCmbIso35RegPass", &doubleTauCmbIso35RegPass, &b_doubleTauCmbIso35RegPass);
    _tree->SetBranchAddress("doubleTauCmbIso35RegPrescale", &doubleTauCmbIso35RegPrescale, &b_doubleTauCmbIso35RegPrescale);
    _tree->SetBranchAddress("doubleTauCmbIso40Group", &doubleTauCmbIso40Group, &b_doubleTauCmbIso40Group);
@@ -2055,21 +2139,22 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("doubleTauCmbIso40RegGroup", &doubleTauCmbIso40RegGroup, &b_doubleTauCmbIso40RegGroup);
    _tree->SetBranchAddress("doubleTauCmbIso40RegPass", &doubleTauCmbIso40RegPass, &b_doubleTauCmbIso40RegPass);
    _tree->SetBranchAddress("doubleTauCmbIso40RegPrescale", &doubleTauCmbIso40RegPrescale, &b_doubleTauCmbIso40RegPrescale);
+*/
    _tree->SetBranchAddress("eVetoMVAIso", &eVetoMVAIso, &b_eVetoMVAIso);
    _tree->SetBranchAddress("eVetoMVAIsoVtx", &eVetoMVAIsoVtx, &b_eVetoMVAIsoVtx);
    _tree->SetBranchAddress("eVetoZTTp001dxyz", &eVetoZTTp001dxyz, &b_eVetoZTTp001dxyz);
    _tree->SetBranchAddress("eVetoZTTp001dxyzR0", &eVetoZTTp001dxyzR0, &b_eVetoZTTp001dxyzR0);
    _tree->SetBranchAddress("evt", &evt, &b_evt);
-   _tree->SetBranchAddress("genEta", &genEta, &b_genEta);
+//   _tree->SetBranchAddress("genEta", &genEta, &b_genEta);
    _tree->SetBranchAddress("genHTT", &genHTT, &b_genHTT);
    _tree->SetBranchAddress("genM", &genM, &b_genM);
    _tree->SetBranchAddress("genMass", &genMass, &b_genMass);
-   _tree->SetBranchAddress("genPhi", &genPhi, &b_genPhi);
+//   _tree->SetBranchAddress("genPhi", &genPhi, &b_genPhi);
    _tree->SetBranchAddress("genpT", &genpT, &b_genpT);
    _tree->SetBranchAddress("genpX", &genpX, &b_genpX);
    _tree->SetBranchAddress("genpY", &genpY, &b_genpY);
    _tree->SetBranchAddress("isGtautau", &isGtautau, &b_isGtautau);
-   _tree->SetBranchAddress("isWenu", &isWenu, &b_isWenu);
+//   _tree->SetBranchAddress("isWenu", &isWenu, &b_isWenu);
    _tree->SetBranchAddress("isWmunu", &isWmunu, &b_isWmunu);
    _tree->SetBranchAddress("isWtaunu", &isWtaunu, &b_isWtaunu);
    _tree->SetBranchAddress("isZee", &isZee, &b_isZee);
@@ -2078,36 +2163,41 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("isdata", &isdata, &b_isdata);
    _tree->SetBranchAddress("j1csv", &j1csv, &b_j1csv);
    _tree->SetBranchAddress("j1eta", &j1eta, &b_j1eta);
-   _tree->SetBranchAddress("j1hadronflavor", &j1hadronflavor, &b_j1hadronflavor);
-   _tree->SetBranchAddress("j1partonflavor", &j1partonflavor, &b_j1partonflavor);
+//   _tree->SetBranchAddress("j1hadronflavor", &j1hadronflavor, &b_j1hadronflavor);
+//   _tree->SetBranchAddress("j1partonflavor", &j1partonflavor, &b_j1partonflavor);
    _tree->SetBranchAddress("j1phi", &j1phi, &b_j1phi);
    _tree->SetBranchAddress("j1pt", &j1pt, &b_j1pt);
-   _tree->SetBranchAddress("j1ptDown", &j1ptDown, &b_j1ptDown);
+/*   _tree->SetBranchAddress("j1ptDown", &j1ptDown, &b_j1ptDown);
    _tree->SetBranchAddress("j1ptUp", &j1ptUp, &b_j1ptUp);
    _tree->SetBranchAddress("j1pu", &j1pu, &b_j1pu);
    _tree->SetBranchAddress("j1rawf", &j1rawf, &b_j1rawf);
+*/
    _tree->SetBranchAddress("j2csv", &j2csv, &b_j2csv);
    _tree->SetBranchAddress("j2eta", &j2eta, &b_j2eta);
-   _tree->SetBranchAddress("j2hadronflavor", &j2hadronflavor, &b_j2hadronflavor);
+/*   _tree->SetBranchAddress("j2hadronflavor", &j2hadronflavor, &b_j2hadronflavor);
    _tree->SetBranchAddress("j2partonflavor", &j2partonflavor, &b_j2partonflavor);
+*/
    _tree->SetBranchAddress("j2phi", &j2phi, &b_j2phi);
    _tree->SetBranchAddress("j2pt", &j2pt, &b_j2pt);
-   _tree->SetBranchAddress("j2ptDown", &j2ptDown, &b_j2ptDown);
+/*   _tree->SetBranchAddress("j2ptDown", &j2ptDown, &b_j2ptDown);
    _tree->SetBranchAddress("j2ptUp", &j2ptUp, &b_j2ptUp);
    _tree->SetBranchAddress("j2pu", &j2pu, &b_j2pu);
    _tree->SetBranchAddress("j2rawf", &j2rawf, &b_j2rawf);
+*/
    _tree->SetBranchAddress("jb1csv", &jb1csv, &b_jb1csv);
-   _tree->SetBranchAddress("jb1csv_CSVL", &jb1csv_CSVL, &b_jb1csv_CSVL);
+//   _tree->SetBranchAddress("jb1csv_CSVL", &jb1csv_CSVL, &b_jb1csv_CSVL);
    _tree->SetBranchAddress("jb1eta", &jb1eta, &b_jb1eta);
-   _tree->SetBranchAddress("jb1eta_CSVL", &jb1eta_CSVL, &b_jb1eta_CSVL);
+/*   _tree->SetBranchAddress("jb1eta_CSVL", &jb1eta_CSVL, &b_jb1eta_CSVL);
    _tree->SetBranchAddress("jb1hadronflavor", &jb1hadronflavor, &b_jb1hadronflavor);
    _tree->SetBranchAddress("jb1hadronflavor_CSVL", &jb1hadronflavor_CSVL, &b_jb1hadronflavor_CSVL);
    _tree->SetBranchAddress("jb1partonflavor", &jb1partonflavor, &b_jb1partonflavor);
    _tree->SetBranchAddress("jb1partonflavor_CSVL", &jb1partonflavor_CSVL, &b_jb1partonflavor_CSVL);
+*/
+
    _tree->SetBranchAddress("jb1phi", &jb1phi, &b_jb1phi);
-   _tree->SetBranchAddress("jb1phi_CSVL", &jb1phi_CSVL, &b_jb1phi_CSVL);
+//   _tree->SetBranchAddress("jb1phi_CSVL", &jb1phi_CSVL, &b_jb1phi_CSVL);
    _tree->SetBranchAddress("jb1pt", &jb1pt, &b_jb1pt);
-   _tree->SetBranchAddress("jb1ptDown", &jb1ptDown, &b_jb1ptDown);
+/*   _tree->SetBranchAddress("jb1ptDown", &jb1ptDown, &b_jb1ptDown);
    _tree->SetBranchAddress("jb1ptDown_CSVL", &jb1ptDown_CSVL, &b_jb1ptDown_CSVL);
    _tree->SetBranchAddress("jb1ptUp", &jb1ptUp, &b_jb1ptUp);
    _tree->SetBranchAddress("jb1ptUp_CSVL", &jb1ptUp_CSVL, &b_jb1ptUp_CSVL);
@@ -2116,18 +2206,20 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("jb1pu_CSVL", &jb1pu_CSVL, &b_jb1pu_CSVL);
    _tree->SetBranchAddress("jb1rawf", &jb1rawf, &b_jb1rawf);
    _tree->SetBranchAddress("jb1rawf_CSVL", &jb1rawf_CSVL, &b_jb1rawf_CSVL);
+*/
    _tree->SetBranchAddress("jb2csv", &jb2csv, &b_jb2csv);
-   _tree->SetBranchAddress("jb2csv_CSVL", &jb2csv_CSVL, &b_jb2csv_CSVL);
+//   _tree->SetBranchAddress("jb2csv_CSVL", &jb2csv_CSVL, &b_jb2csv_CSVL);
    _tree->SetBranchAddress("jb2eta", &jb2eta, &b_jb2eta);
-   _tree->SetBranchAddress("jb2eta_CSVL", &jb2eta_CSVL, &b_jb2eta_CSVL);
+/*   _tree->SetBranchAddress("jb2eta_CSVL", &jb2eta_CSVL, &b_jb2eta_CSVL);
    _tree->SetBranchAddress("jb2hadronflavor", &jb2hadronflavor, &b_jb2hadronflavor);
    _tree->SetBranchAddress("jb2hadronflavor_CSVL", &jb2hadronflavor_CSVL, &b_jb2hadronflavor_CSVL);
    _tree->SetBranchAddress("jb2partonflavor", &jb2partonflavor, &b_jb2partonflavor);
    _tree->SetBranchAddress("jb2partonflavor_CSVL", &jb2partonflavor_CSVL, &b_jb2partonflavor_CSVL);
+*/
    _tree->SetBranchAddress("jb2phi", &jb2phi, &b_jb2phi);
-   _tree->SetBranchAddress("jb2phi_CSVL", &jb2phi_CSVL, &b_jb2phi_CSVL);
+//   _tree->SetBranchAddress("jb2phi_CSVL", &jb2phi_CSVL, &b_jb2phi_CSVL);
    _tree->SetBranchAddress("jb2pt", &jb2pt, &b_jb2pt);
-   _tree->SetBranchAddress("jb2ptDown", &jb2ptDown, &b_jb2ptDown);
+/*   _tree->SetBranchAddress("jb2ptDown", &jb2ptDown, &b_jb2ptDown);
    _tree->SetBranchAddress("jb2ptDown_CSVL", &jb2ptDown_CSVL, &b_jb2ptDown_CSVL);
    _tree->SetBranchAddress("jb2ptUp", &jb2ptUp, &b_jb2ptUp);
    _tree->SetBranchAddress("jb2ptUp_CSVL", &jb2ptUp_CSVL, &b_jb2ptUp_CSVL);
@@ -2136,11 +2228,12 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("jb2pu_CSVL", &jb2pu_CSVL, &b_jb2pu_CSVL);
    _tree->SetBranchAddress("jb2rawf", &jb2rawf, &b_jb2rawf);
    _tree->SetBranchAddress("jb2rawf_CSVL", &jb2rawf_CSVL, &b_jb2rawf_CSVL);
+*/
    _tree->SetBranchAddress("jetVeto20", &jetVeto20, &b_jetVeto20);
    _tree->SetBranchAddress("jetVeto20_JetEnDown", &jetVeto20_JetEnDown, &b_jetVeto20_JetEnDown);
    _tree->SetBranchAddress("jetVeto20_JetEnUp", &jetVeto20_JetEnUp, &b_jetVeto20_JetEnUp);
    _tree->SetBranchAddress("jetVeto30", &jetVeto30, &b_jetVeto30);
-   _tree->SetBranchAddress("jetVeto30_JetAbsoluteFlavMapDown", &jetVeto30_JetAbsoluteFlavMapDown, &b_jetVeto30_JetAbsoluteFlavMapDown);
+/*   _tree->SetBranchAddress("jetVeto30_JetAbsoluteFlavMapDown", &jetVeto30_JetAbsoluteFlavMapDown, &b_jetVeto30_JetAbsoluteFlavMapDown);
    _tree->SetBranchAddress("jetVeto30_JetAbsoluteFlavMapUp", &jetVeto30_JetAbsoluteFlavMapUp, &b_jetVeto30_JetAbsoluteFlavMapUp);
    _tree->SetBranchAddress("jetVeto30_JetAbsoluteMPFBiasDown", &jetVeto30_JetAbsoluteMPFBiasDown, &b_jetVeto30_JetAbsoluteMPFBiasDown);
    _tree->SetBranchAddress("jetVeto30_JetAbsoluteMPFBiasUp", &jetVeto30_JetAbsoluteMPFBiasUp, &b_jetVeto30_JetAbsoluteMPFBiasUp);
@@ -2149,10 +2242,10 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("jetVeto30_JetAbsoluteStatDown", &jetVeto30_JetAbsoluteStatDown, &b_jetVeto30_JetAbsoluteStatDown);
    _tree->SetBranchAddress("jetVeto30_JetAbsoluteStatUp", &jetVeto30_JetAbsoluteStatUp, &b_jetVeto30_JetAbsoluteStatUp);
    _tree->SetBranchAddress("jetVeto30_JetClosureDown", &jetVeto30_JetClosureDown, &b_jetVeto30_JetClosureDown);
-   _tree->SetBranchAddress("jetVeto30_JetClosureUp", &jetVeto30_JetClosureUp, &b_jetVeto30_JetClosureUp);
+   _tree->SetBranchAddress("jetVeto30_JetClosureUp", &jetVeto30_JetClosureUp, &b_jetVeto30_JetClosureUp);*/
    _tree->SetBranchAddress("jetVeto30_JetEnDown", &jetVeto30_JetEnDown, &b_jetVeto30_JetEnDown);
    _tree->SetBranchAddress("jetVeto30_JetEnUp", &jetVeto30_JetEnUp, &b_jetVeto30_JetEnUp);
-   _tree->SetBranchAddress("jetVeto30_JetFlavorQCDDown", &jetVeto30_JetFlavorQCDDown, &b_jetVeto30_JetFlavorQCDDown);
+/*   _tree->SetBranchAddress("jetVeto30_JetFlavorQCDDown", &jetVeto30_JetFlavorQCDDown, &b_jetVeto30_JetFlavorQCDDown);
    _tree->SetBranchAddress("jetVeto30_JetFlavorQCDUp", &jetVeto30_JetFlavorQCDUp, &b_jetVeto30_JetFlavorQCDUp);
    _tree->SetBranchAddress("jetVeto30_JetFragmentationDown", &jetVeto30_JetFragmentationDown, &b_jetVeto30_JetFragmentationDown);
    _tree->SetBranchAddress("jetVeto30_JetFragmentationUp", &jetVeto30_JetFragmentationUp, &b_jetVeto30_JetFragmentationUp);
@@ -2212,13 +2305,14 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("jetVeto30_JetTimePtEtaUp", &jetVeto30_JetTimePtEtaUp, &b_jetVeto30_JetTimePtEtaUp);
    _tree->SetBranchAddress("jetVeto30_JetTotalDown", &jetVeto30_JetTotalDown, &b_jetVeto30_JetTotalDown);
    _tree->SetBranchAddress("jetVeto30_JetTotalUp", &jetVeto30_JetTotalUp, &b_jetVeto30_JetTotalUp);
+*/
    _tree->SetBranchAddress("lumi", &lumi, &b_lumi);
    _tree->SetBranchAddress("mAbsEta", &mAbsEta, &b_mAbsEta);
    _tree->SetBranchAddress("mBestTrackType", &mBestTrackType, &b_mBestTrackType);
    _tree->SetBranchAddress("mCharge", &mCharge, &b_mCharge);
    _tree->SetBranchAddress("mChi2LocalPosition", &mChi2LocalPosition, &b_mChi2LocalPosition);
    _tree->SetBranchAddress("mComesFromHiggs", &mComesFromHiggs, &b_mComesFromHiggs);
-   _tree->SetBranchAddress("mDPhiToPfMet_ElectronEnDown", &mDPhiToPfMet_ElectronEnDown, &b_mDPhiToPfMet_ElectronEnDown);
+/*   _tree->SetBranchAddress("mDPhiToPfMet_ElectronEnDown", &mDPhiToPfMet_ElectronEnDown, &b_mDPhiToPfMet_ElectronEnDown);
    _tree->SetBranchAddress("mDPhiToPfMet_ElectronEnUp", &mDPhiToPfMet_ElectronEnUp, &b_mDPhiToPfMet_ElectronEnUp);
    _tree->SetBranchAddress("mDPhiToPfMet_JetEnDown", &mDPhiToPfMet_JetEnDown, &b_mDPhiToPfMet_JetEnDown);
    _tree->SetBranchAddress("mDPhiToPfMet_JetEnUp", &mDPhiToPfMet_JetEnUp, &b_mDPhiToPfMet_JetEnUp);
@@ -2232,18 +2326,19 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("mDPhiToPfMet_TauEnUp", &mDPhiToPfMet_TauEnUp, &b_mDPhiToPfMet_TauEnUp);
    _tree->SetBranchAddress("mDPhiToPfMet_UnclusteredEnDown", &mDPhiToPfMet_UnclusteredEnDown, &b_mDPhiToPfMet_UnclusteredEnDown);
    _tree->SetBranchAddress("mDPhiToPfMet_UnclusteredEnUp", &mDPhiToPfMet_UnclusteredEnUp, &b_mDPhiToPfMet_UnclusteredEnUp);
+*/
    _tree->SetBranchAddress("mDPhiToPfMet_type1", &mDPhiToPfMet_type1, &b_mDPhiToPfMet_type1);
    _tree->SetBranchAddress("mEcalIsoDR03", &mEcalIsoDR03, &b_mEcalIsoDR03);
    _tree->SetBranchAddress("mEffectiveArea2011", &mEffectiveArea2011, &b_mEffectiveArea2011);
    _tree->SetBranchAddress("mEffectiveArea2012", &mEffectiveArea2012, &b_mEffectiveArea2012);
-   _tree->SetBranchAddress("mErsatzGenEta", &mErsatzGenEta, &b_mErsatzGenEta);
+/*   _tree->SetBranchAddress("mErsatzGenEta", &mErsatzGenEta, &b_mErsatzGenEta);
    _tree->SetBranchAddress("mErsatzGenM", &mErsatzGenM, &b_mErsatzGenM);
    _tree->SetBranchAddress("mErsatzGenPhi", &mErsatzGenPhi, &b_mErsatzGenPhi);
    _tree->SetBranchAddress("mErsatzGenpT", &mErsatzGenpT, &b_mErsatzGenpT);
    _tree->SetBranchAddress("mErsatzGenpX", &mErsatzGenpX, &b_mErsatzGenpX);
    _tree->SetBranchAddress("mErsatzGenpY", &mErsatzGenpY, &b_mErsatzGenpY);
    _tree->SetBranchAddress("mErsatzVispX", &mErsatzVispX, &b_mErsatzVispX);
-   _tree->SetBranchAddress("mErsatzVispY", &mErsatzVispY, &b_mErsatzVispY);
+   _tree->SetBranchAddress("mErsatzVispY", &mErsatzVispY, &b_mErsatzVispY);*/
    _tree->SetBranchAddress("mEta", &mEta, &b_mEta);
    _tree->SetBranchAddress("mEta_MuonEnDown", &mEta_MuonEnDown, &b_mEta_MuonEnDown);
    _tree->SetBranchAddress("mEta_MuonEnUp", &mEta_MuonEnUp, &b_mEta_MuonEnUp);
@@ -2274,17 +2369,18 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("mIsoMu22Filter", &mIsoMu22Filter, &b_mIsoMu22Filter);
    _tree->SetBranchAddress("mIsoMu22eta2p1Filter", &mIsoMu22eta2p1Filter, &b_mIsoMu22eta2p1Filter);
    _tree->SetBranchAddress("mIsoMu24Filter", &mIsoMu24Filter, &b_mIsoMu24Filter);
-   _tree->SetBranchAddress("mIsoMu24eta2p1Filter", &mIsoMu24eta2p1Filter, &b_mIsoMu24eta2p1Filter);
+/*   _tree->SetBranchAddress("mIsoMu24eta2p1Filter", &mIsoMu24eta2p1Filter, &b_mIsoMu24eta2p1Filter);
+*/
    _tree->SetBranchAddress("mIsoTkMu22Filter", &mIsoTkMu22Filter, &b_mIsoTkMu22Filter);
    _tree->SetBranchAddress("mIsoTkMu22eta2p1Filter", &mIsoTkMu22eta2p1Filter, &b_mIsoTkMu22eta2p1Filter);
    _tree->SetBranchAddress("mIsoTkMu24Filter", &mIsoTkMu24Filter, &b_mIsoTkMu24Filter);
-   _tree->SetBranchAddress("mIsoTkMu24eta2p1Filter", &mIsoTkMu24eta2p1Filter, &b_mIsoTkMu24eta2p1Filter);
+/*	   _tree->SetBranchAddress("mIsoTkMu24eta2p1Filter", &mIsoTkMu24eta2p1Filter, &b_mIsoTkMu24eta2p1Filter);*/
    _tree->SetBranchAddress("mJetArea", &mJetArea, &b_mJetArea);
    _tree->SetBranchAddress("mJetBtag", &mJetBtag, &b_mJetBtag);
    _tree->SetBranchAddress("mJetEtaEtaMoment", &mJetEtaEtaMoment, &b_mJetEtaEtaMoment);
    _tree->SetBranchAddress("mJetEtaPhiMoment", &mJetEtaPhiMoment, &b_mJetEtaPhiMoment);
    _tree->SetBranchAddress("mJetEtaPhiSpread", &mJetEtaPhiSpread, &b_mJetEtaPhiSpread);
-   _tree->SetBranchAddress("mJetHadronFlavour", &mJetHadronFlavour, &b_mJetHadronFlavour);
+//   _tree->SetBranchAddress("mJetHadronFlavour", &mJetHadronFlavour, &b_mJetHadronFlavour);
    _tree->SetBranchAddress("mJetPFCISVBtag", &mJetPFCISVBtag, &b_mJetPFCISVBtag);
    _tree->SetBranchAddress("mJetPartonFlavour", &mJetPartonFlavour, &b_mJetPartonFlavour);
    _tree->SetBranchAddress("mJetPhiPhiMoment", &mJetPhiPhiMoment, &b_mJetPhiPhiMoment);
@@ -2298,11 +2394,12 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("mMatchesIsoMu22Path", &mMatchesIsoMu22Path, &b_mMatchesIsoMu22Path);
    _tree->SetBranchAddress("mMatchesIsoMu22eta2p1Path", &mMatchesIsoMu22eta2p1Path, &b_mMatchesIsoMu22eta2p1Path);
    _tree->SetBranchAddress("mMatchesIsoMu24Path", &mMatchesIsoMu24Path, &b_mMatchesIsoMu24Path);
-   _tree->SetBranchAddress("mMatchesIsoMu24eta2p1Path", &mMatchesIsoMu24eta2p1Path, &b_mMatchesIsoMu24eta2p1Path);
+/*   _tree->SetBranchAddress("mMatchesIsoMu24eta2p1Path", &mMatchesIsoMu24eta2p1Path, &b_mMatchesIsoMu24eta2p1Path);
+*/
    _tree->SetBranchAddress("mMatchesIsoTkMu22Path", &mMatchesIsoTkMu22Path, &b_mMatchesIsoTkMu22Path);
    _tree->SetBranchAddress("mMatchesIsoTkMu22eta2p1Path", &mMatchesIsoTkMu22eta2p1Path, &b_mMatchesIsoTkMu22eta2p1Path);
    _tree->SetBranchAddress("mMatchesIsoTkMu24Path", &mMatchesIsoTkMu24Path, &b_mMatchesIsoTkMu24Path);
-   _tree->SetBranchAddress("mMatchesIsoTkMu24eta2p1Path", &mMatchesIsoTkMu24eta2p1Path, &b_mMatchesIsoTkMu24eta2p1Path);
+/*   _tree->SetBranchAddress("mMatchesIsoTkMu24eta2p1Path", &mMatchesIsoTkMu24eta2p1Path, &b_mMatchesIsoTkMu24eta2p1Path);
    _tree->SetBranchAddress("mMatchesMu19Tau20Filter", &mMatchesMu19Tau20Filter, &b_mMatchesMu19Tau20Filter);
    _tree->SetBranchAddress("mMatchesMu19Tau20Path", &mMatchesMu19Tau20Path, &b_mMatchesMu19Tau20Path);
    _tree->SetBranchAddress("mMatchesMu19Tau20sL1Filter", &mMatchesMu19Tau20sL1Filter, &b_mMatchesMu19Tau20sL1Filter);
@@ -2310,8 +2407,9 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("mMatchesMu21Tau20sL1Filter", &mMatchesMu21Tau20sL1Filter, &b_mMatchesMu21Tau20sL1Filter);
    _tree->SetBranchAddress("mMatchesMu21Tau20sL1Path", &mMatchesMu21Tau20sL1Path, &b_mMatchesMu21Tau20sL1Path);
    _tree->SetBranchAddress("mMatchesMu23Ele12DZPath", &mMatchesMu23Ele12DZPath, &b_mMatchesMu23Ele12DZPath);
+*/
    _tree->SetBranchAddress("mMatchesMu23Ele12Path", &mMatchesMu23Ele12Path, &b_mMatchesMu23Ele12Path);
-   _tree->SetBranchAddress("mMatchesMu8Ele23DZPath", &mMatchesMu8Ele23DZPath, &b_mMatchesMu8Ele23DZPath);
+//   _tree->SetBranchAddress("mMatchesMu8Ele23DZPath", &mMatchesMu8Ele23DZPath, &b_mMatchesMu8Ele23DZPath);
    _tree->SetBranchAddress("mMatchesMu8Ele23Path", &mMatchesMu8Ele23Path, &b_mMatchesMu8Ele23Path);
    _tree->SetBranchAddress("mMatchesSingleESingleMu", &mMatchesSingleESingleMu, &b_mMatchesSingleESingleMu);
    _tree->SetBranchAddress("mMatchesSingleMu", &mMatchesSingleMu, &b_mMatchesSingleMu);
@@ -2323,7 +2421,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("mMatchesSingleMu_leg2", &mMatchesSingleMu_leg2, &b_mMatchesSingleMu_leg2);
    _tree->SetBranchAddress("mMatchesSingleMu_leg2_noiso", &mMatchesSingleMu_leg2_noiso, &b_mMatchesSingleMu_leg2_noiso);
    _tree->SetBranchAddress("mMatchesTripleMu", &mMatchesTripleMu, &b_mMatchesTripleMu);
-   _tree->SetBranchAddress("mMtToPfMet_ElectronEnDown", &mMtToPfMet_ElectronEnDown, &b_mMtToPfMet_ElectronEnDown);
+/*   _tree->SetBranchAddress("mMtToPfMet_ElectronEnDown", &mMtToPfMet_ElectronEnDown, &b_mMtToPfMet_ElectronEnDown);
    _tree->SetBranchAddress("mMtToPfMet_ElectronEnUp", &mMtToPfMet_ElectronEnUp, &b_mMtToPfMet_ElectronEnUp);
    _tree->SetBranchAddress("mMtToPfMet_JetEnDown", &mMtToPfMet_JetEnDown, &b_mMtToPfMet_JetEnDown);
    _tree->SetBranchAddress("mMtToPfMet_JetEnUp", &mMtToPfMet_JetEnUp, &b_mMtToPfMet_JetEnUp);
@@ -2337,7 +2435,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("mMtToPfMet_TauEnDown", &mMtToPfMet_TauEnDown, &b_mMtToPfMet_TauEnDown);
    _tree->SetBranchAddress("mMtToPfMet_TauEnUp", &mMtToPfMet_TauEnUp, &b_mMtToPfMet_TauEnUp);
    _tree->SetBranchAddress("mMtToPfMet_UnclusteredEnDown", &mMtToPfMet_UnclusteredEnDown, &b_mMtToPfMet_UnclusteredEnDown);
-   _tree->SetBranchAddress("mMtToPfMet_UnclusteredEnUp", &mMtToPfMet_UnclusteredEnUp, &b_mMtToPfMet_UnclusteredEnUp);
+   _tree->SetBranchAddress("mMtToPfMet_UnclusteredEnUp", &mMtToPfMet_UnclusteredEnUp, &b_mMtToPfMet_UnclusteredEnUp);*/
    _tree->SetBranchAddress("mMtToPfMet_type1", &mMtToPfMet_type1, &b_mMtToPfMet_type1);
    _tree->SetBranchAddress("mMu23Ele12DZFilter", &mMu23Ele12DZFilter, &b_mMu23Ele12DZFilter);
    _tree->SetBranchAddress("mMu23Ele12Filter", &mMu23Ele12Filter, &b_mMu23Ele12Filter);
@@ -2393,12 +2491,13 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("m_t_MtTotal", &m_t_MtTotal, &b_m_t_MtTotal);
    _tree->SetBranchAddress("m_t_Mt_TauEnDown", &m_t_Mt_TauEnDown, &b_m_t_Mt_TauEnDown);
    _tree->SetBranchAddress("m_t_Mt_TauEnUp", &m_t_Mt_TauEnUp, &b_m_t_Mt_TauEnUp);
-   _tree->SetBranchAddress("m_t_MvaMet", &m_t_MvaMet, &b_m_t_MvaMet);
+/*   _tree->SetBranchAddress("m_t_MvaMet", &m_t_MvaMet, &b_m_t_MvaMet);
    _tree->SetBranchAddress("m_t_MvaMetCovMatrix00", &m_t_MvaMetCovMatrix00, &b_m_t_MvaMetCovMatrix00);
    _tree->SetBranchAddress("m_t_MvaMetCovMatrix01", &m_t_MvaMetCovMatrix01, &b_m_t_MvaMetCovMatrix01);
    _tree->SetBranchAddress("m_t_MvaMetCovMatrix10", &m_t_MvaMetCovMatrix10, &b_m_t_MvaMetCovMatrix10);
    _tree->SetBranchAddress("m_t_MvaMetCovMatrix11", &m_t_MvaMetCovMatrix11, &b_m_t_MvaMetCovMatrix11);
    _tree->SetBranchAddress("m_t_MvaMetPhi", &m_t_MvaMetPhi, &b_m_t_MvaMetPhi);
+*/
    _tree->SetBranchAddress("m_t_PZeta", &m_t_PZeta, &b_m_t_PZeta);
    _tree->SetBranchAddress("m_t_PZetaLess0p85PZetaVis", &m_t_PZetaLess0p85PZetaVis, &b_m_t_PZetaLess0p85PZetaVis);
    _tree->SetBranchAddress("m_t_PZetaVis", &m_t_PZetaVis, &b_m_t_PZetaVis);
@@ -2407,18 +2506,20 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("m_t_SS", &m_t_SS, &b_m_t_SS);
    _tree->SetBranchAddress("m_t_ToMETDPhi_Ty1", &m_t_ToMETDPhi_Ty1, &b_m_t_ToMETDPhi_Ty1);
    _tree->SetBranchAddress("m_t_collinearmass", &m_t_collinearmass, &b_m_t_collinearmass);
-   _tree->SetBranchAddress("m_t_collinearmass_EleEnDown", &m_t_collinearmass_EleEnDown, &b_m_t_collinearmass_EleEnDown);
+/*   _tree->SetBranchAddress("m_t_collinearmass_EleEnDown", &m_t_collinearmass_EleEnDown, &b_m_t_collinearmass_EleEnDown);
    _tree->SetBranchAddress("m_t_collinearmass_EleEnUp", &m_t_collinearmass_EleEnUp, &b_m_t_collinearmass_EleEnUp);
+*/
    _tree->SetBranchAddress("m_t_collinearmass_JetEnDown", &m_t_collinearmass_JetEnDown, &b_m_t_collinearmass_JetEnDown);
    _tree->SetBranchAddress("m_t_collinearmass_JetEnUp", &m_t_collinearmass_JetEnUp, &b_m_t_collinearmass_JetEnUp);
-   _tree->SetBranchAddress("m_t_collinearmass_MuEnDown", &m_t_collinearmass_MuEnDown, &b_m_t_collinearmass_MuEnDown);
+/*   _tree->SetBranchAddress("m_t_collinearmass_MuEnDown", &m_t_collinearmass_MuEnDown, &b_m_t_collinearmass_MuEnDown);
    _tree->SetBranchAddress("m_t_collinearmass_MuEnUp", &m_t_collinearmass_MuEnUp, &b_m_t_collinearmass_MuEnUp);
+*/
    _tree->SetBranchAddress("m_t_collinearmass_TauEnDown", &m_t_collinearmass_TauEnDown, &b_m_t_collinearmass_TauEnDown);
    _tree->SetBranchAddress("m_t_collinearmass_TauEnUp", &m_t_collinearmass_TauEnUp, &b_m_t_collinearmass_TauEnUp);
    _tree->SetBranchAddress("m_t_collinearmass_UnclusteredEnDown", &m_t_collinearmass_UnclusteredEnDown, &b_m_t_collinearmass_UnclusteredEnDown);
    _tree->SetBranchAddress("m_t_collinearmass_UnclusteredEnUp", &m_t_collinearmass_UnclusteredEnUp, &b_m_t_collinearmass_UnclusteredEnUp);
    _tree->SetBranchAddress("m_t_pt_tt", &m_t_pt_tt, &b_m_t_pt_tt);
-   _tree->SetBranchAddress("metSig", &metSig, &b_metSig);
+/*   _tree->SetBranchAddress("metSig", &metSig, &b_metSig);
    _tree->SetBranchAddress("metcov00", &metcov00, &b_metcov00);
    _tree->SetBranchAddress("metcov01", &metcov01, &b_metcov01);
    _tree->SetBranchAddress("metcov10", &metcov10, &b_metcov10);
@@ -2427,6 +2528,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("metcov01_DESYlike", &metcov01_DESYlike, &b_metcov01_DESYlike);
    _tree->SetBranchAddress("metcov10_DESYlike", &metcov10_DESYlike, &b_metcov10_DESYlike);
    _tree->SetBranchAddress("metcov11_DESYlike", &metcov11_DESYlike, &b_metcov11_DESYlike);
+*/
    _tree->SetBranchAddress("muGlbIsoVetoPt10", &muGlbIsoVetoPt10, &b_muGlbIsoVetoPt10);
    _tree->SetBranchAddress("muVetoPt15IsoIdVtx", &muVetoPt15IsoIdVtx, &b_muVetoPt15IsoIdVtx);
    _tree->SetBranchAddress("muVetoPt5", &muVetoPt5, &b_muVetoPt5);
@@ -2437,8 +2539,8 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("numGenJets", &numGenJets, &b_numGenJets);
    _tree->SetBranchAddress("nvtx", &nvtx, &b_nvtx);
    _tree->SetBranchAddress("processID", &processID, &b_processID);
-   _tree->SetBranchAddress("puppiMetEt", &puppiMetEt, &b_puppiMetEt);
-   _tree->SetBranchAddress("puppiMetPhi", &puppiMetPhi, &b_puppiMetPhi);
+//   _tree->SetBranchAddress("puppiMetEt", &puppiMetEt, &b_puppiMetEt);
+//   _tree->SetBranchAddress("puppiMetPhi", &puppiMetPhi, &b_puppiMetPhi);
    _tree->SetBranchAddress("pvChi2", &pvChi2, &b_pvChi2);
    _tree->SetBranchAddress("pvDX", &pvDX, &b_pvDX);
    _tree->SetBranchAddress("pvDY", &pvDY, &b_pvDY);
@@ -2451,8 +2553,8 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("pvY", &pvY, &b_pvY);
    _tree->SetBranchAddress("pvZ", &pvZ, &b_pvZ);
    _tree->SetBranchAddress("pvndof", &pvndof, &b_pvndof);
-   _tree->SetBranchAddress("raw_pfMetEt", &raw_pfMetEt, &b_raw_pfMetEt);
-   _tree->SetBranchAddress("raw_pfMetPhi", &raw_pfMetPhi, &b_raw_pfMetPhi);
+//   _tree->SetBranchAddress("raw_pfMetEt", &raw_pfMetEt, &b_raw_pfMetEt);
+//   _tree->SetBranchAddress("raw_pfMetPhi", &raw_pfMetPhi, &b_raw_pfMetPhi);
    _tree->SetBranchAddress("recoilDaught", &recoilDaught, &b_recoilDaught);
    _tree->SetBranchAddress("recoilWithMet", &recoilWithMet, &b_recoilWithMet);
    _tree->SetBranchAddress("rho", &rho, &b_rho);
@@ -2460,7 +2562,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("singleE17SingleMu8Group", &singleE17SingleMu8Group, &b_singleE17SingleMu8Group);
    _tree->SetBranchAddress("singleE17SingleMu8Pass", &singleE17SingleMu8Pass, &b_singleE17SingleMu8Pass);
    _tree->SetBranchAddress("singleE17SingleMu8Prescale", &singleE17SingleMu8Prescale, &b_singleE17SingleMu8Prescale);
-   _tree->SetBranchAddress("singleE20SingleTau28Group", &singleE20SingleTau28Group, &b_singleE20SingleTau28Group);
+/*   _tree->SetBranchAddress("singleE20SingleTau28Group", &singleE20SingleTau28Group, &b_singleE20SingleTau28Group);
    _tree->SetBranchAddress("singleE20SingleTau28Pass", &singleE20SingleTau28Pass, &b_singleE20SingleTau28Pass);
    _tree->SetBranchAddress("singleE20SingleTau28Prescale", &singleE20SingleTau28Prescale, &b_singleE20SingleTau28Prescale);
    _tree->SetBranchAddress("singleE22SingleTau20SingleL1Group", &singleE22SingleTau20SingleL1Group, &b_singleE22SingleTau20SingleL1Group);
@@ -2469,10 +2571,11 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("singleE22SingleTau29Group", &singleE22SingleTau29Group, &b_singleE22SingleTau29Group);
    _tree->SetBranchAddress("singleE22SingleTau29Pass", &singleE22SingleTau29Pass, &b_singleE22SingleTau29Pass);
    _tree->SetBranchAddress("singleE22SingleTau29Prescale", &singleE22SingleTau29Prescale, &b_singleE22SingleTau29Prescale);
+*/
    _tree->SetBranchAddress("singleE23SingleMu8Group", &singleE23SingleMu8Group, &b_singleE23SingleMu8Group);
    _tree->SetBranchAddress("singleE23SingleMu8Pass", &singleE23SingleMu8Pass, &b_singleE23SingleMu8Pass);
    _tree->SetBranchAddress("singleE23SingleMu8Prescale", &singleE23SingleMu8Prescale, &b_singleE23SingleMu8Prescale);
-   _tree->SetBranchAddress("singleE24SingleTau20Group", &singleE24SingleTau20Group, &b_singleE24SingleTau20Group);
+/*   _tree->SetBranchAddress("singleE24SingleTau20Group", &singleE24SingleTau20Group, &b_singleE24SingleTau20Group);
    _tree->SetBranchAddress("singleE24SingleTau20Pass", &singleE24SingleTau20Pass, &b_singleE24SingleTau20Pass);
    _tree->SetBranchAddress("singleE24SingleTau20Prescale", &singleE24SingleTau20Prescale, &b_singleE24SingleTau20Prescale);
    _tree->SetBranchAddress("singleE24SingleTau20SingleL1Group", &singleE24SingleTau20SingleL1Group, &b_singleE24SingleTau20SingleL1Group);
@@ -2481,10 +2584,11 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("singleE24SingleTau30Group", &singleE24SingleTau30Group, &b_singleE24SingleTau30Group);
    _tree->SetBranchAddress("singleE24SingleTau30Pass", &singleE24SingleTau30Pass, &b_singleE24SingleTau30Pass);
    _tree->SetBranchAddress("singleE24SingleTau30Prescale", &singleE24SingleTau30Prescale, &b_singleE24SingleTau30Prescale);
+*/
    _tree->SetBranchAddress("singleE25eta2p1TightGroup", &singleE25eta2p1TightGroup, &b_singleE25eta2p1TightGroup);
    _tree->SetBranchAddress("singleE25eta2p1TightPass", &singleE25eta2p1TightPass, &b_singleE25eta2p1TightPass);
    _tree->SetBranchAddress("singleE25eta2p1TightPrescale", &singleE25eta2p1TightPrescale, &b_singleE25eta2p1TightPrescale);
-   _tree->SetBranchAddress("singleE27SingleTau20SingleL1Group", &singleE27SingleTau20SingleL1Group, &b_singleE27SingleTau20SingleL1Group);
+/*   _tree->SetBranchAddress("singleE27SingleTau20SingleL1Group", &singleE27SingleTau20SingleL1Group, &b_singleE27SingleTau20SingleL1Group);
    _tree->SetBranchAddress("singleE27SingleTau20SingleL1Pass", &singleE27SingleTau20SingleL1Pass, &b_singleE27SingleTau20SingleL1Pass);
    _tree->SetBranchAddress("singleE27SingleTau20SingleL1Prescale", &singleE27SingleTau20SingleL1Prescale, &b_singleE27SingleTau20SingleL1Prescale);
    _tree->SetBranchAddress("singleE27TightGroup", &singleE27TightGroup, &b_singleE27TightGroup);
@@ -2502,6 +2606,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("singleE36SingleTau30Group", &singleE36SingleTau30Group, &b_singleE36SingleTau30Group);
    _tree->SetBranchAddress("singleE36SingleTau30Pass", &singleE36SingleTau30Pass, &b_singleE36SingleTau30Pass);
    _tree->SetBranchAddress("singleE36SingleTau30Prescale", &singleE36SingleTau30Prescale, &b_singleE36SingleTau30Prescale);
+*/
    _tree->SetBranchAddress("singleESingleMuGroup", &singleESingleMuGroup, &b_singleESingleMuGroup);
    _tree->SetBranchAddress("singleESingleMuPass", &singleESingleMuPass, &b_singleESingleMuPass);
    _tree->SetBranchAddress("singleESingleMuPrescale", &singleESingleMuPrescale, &b_singleESingleMuPrescale);
@@ -2520,12 +2625,14 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("singleIsoMu22eta2p1Group", &singleIsoMu22eta2p1Group, &b_singleIsoMu22eta2p1Group);
    _tree->SetBranchAddress("singleIsoMu22eta2p1Pass", &singleIsoMu22eta2p1Pass, &b_singleIsoMu22eta2p1Pass);
    _tree->SetBranchAddress("singleIsoMu22eta2p1Prescale", &singleIsoMu22eta2p1Prescale, &b_singleIsoMu22eta2p1Prescale);
-   _tree->SetBranchAddress("singleIsoMu24Group", &singleIsoMu24Group, &b_singleIsoMu24Group);
+/*   _tree->SetBranchAddress("singleIsoMu24Group", &singleIsoMu24Group, &b_singleIsoMu24Group);
+*/
    _tree->SetBranchAddress("singleIsoMu24Pass", &singleIsoMu24Pass, &b_singleIsoMu24Pass);
-   _tree->SetBranchAddress("singleIsoMu24Prescale", &singleIsoMu24Prescale, &b_singleIsoMu24Prescale);
+/*   _tree->SetBranchAddress("singleIsoMu24Prescale", &singleIsoMu24Prescale, &b_singleIsoMu24Prescale);
    _tree->SetBranchAddress("singleIsoMu24eta2p1Group", &singleIsoMu24eta2p1Group, &b_singleIsoMu24eta2p1Group);
    _tree->SetBranchAddress("singleIsoMu24eta2p1Pass", &singleIsoMu24eta2p1Pass, &b_singleIsoMu24eta2p1Pass);
    _tree->SetBranchAddress("singleIsoMu24eta2p1Prescale", &singleIsoMu24eta2p1Prescale, &b_singleIsoMu24eta2p1Prescale);
+*/
    _tree->SetBranchAddress("singleIsoMu27Group", &singleIsoMu27Group, &b_singleIsoMu27Group);
    _tree->SetBranchAddress("singleIsoMu27Pass", &singleIsoMu27Pass, &b_singleIsoMu27Pass);
    _tree->SetBranchAddress("singleIsoMu27Prescale", &singleIsoMu27Prescale, &b_singleIsoMu27Prescale);
@@ -2535,19 +2642,22 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("singleIsoTkMu22Group", &singleIsoTkMu22Group, &b_singleIsoTkMu22Group);
    _tree->SetBranchAddress("singleIsoTkMu22Pass", &singleIsoTkMu22Pass, &b_singleIsoTkMu22Pass);
    _tree->SetBranchAddress("singleIsoTkMu22Prescale", &singleIsoTkMu22Prescale, &b_singleIsoTkMu22Prescale);
-   _tree->SetBranchAddress("singleIsoTkMu22eta2p1Group", &singleIsoTkMu22eta2p1Group, &b_singleIsoTkMu22eta2p1Group);
+/*   _tree->SetBranchAddress("singleIsoTkMu22eta2p1Group", &singleIsoTkMu22eta2p1Group, &b_singleIsoTkMu22eta2p1Group);
+*/
    _tree->SetBranchAddress("singleIsoTkMu22eta2p1Pass", &singleIsoTkMu22eta2p1Pass, &b_singleIsoTkMu22eta2p1Pass);
-   _tree->SetBranchAddress("singleIsoTkMu22eta2p1Prescale", &singleIsoTkMu22eta2p1Prescale, &b_singleIsoTkMu22eta2p1Prescale);
+/*   _tree->SetBranchAddress("singleIsoTkMu22eta2p1Prescale", &singleIsoTkMu22eta2p1Prescale, &b_singleIsoTkMu22eta2p1Prescale);
    _tree->SetBranchAddress("singleIsoTkMu24Group", &singleIsoTkMu24Group, &b_singleIsoTkMu24Group);
+*/
    _tree->SetBranchAddress("singleIsoTkMu24Pass", &singleIsoTkMu24Pass, &b_singleIsoTkMu24Pass);
-   _tree->SetBranchAddress("singleIsoTkMu24Prescale", &singleIsoTkMu24Prescale, &b_singleIsoTkMu24Prescale);
+/*   _tree->SetBranchAddress("singleIsoTkMu24Prescale", &singleIsoTkMu24Prescale, &b_singleIsoTkMu24Prescale);
    _tree->SetBranchAddress("singleIsoTkMu24eta2p1Group", &singleIsoTkMu24eta2p1Group, &b_singleIsoTkMu24eta2p1Group);
    _tree->SetBranchAddress("singleIsoTkMu24eta2p1Pass", &singleIsoTkMu24eta2p1Pass, &b_singleIsoTkMu24eta2p1Pass);
    _tree->SetBranchAddress("singleIsoTkMu24eta2p1Prescale", &singleIsoTkMu24eta2p1Prescale, &b_singleIsoTkMu24eta2p1Prescale);
+*/
    _tree->SetBranchAddress("singleMu17SingleE12Group", &singleMu17SingleE12Group, &b_singleMu17SingleE12Group);
    _tree->SetBranchAddress("singleMu17SingleE12Pass", &singleMu17SingleE12Pass, &b_singleMu17SingleE12Pass);
    _tree->SetBranchAddress("singleMu17SingleE12Prescale", &singleMu17SingleE12Prescale, &b_singleMu17SingleE12Prescale);
-   _tree->SetBranchAddress("singleMu19eta2p1LooseTau20Group", &singleMu19eta2p1LooseTau20Group, &b_singleMu19eta2p1LooseTau20Group);
+/*   _tree->SetBranchAddress("singleMu19eta2p1LooseTau20Group", &singleMu19eta2p1LooseTau20Group, &b_singleMu19eta2p1LooseTau20Group);
    _tree->SetBranchAddress("singleMu19eta2p1LooseTau20Pass", &singleMu19eta2p1LooseTau20Pass, &b_singleMu19eta2p1LooseTau20Pass);
    _tree->SetBranchAddress("singleMu19eta2p1LooseTau20Prescale", &singleMu19eta2p1LooseTau20Prescale, &b_singleMu19eta2p1LooseTau20Prescale);
    _tree->SetBranchAddress("singleMu19eta2p1LooseTau20singleL1Group", &singleMu19eta2p1LooseTau20singleL1Group, &b_singleMu19eta2p1LooseTau20singleL1Group);
@@ -2559,15 +2669,17 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("singleMu23SingleE12DZGroup", &singleMu23SingleE12DZGroup, &b_singleMu23SingleE12DZGroup);
    _tree->SetBranchAddress("singleMu23SingleE12DZPass", &singleMu23SingleE12DZPass, &b_singleMu23SingleE12DZPass);
    _tree->SetBranchAddress("singleMu23SingleE12DZPrescale", &singleMu23SingleE12DZPrescale, &b_singleMu23SingleE12DZPrescale);
+*/
    _tree->SetBranchAddress("singleMu23SingleE12Group", &singleMu23SingleE12Group, &b_singleMu23SingleE12Group);
    _tree->SetBranchAddress("singleMu23SingleE12Pass", &singleMu23SingleE12Pass, &b_singleMu23SingleE12Pass);
    _tree->SetBranchAddress("singleMu23SingleE12Prescale", &singleMu23SingleE12Prescale, &b_singleMu23SingleE12Prescale);
-   _tree->SetBranchAddress("singleMu23SingleE8Group", &singleMu23SingleE8Group, &b_singleMu23SingleE8Group);
+/*   _tree->SetBranchAddress("singleMu23SingleE8Group", &singleMu23SingleE8Group, &b_singleMu23SingleE8Group);
    _tree->SetBranchAddress("singleMu23SingleE8Pass", &singleMu23SingleE8Pass, &b_singleMu23SingleE8Pass);
    _tree->SetBranchAddress("singleMu23SingleE8Prescale", &singleMu23SingleE8Prescale, &b_singleMu23SingleE8Prescale);
    _tree->SetBranchAddress("singleMu8SingleE23DZGroup", &singleMu8SingleE23DZGroup, &b_singleMu8SingleE23DZGroup);
    _tree->SetBranchAddress("singleMu8SingleE23DZPass", &singleMu8SingleE23DZPass, &b_singleMu8SingleE23DZPass);
    _tree->SetBranchAddress("singleMu8SingleE23DZPrescale", &singleMu8SingleE23DZPrescale, &b_singleMu8SingleE23DZPrescale);
+*/
    _tree->SetBranchAddress("singleMuGroup", &singleMuGroup, &b_singleMuGroup);
    _tree->SetBranchAddress("singleMuPass", &singleMuPass, &b_singleMuPass);
    _tree->SetBranchAddress("singleMuPrescale", &singleMuPrescale, &b_singleMuPrescale);
@@ -2586,12 +2698,13 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("singleMu_leg2_noisoGroup", &singleMu_leg2_noisoGroup, &b_singleMu_leg2_noisoGroup);
    _tree->SetBranchAddress("singleMu_leg2_noisoPass", &singleMu_leg2_noisoPass, &b_singleMu_leg2_noisoPass);
    _tree->SetBranchAddress("singleMu_leg2_noisoPrescale", &singleMu_leg2_noisoPrescale, &b_singleMu_leg2_noisoPrescale);
-   _tree->SetBranchAddress("singleTau140Group", &singleTau140Group, &b_singleTau140Group);
+/*   _tree->SetBranchAddress("singleTau140Group", &singleTau140Group, &b_singleTau140Group);
    _tree->SetBranchAddress("singleTau140Pass", &singleTau140Pass, &b_singleTau140Pass);
    _tree->SetBranchAddress("singleTau140Prescale", &singleTau140Prescale, &b_singleTau140Prescale);
    _tree->SetBranchAddress("singleTau140Trk50Group", &singleTau140Trk50Group, &b_singleTau140Trk50Group);
    _tree->SetBranchAddress("singleTau140Trk50Pass", &singleTau140Trk50Pass, &b_singleTau140Trk50Pass);
    _tree->SetBranchAddress("singleTau140Trk50Prescale", &singleTau140Trk50Prescale, &b_singleTau140Trk50Prescale);
+*/
    _tree->SetBranchAddress("tAbsEta", &tAbsEta, &b_tAbsEta);
    _tree->SetBranchAddress("tAgainstElectronLooseMVA6", &tAgainstElectronLooseMVA6, &b_tAgainstElectronLooseMVA6);
    _tree->SetBranchAddress("tAgainstElectronMVA6Raw", &tAgainstElectronMVA6Raw, &b_tAgainstElectronMVA6Raw);
@@ -2653,7 +2766,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tChargedIsoPtSum", &tChargedIsoPtSum, &b_tChargedIsoPtSum);
    _tree->SetBranchAddress("tChargedIsoPtSumdR03", &tChargedIsoPtSumdR03, &b_tChargedIsoPtSumdR03);
    _tree->SetBranchAddress("tComesFromHiggs", &tComesFromHiggs, &b_tComesFromHiggs);
-   _tree->SetBranchAddress("tDPhiToPfMet_ElectronEnDown", &tDPhiToPfMet_ElectronEnDown, &b_tDPhiToPfMet_ElectronEnDown);
+/*   _tree->SetBranchAddress("tDPhiToPfMet_ElectronEnDown", &tDPhiToPfMet_ElectronEnDown, &b_tDPhiToPfMet_ElectronEnDown);
    _tree->SetBranchAddress("tDPhiToPfMet_ElectronEnUp", &tDPhiToPfMet_ElectronEnUp, &b_tDPhiToPfMet_ElectronEnUp);
    _tree->SetBranchAddress("tDPhiToPfMet_JetEnDown", &tDPhiToPfMet_JetEnDown, &b_tDPhiToPfMet_JetEnDown);
    _tree->SetBranchAddress("tDPhiToPfMet_JetEnUp", &tDPhiToPfMet_JetEnUp, &b_tDPhiToPfMet_JetEnUp);
@@ -2667,6 +2780,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tDPhiToPfMet_TauEnUp", &tDPhiToPfMet_TauEnUp, &b_tDPhiToPfMet_TauEnUp);
    _tree->SetBranchAddress("tDPhiToPfMet_UnclusteredEnDown", &tDPhiToPfMet_UnclusteredEnDown, &b_tDPhiToPfMet_UnclusteredEnDown);
    _tree->SetBranchAddress("tDPhiToPfMet_UnclusteredEnUp", &tDPhiToPfMet_UnclusteredEnUp, &b_tDPhiToPfMet_UnclusteredEnUp);
+*/
    _tree->SetBranchAddress("tDPhiToPfMet_type1", &tDPhiToPfMet_type1, &b_tDPhiToPfMet_type1);
    _tree->SetBranchAddress("tDecayMode", &tDecayMode, &b_tDecayMode);
    _tree->SetBranchAddress("tDecayModeFinding", &tDecayModeFinding, &b_tDecayModeFinding);
@@ -2699,7 +2813,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tJetEtaEtaMoment", &tJetEtaEtaMoment, &b_tJetEtaEtaMoment);
    _tree->SetBranchAddress("tJetEtaPhiMoment", &tJetEtaPhiMoment, &b_tJetEtaPhiMoment);
    _tree->SetBranchAddress("tJetEtaPhiSpread", &tJetEtaPhiSpread, &b_tJetEtaPhiSpread);
-   _tree->SetBranchAddress("tJetHadronFlavour", &tJetHadronFlavour, &b_tJetHadronFlavour);
+//   _tree->SetBranchAddress("tJetHadronFlavour", &tJetHadronFlavour, &b_tJetHadronFlavour);
    _tree->SetBranchAddress("tJetPFCISVBtag", &tJetPFCISVBtag, &b_tJetPFCISVBtag);
    _tree->SetBranchAddress("tJetPartonFlavour", &tJetPartonFlavour, &b_tJetPartonFlavour);
    _tree->SetBranchAddress("tJetPhiPhiMoment", &tJetPhiPhiMoment, &b_tJetPhiPhiMoment);
@@ -2715,7 +2829,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tMatchesDoubleTau35Path", &tMatchesDoubleTau35Path, &b_tMatchesDoubleTau35Path);
    _tree->SetBranchAddress("tMatchesDoubleTau40Filter", &tMatchesDoubleTau40Filter, &b_tMatchesDoubleTau40Filter);
    _tree->SetBranchAddress("tMatchesDoubleTau40Path", &tMatchesDoubleTau40Path, &b_tMatchesDoubleTau40Path);
-   _tree->SetBranchAddress("tMatchesDoubleTauCmbIso35RegFilter", &tMatchesDoubleTauCmbIso35RegFilter, &b_tMatchesDoubleTauCmbIso35RegFilter);
+/*   _tree->SetBranchAddress("tMatchesDoubleTauCmbIso35RegFilter", &tMatchesDoubleTauCmbIso35RegFilter, &b_tMatchesDoubleTauCmbIso35RegFilter);
    _tree->SetBranchAddress("tMatchesDoubleTauCmbIso35RegPath", &tMatchesDoubleTauCmbIso35RegPath, &b_tMatchesDoubleTauCmbIso35RegPath);
    _tree->SetBranchAddress("tMatchesDoubleTauCmbIso40Filter", &tMatchesDoubleTauCmbIso40Filter, &b_tMatchesDoubleTauCmbIso40Filter);
    _tree->SetBranchAddress("tMatchesDoubleTauCmbIso40Path", &tMatchesDoubleTauCmbIso40Path, &b_tMatchesDoubleTauCmbIso40Path);
@@ -2733,7 +2847,8 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tMatchesMu19Tau20sL1Path", &tMatchesMu19Tau20sL1Path, &b_tMatchesMu19Tau20sL1Path);
    _tree->SetBranchAddress("tMatchesMu21Tau20sL1Filter", &tMatchesMu21Tau20sL1Filter, &b_tMatchesMu21Tau20sL1Filter);
    _tree->SetBranchAddress("tMatchesMu21Tau20sL1Path", &tMatchesMu21Tau20sL1Path, &b_tMatchesMu21Tau20sL1Path);
-   _tree->SetBranchAddress("tMtToPfMet_ElectronEnDown", &tMtToPfMet_ElectronEnDown, &b_tMtToPfMet_ElectronEnDown);
+*/
+/*   _tree->SetBranchAddress("tMtToPfMet_ElectronEnDown", &tMtToPfMet_ElectronEnDown, &b_tMtToPfMet_ElectronEnDown);
    _tree->SetBranchAddress("tMtToPfMet_ElectronEnUp", &tMtToPfMet_ElectronEnUp, &b_tMtToPfMet_ElectronEnUp);
    _tree->SetBranchAddress("tMtToPfMet_JetEnDown", &tMtToPfMet_JetEnDown, &b_tMtToPfMet_JetEnDown);
    _tree->SetBranchAddress("tMtToPfMet_JetEnUp", &tMtToPfMet_JetEnUp, &b_tMtToPfMet_JetEnUp);
@@ -2747,7 +2862,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tMtToPfMet_TauEnDown", &tMtToPfMet_TauEnDown, &b_tMtToPfMet_TauEnDown);
    _tree->SetBranchAddress("tMtToPfMet_TauEnUp", &tMtToPfMet_TauEnUp, &b_tMtToPfMet_TauEnUp);
    _tree->SetBranchAddress("tMtToPfMet_UnclusteredEnDown", &tMtToPfMet_UnclusteredEnDown, &b_tMtToPfMet_UnclusteredEnDown);
-   _tree->SetBranchAddress("tMtToPfMet_UnclusteredEnUp", &tMtToPfMet_UnclusteredEnUp, &b_tMtToPfMet_UnclusteredEnUp);
+   _tree->SetBranchAddress("tMtToPfMet_UnclusteredEnUp", &tMtToPfMet_UnclusteredEnUp, &b_tMtToPfMet_UnclusteredEnUp);*/
    _tree->SetBranchAddress("tMtToPfMet_type1", &tMtToPfMet_type1, &b_tMtToPfMet_type1);
    _tree->SetBranchAddress("tMuOverlap", &tMuOverlap, &b_tMuOverlap);
    _tree->SetBranchAddress("tMuonIdIsoStdVtxOverlap", &tMuonIdIsoStdVtxOverlap, &b_tMuonIdIsoStdVtxOverlap);
@@ -2782,6 +2897,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tRerunMVArun2v1DBoldDMwLTVTight", &tRerunMVArun2v1DBoldDMwLTVTight, &b_tRerunMVArun2v1DBoldDMwLTVTight);
    _tree->SetBranchAddress("tRerunMVArun2v1DBoldDMwLTVVTight", &tRerunMVArun2v1DBoldDMwLTVVTight, &b_tRerunMVArun2v1DBoldDMwLTVVTight);
    _tree->SetBranchAddress("tRerunMVArun2v1DBoldDMwLTraw", &tRerunMVArun2v1DBoldDMwLTraw, &b_tRerunMVArun2v1DBoldDMwLTraw);
+
    _tree->SetBranchAddress("tVZ", &tVZ, &b_tVZ);
    _tree->SetBranchAddress("tZTTGenDR", &tZTTGenDR, &b_tZTTGenDR);
    _tree->SetBranchAddress("tZTTGenEta", &tZTTGenEta, &b_tZTTGenEta);
@@ -2789,10 +2905,11 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tZTTGenPhi", &tZTTGenPhi, &b_tZTTGenPhi);
    _tree->SetBranchAddress("tZTTGenPt", &tZTTGenPt, &b_tZTTGenPt);
    _tree->SetBranchAddress("t_m_collinearmass", &t_m_collinearmass, &b_t_m_collinearmass);
-   _tree->SetBranchAddress("t_m_collinearmass_JetEnDown", &t_m_collinearmass_JetEnDown, &b_t_m_collinearmass_JetEnDown);
+/*   _tree->SetBranchAddress("t_m_collinearmass_JetEnDown", &t_m_collinearmass_JetEnDown, &b_t_m_collinearmass_JetEnDown);
    _tree->SetBranchAddress("t_m_collinearmass_JetEnUp", &t_m_collinearmass_JetEnUp, &b_t_m_collinearmass_JetEnUp);
    _tree->SetBranchAddress("t_m_collinearmass_UnclusteredEnDown", &t_m_collinearmass_UnclusteredEnDown, &b_t_m_collinearmass_UnclusteredEnDown);
    _tree->SetBranchAddress("t_m_collinearmass_UnclusteredEnUp", &t_m_collinearmass_UnclusteredEnUp, &b_t_m_collinearmass_UnclusteredEnUp);
+*/
    _tree->SetBranchAddress("tauVetoPt20Loose3HitsVtx", &tauVetoPt20Loose3HitsVtx, &b_tauVetoPt20Loose3HitsVtx);
    _tree->SetBranchAddress("tauVetoPt20TightMVALTVtx", &tauVetoPt20TightMVALTVtx, &b_tauVetoPt20TightMVALTVtx);
    _tree->SetBranchAddress("topQuarkPt1", &topQuarkPt1, &b_topQuarkPt1);
@@ -2819,6 +2936,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("type1_pfMet_shiftedPhi_TauEnUp", &type1_pfMet_shiftedPhi_TauEnUp, &b_type1_pfMet_shiftedPhi_TauEnUp);
    _tree->SetBranchAddress("type1_pfMet_shiftedPhi_UnclusteredEnDown", &type1_pfMet_shiftedPhi_UnclusteredEnDown, &b_type1_pfMet_shiftedPhi_UnclusteredEnDown);
    _tree->SetBranchAddress("type1_pfMet_shiftedPhi_UnclusteredEnUp", &type1_pfMet_shiftedPhi_UnclusteredEnUp, &b_type1_pfMet_shiftedPhi_UnclusteredEnUp);
+
    _tree->SetBranchAddress("type1_pfMet_shiftedPt_ElectronEnDown", &type1_pfMet_shiftedPt_ElectronEnDown, &b_type1_pfMet_shiftedPt_ElectronEnDown);
    _tree->SetBranchAddress("type1_pfMet_shiftedPt_ElectronEnUp", &type1_pfMet_shiftedPt_ElectronEnUp, &b_type1_pfMet_shiftedPt_ElectronEnUp);
    _tree->SetBranchAddress("type1_pfMet_shiftedPt_JetEnDown", &type1_pfMet_shiftedPt_JetEnDown, &b_type1_pfMet_shiftedPt_JetEnDown);
@@ -2861,7 +2979,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("vbfMVA_JetEnDown", &vbfMVA_JetEnDown, &b_vbfMVA_JetEnDown);
    _tree->SetBranchAddress("vbfMVA_JetEnUp", &vbfMVA_JetEnUp, &b_vbfMVA_JetEnUp);
    _tree->SetBranchAddress("vbfMass", &vbfMass, &b_vbfMass);
-   _tree->SetBranchAddress("vbfMass_JetAbsoluteFlavMapDown", &vbfMass_JetAbsoluteFlavMapDown, &b_vbfMass_JetAbsoluteFlavMapDown);
+/*   _tree->SetBranchAddress("vbfMass_JetAbsoluteFlavMapDown", &vbfMass_JetAbsoluteFlavMapDown, &b_vbfMass_JetAbsoluteFlavMapDown);
    _tree->SetBranchAddress("vbfMass_JetAbsoluteFlavMapUp", &vbfMass_JetAbsoluteFlavMapUp, &b_vbfMass_JetAbsoluteFlavMapUp);
    _tree->SetBranchAddress("vbfMass_JetAbsoluteMPFBiasDown", &vbfMass_JetAbsoluteMPFBiasDown, &b_vbfMass_JetAbsoluteMPFBiasDown);
    _tree->SetBranchAddress("vbfMass_JetAbsoluteMPFBiasUp", &vbfMass_JetAbsoluteMPFBiasUp, &b_vbfMass_JetAbsoluteMPFBiasUp);
@@ -2871,9 +2989,10 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("vbfMass_JetAbsoluteStatUp", &vbfMass_JetAbsoluteStatUp, &b_vbfMass_JetAbsoluteStatUp);
    _tree->SetBranchAddress("vbfMass_JetClosureDown", &vbfMass_JetClosureDown, &b_vbfMass_JetClosureDown);
    _tree->SetBranchAddress("vbfMass_JetClosureUp", &vbfMass_JetClosureUp, &b_vbfMass_JetClosureUp);
+*/
    _tree->SetBranchAddress("vbfMass_JetEnDown", &vbfMass_JetEnDown, &b_vbfMass_JetEnDown);
    _tree->SetBranchAddress("vbfMass_JetEnUp", &vbfMass_JetEnUp, &b_vbfMass_JetEnUp);
-   _tree->SetBranchAddress("vbfMass_JetFlavorQCDDown", &vbfMass_JetFlavorQCDDown, &b_vbfMass_JetFlavorQCDDown);
+/*   _tree->SetBranchAddress("vbfMass_JetFlavorQCDDown", &vbfMass_JetFlavorQCDDown, &b_vbfMass_JetFlavorQCDDown);
    _tree->SetBranchAddress("vbfMass_JetFlavorQCDUp", &vbfMass_JetFlavorQCDUp, &b_vbfMass_JetFlavorQCDUp);
    _tree->SetBranchAddress("vbfMass_JetFragmentationDown", &vbfMass_JetFragmentationDown, &b_vbfMass_JetFragmentationDown);
    _tree->SetBranchAddress("vbfMass_JetFragmentationUp", &vbfMass_JetFragmentationUp, &b_vbfMass_JetFragmentationUp);
@@ -2939,6 +3058,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("vbfNJets30", &vbfNJets30, &b_vbfNJets30);
    _tree->SetBranchAddress("vbfNJets30_JetEnDown", &vbfNJets30_JetEnDown, &b_vbfNJets30_JetEnDown);
    _tree->SetBranchAddress("vbfNJets30_JetEnUp", &vbfNJets30_JetEnUp, &b_vbfNJets30_JetEnUp);
+*/
    _tree->SetBranchAddress("vbfVispt", &vbfVispt, &b_vbfVispt);
    _tree->SetBranchAddress("vbfVispt_JetEnDown", &vbfVispt_JetEnDown, &b_vbfVispt_JetEnDown);
    _tree->SetBranchAddress("vbfVispt_JetEnUp", &vbfVispt_JetEnUp, &b_vbfVispt_JetEnUp);
