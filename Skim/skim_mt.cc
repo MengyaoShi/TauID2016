@@ -254,7 +254,7 @@ Run_Tree->Branch("byVLooseIsolationRerunMVArun2v1DBoldDMwLT_2", &byVLooseIsolati
 	if (fabs(tree->mPVDXY)>0.045) continue;
         if (fabs(tree->mPVDZ)>0.2) continue;
         if (fabs(tree->tPVDZ)>0.2) continue;
-        if (dau1.Pt()<21 or dau2.Pt()<19) continue;
+        if (dau1.Pt()<10 or dau2.Pt()<10) continue;
         if (fabs(dau1.Eta())>2.4 or fabs(dau2.Eta())>2.3) continue;
 	if (!tree->tDecayModeFinding) continue;
  	if (fabs(tree->tCharge)>1) continue;
@@ -266,8 +266,8 @@ Run_Tree->Branch("byVLooseIsolationRerunMVArun2v1DBoldDMwLT_2", &byVLooseIsolati
 	if (tree->eVetoZTTp001dxyzR0>0) continue;
 	if (tree->muVetoZTTp001dxyzR0>1) continue;
 	if (tree->dimuonVeto>0) continue;
-        if (!tree->tAgainstMuonTight3) continue;//FIXME
-        if (!tree->tAgainstElectronVLooseMVA6) continue;//FIXME
+        //if (!tree->tAgainstMuonTight3) continue;//FIXME
+        //if (!tree->tAgainstElectronVLooseMVA6) continue;//FIXME
 	if (tree->mRelPFIsoDBDefaultR04>0.15) continue;
 	if (evt_now!=evt_before){
 	   mupt_before=tree->mPt;

@@ -12,7 +12,7 @@ if __name__ == "__main__":
     print len(sample) 
 
     
-    datadir="/nfs_scratch/MengyaoShi/tauid_25may/"
+    datadir="/afs/cern.ch/work/m/mshi/public/outputTauID/"
     all_File = open("do_submit.sh" , 'w')
     line=""
     for j in range(0,len(name)):
@@ -24,7 +24,7 @@ if __name__ == "__main__":
        command1=""
        ligne=0
        for i in f.readlines():
-	   command1=command1+"./skim_mt.exe mc "+datadir+"Out_"+name[j]+"/"+name[j]+str(ligne)+".root " + i + " " + recoil[j] +" \n"
+	   command1=command1+"./skim_mt.exe mc "+datadir+"Out_"+name[j]+"/"+name[j]+str(ligne)+".root " + i.rstrip('\n') + " " + recoil[j] +" \n"
            ligne=ligne+1
        submit_File.write(command1)
        submit_File.close()

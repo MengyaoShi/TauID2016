@@ -31,7 +31,8 @@ def getFileInOneFolderList(inDir, inputName):
     tempfile.write(process.communicate()[0])
     tempfile.close()
     for line in fileinput.input([inputName], inplace=True):
-        sys.stdout.write('{l}'.format(l=line[8:]))
+        sys.stdout.write('root://eoscms/{l}'.format(l=line))
+        #sys.stdout.write('{l}'.format(l=line[8:]))
 
 
 inputName_='testscript.txt'
