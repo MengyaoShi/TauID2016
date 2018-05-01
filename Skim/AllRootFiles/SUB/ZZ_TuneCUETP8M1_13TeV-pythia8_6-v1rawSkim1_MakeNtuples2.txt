@@ -1,0 +1,3 @@
+root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/mshi/ZZ_TuneCUETP8M1_13TeV-pythia8_6-v1rawSkim1_MakeNtuples2/ZZ_TuneCUETP8M1_13TeV-pythia8_6-v1rawSkim1_MakeNtuples2/180428_000002/0000/ntuplize_1.root
+root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/mshi/ZZ_TuneCUETP8M1_13TeV-pythia8_6-v1rawSkim1_MakeNtuples2/ZZ_TuneCUETP8M1_13TeV-pythia8_6-v1rawSkim1_MakeNtuples2/180428_000002/0000/ntuplize_2.root
+root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/mshi/ZZ_TuneCUETP8M1_13TeV-pythia8_6-v1rawSkim1_MakeNtuples2/ZZ_TuneCUETP8M1_13TeV-pythia8_6-v1rawSkim1_MakeNtuples2/180428_000002/0000/ntuplize_3.root
