@@ -20,6 +20,7 @@ if __name__ == "__main__":
 
     with open(options.input, 'r') as infile, open("submit.sh",'w') as outfile:
        for line in infile:
+           print line
            for src, target in replacements.iteritems():
                line = line.replace(src, target)
            outfile.write(line)
