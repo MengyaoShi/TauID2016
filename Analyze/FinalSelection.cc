@@ -151,7 +151,7 @@ int main(int argc, char** argv) {
     arbre->SetBranchAddress("decayModeFinding_2",&decayModeFinding_2);
     arbre->SetBranchAddress("charged_signalCone_2",&charged_signalCone_2);
     arbre->SetBranchAddress("charged_isoCone_2",&charged_isoCone_2);
-    arbre->SetBranchAddress("decayMode_2",&decayMode_2);
+    //arbre->SetBranchAddress("l2_decayMode",&l2_decayMode);
     arbre->SetBranchAddress("againstElectronVLooseMVA6_2",&againstElectronVLooseMVA6_2);
     arbre->SetBranchAddress("againstElectronLooseMVA6_2",&againstElectronLooseMVA6_2);
     arbre->SetBranchAddress("againstElectronMediumMVA6_2",&againstElectronMediumMVA6_2);
@@ -160,7 +160,7 @@ int main(int argc, char** argv) {
     arbre->SetBranchAddress("againstMuonLoose3_2",&againstMuonLoose3_2);
     arbre->SetBranchAddress("againstMuonTight3_2",&againstMuonTight3_2);
     arbre->SetBranchAddress("l2_decayMode",&l2_decayMode);
-    arbre->SetBranchAddress("isZmt",&isZmt);
+    //arbre->SetBranchAddress("isZmt",&isZmt);
     arbre->SetBranchAddress("amcatNLO_weight",&amcatNLO_weight);
     arbre->SetBranchAddress("m_vis",&m_vis);
     arbre->SetBranchAddress("npu",&npu);
