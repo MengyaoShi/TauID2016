@@ -18,16 +18,16 @@ if __name__ == "__main__":
     if (options.scale=="down"):
         postfix="_TESDown"
 
-    fDYB=ROOT.TFile("files_"+options.scale+"/DYB.root","r")
-    fDYJ=ROOT.TFile("files_"+options.scale+"/DYJ.root","r")
-    fDYS=ROOT.TFile("files_"+options.scale+"/DYS.root","r")
-    fW=ROOT.TFile("files_"+options.scale+"/Wunscaled.root","r")
-    fTT=ROOT.TFile("files_"+options.scale+"/TT.root","r")
-    fVV=ROOT.TFile("files_"+options.scale+"/VV.root","r")
-    fData=ROOT.TFile("files_nominal/Data.root","r")
-    fout=ROOT.TFile("files_"+anti+options.scale+"/W.root","recreate")
+    fDYB=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/DYB.root","r")
+    fDYJ=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/DYJ.root","r")
+    fDYS=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/DYS.root","r")
+    fW=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/Wunscaled.root","r")
+    fTT=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/TT.root","r")
+    fVV=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/VV.root","r")
+    fData=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/Data.root","r")
+    fout=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+anti+options.scale+"/W.root","recreate")
 
-    fW_=ROOT.TFile("files_"+anti+options.scale+"/Wunscaled.root","r")
+    fW_=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+anti+options.scale+"/Wunscaled.root","r")
 
     print fData.Get("n70").GetBinContent(3)
     print fVV.Get("n70").GetBinContent(3)
