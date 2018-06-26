@@ -26,7 +26,8 @@
 #include "tr_Tree.h"
 #include "ScaleFactor.h"
 #include "LumiReweightingStandAlone.h"
-
+#include "BTagCalibrationStandalone.h"
+#include "BTagCalibrationStandalone.cpp"
 using namespace std;
 
 int main(int argc, char** argv) {
@@ -50,7 +51,7 @@ int main(int argc, char** argv) {
         pumin = atof(argv[15]);
         pumax = atof(argv[16]);
     }
-
+    string bTagSFShift_="central";
     TFile *f_Double = new TFile(input.c_str());
     cout<<"XXXXXXXXXXXXX "<<input.c_str()<<" XXXXXXXXXXXX"<<endl;
     TTree *arbre = (TTree*) f_Double->Get("mutau_tree");
@@ -231,7 +232,20 @@ int main(int argc, char** argv) {
 
    TString postfixTES[8]={"_CMS_scale_t_13TeVDown","_CMS_scale_t_13TeVUp","_CMS_scale_t_1prong_13TeVDown","_CMS_scale_t_1prong_13TeVUp","_CMS_scale_t_1prong1pizero_13TeVDown","_CMS_scale_t_1prong1pizero_13TeVUp","_CMS_scale_t_3prong_13TeVDown","_CMS_scale_t_3prong_13TeVUp"};
    TString postfixLES[6]={"_CMS_scale_faket_13TeVDown","_CMS_scale_faket_13TeVUp","_CMS_scale_faket_1prong_13TeVDown","_CMS_scale_faket_1prong_13TeVUp","_CMS_scale_faket_1prong1pizero_13TeVDown","_CMS_scale_faket_1prong1pizero_13TeVUp"};
-
+//this is where btagging start
+// from Kyle
+  std::cout << "===> Loading the input .csv SF file..." << std::endl;
+  
+  std::string inputCSVfile = "/afs/cern.ch/work/k/ktos/public/CMSSW_8_0_17/src/AnalyzerGeneratorRecoVariousFunctions/Analyzer/FILE_TESTS/CSVv2_Moriond17_B_H.csv";  
+  BTagCalibration calib("csvv2", inputCSVfile);
+  std::cout << "bTagSFShift_= " << bTagSFShift_ << "  BTagEntry::FLAV_C=" << BTagEntry::FLAV_C << "  BTagEntry::FLAV_B=" << BTagEntry::FLAV_B <<  std::endl;
+  BTagCalibrationReader reader(BTagEntry::OP_MEDIUM, bTagSFShift_) ;
+  
+  reader.load(calib, BTagEntry::FLAV_B, "comb");
+  reader.load(calib, BTagEntry::FLAV_C, "comb");
+  reader.load(calib, BTagEntry::FLAV_UDSG, "incl");
+  std::cout  << "initialized reader" << std::endl;
+// b tagging ends.
    ScaleFactor * myScaleFactor_trg = new ScaleFactor();
    myScaleFactor_trg->init_ScaleFactor("LeptonEfficiencies/Muon/Run2016BtoH/Muon_Mu22OR_eta2p1_eff.root");
    ScaleFactor * myScaleFactor_id = new ScaleFactor();
@@ -256,7 +270,6 @@ int main(int argc, char** argv) {
 	if (sample=="data_obs" && !id_m_ICHEPmedium_1 && run<278808) continue;
         bool isSingleLep = (passIsoMu22 && matchIsoMu22_1 && filterIsoMu22_1) or (passIsoTkMu22 && matchIsoTkMu22_1 && filterIsoTkMu22_1) or (passIsoMu22eta2p1 && matchIsoMu22eta2p1_1 && filterIsoMu22eta2p1_1) or (passIsoTkMu22eta2p1 && matchIsoTkMu22eta2p1_1 && filterIsoTkMu22eta2p1_1);
 	if (!isSingleLep) continue;
-
 //FIXME trigger matching 
 //
         bool tauIsolation;
@@ -351,7 +364,8 @@ int main(int argc, char** argv) {
 	bool fillSS=false;
    	if (fabs(eta_2)>2.3) continue;
 	if (!againstElectronVLooseMVA6_2) continue;
-	if (!againstMuonTight3_2) continue;
+	//if (!againstMuonTight3_2) continue;
+        if (!againstMuonLoose3_2) continue;
 	if (fabs(mytau.Eta())<etamin) continue;
 	if (fabs(mytau.Eta())>etamax) continue;
 	if (decaymodefinding=="old" && !decayModeFinding_2) continue;
@@ -405,6 +419,7 @@ int main(int argc, char** argv) {
             else if (fabs(eta_2)<1.7) aweight=aweight*1.770;
             else if (fabs(eta_2)<2.3) aweight=aweight*1.713;
 	}
+        //std::cout<<"debug, n70 aweight="<<aweight<<std::endl;
 
 	//if (sample!="data_obs") aweight=aweight*20.1/36.8;
 	//if (sample=="DYB") continue;
@@ -457,7 +472,8 @@ int main(int argc, char** argv) {
 	   bool cut_zeta=p_zeta_mis-0.85*pzeta_vis>-25;
 
 	   //************************* Fill histograms **********************
-	   float var=(mytau+mymu).M();
+	   //float var=(mytau+mymu).M();
+           float var=mytau.Pt();
 	   //if (variable=="ntracks"){
 	      //var=charged_signalCone_2+charged_isoCone_2;
 	   //}
