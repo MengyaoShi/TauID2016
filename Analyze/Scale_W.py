@@ -28,9 +28,11 @@ if __name__ == "__main__":
     fout=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+anti+options.scale+"/W.root","recreate")
 
     fW_=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+anti+options.scale+"/Wunscaled.root","r")
-
+    print options.scale
     print fData.Get("n70").GetBinContent(3)
     print fVV.Get("n70").GetBinContent(3)
+    print fVV.Get("n70").GetBinContent(2)
+    print fVV.Get("n70").GetBinContent(1)
     print fDYB.Get("n70").GetBinContent(3)
     print fDYS.Get("n70").GetBinContent(3)
     print fTT.Get("n70").GetBinContent(3)
@@ -49,6 +51,7 @@ if __name__ == "__main__":
     print "nb events: ",fData.Get("n70").GetBinContent(1)
     print QCDpassSS,QCDfailSS
     SFpassOS=(fData.Get("n70").GetBinContent(1)-fVV.Get("n70").GetBinContent(1)-fDYJ.Get("n70").GetBinContent(1)-fDYB.Get("n70").GetBinContent(1)-fDYS.Get("n70").GetBinContent(1)-fTT.Get("n70").GetBinContent(1)-1.05*QCDpassSS)/(fW.Get("n70").GetBinContent(1))
+    print "this is debugging code, and SFpassOS, SFfailOS, SFall="
     SFfailOS=(fData.Get("n70").GetBinContent(2)-fVV.Get("n70").GetBinContent(2)-fDYJ.Get("n70").GetBinContent(2)-fDYB.Get("n70").GetBinContent(2)-fDYS.Get("n70").GetBinContent(2)-fTT.Get("n70").GetBinContent(2)-1.05*QCDfailSS)/fW.Get("n70").GetBinContent(2)
     SFall=(fData.Get("n70").GetBinContent(1)+fData.Get("n70").GetBinContent(2)-fVV.Get("n70").GetBinContent(1)-fVV.Get("n70").GetBinContent(2)-fDYJ.Get("n70").GetBinContent(1)-fDYJ.Get("n70").GetBinContent(2)-fDYB.Get("n70").GetBinContent(1)-fDYB.Get("n70").GetBinContent(2)-fDYS.Get("n70").GetBinContent(1)-fDYS.Get("n70").GetBinContent(2)-fTT.Get("n70").GetBinContent(1)-fTT.Get("n70").GetBinContent(2)-1.05*QCDall)/(fW.Get("n70").GetBinContent(1)+fW.Get("n70").GetBinContent(2))
     print SFpassOS, SFfailOS,SFall

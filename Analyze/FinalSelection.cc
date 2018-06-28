@@ -198,8 +198,8 @@ int main(int argc, char** argv) {
    //float binsPass[] = {40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150};
    //float bins[] = {40,55,70,85,100,115,130,145,160,175,190,205};
    //float binsPass[] = {40,55,70,85,100,115,130};
-   float bins[] = {40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200};
-   float binsPass[] = {40,50,60,70,80,90,110,130,150};
+   float bins[] = {0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200};
+   float binsPass[] = {0,10,20,30,40,50,60,70,80,90,110,130,150};
    //float bins[] = {40,60,80,100,120,140,160,180,200};
    //float binsPass[] = {40,60,80,100,120,140};
 
@@ -259,6 +259,7 @@ int main(int argc, char** argv) {
    Int_t nentries_wtn = (Int_t) arbre->GetEntries();
    for (Int_t i = 0; i < nentries_wtn; i++) {
         arbre->GetEntry(i);
+        if (nbtag>0) continue;
         if (i % 20000 == 0) fprintf(stdout, "\r  Processed events: %8d of %8d ", i, nentries_wtn);
         fflush(stdout);
 	bool print=false;
@@ -364,8 +365,8 @@ int main(int argc, char** argv) {
 	bool fillSS=false;
    	if (fabs(eta_2)>2.3) continue;
 	if (!againstElectronVLooseMVA6_2) continue;
-	//if (!againstMuonTight3_2) continue;
-        if (!againstMuonLoose3_2) continue;
+	if (!againstMuonTight3_2) continue;
+        //if (!againstMuonLoose3_2) continue;
 	if (fabs(mytau.Eta())<etamin) continue;
 	if (fabs(mytau.Eta())>etamax) continue;
 	if (decaymodefinding=="old" && !decayModeFinding_2) continue;
@@ -472,8 +473,8 @@ int main(int argc, char** argv) {
 	   bool cut_zeta=p_zeta_mis-0.85*pzeta_vis>-25;
 
 	   //************************* Fill histograms **********************
-	   //float var=(mytau+mymu).M();
-           float var=mytau.Pt();
+	   float var=(mytau+mymu).M();
+           //float var=mytau.Pt();
 	   //if (variable=="ntracks"){
 	      //var=charged_signalCone_2+charged_isoCone_2;
 	   //}
