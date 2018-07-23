@@ -94,6 +94,7 @@ int main(int argc, char** argv) {
     arbre->SetBranchAddress("evt", &evt);
     arbre->SetBranchAddress("NUP", &NUP);
     arbre->SetBranchAddress("npv", &npv);
+    arbre->SetBranchAddress("tJetHadronFlavour", &tJetHadronFlavour);
     arbre->SetBranchAddress("px_1", &px_1);
     arbre->SetBranchAddress("py_1", &py_1);
     arbre->SetBranchAddress("pz_1", &pz_1);
@@ -198,8 +199,8 @@ int main(int argc, char** argv) {
    //float binsPass[] = {40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150};
    //float bins[] = {40,55,70,85,100,115,130,145,160,175,190,205};
    //float binsPass[] = {40,55,70,85,100,115,130};
-   float bins[] = {0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200};
-   float binsPass[] = {0,10,20,30,40,50,60,70,80,90,110,130,150};
+   float bins[] = {0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0};
+   float binsPass[] = {0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0};
    //float bins[] = {40,60,80,100,120,140,160,180,200};
    //float binsPass[] = {40,60,80,100,120,140};
 
@@ -259,12 +260,29 @@ int main(int argc, char** argv) {
    Int_t nentries_wtn = (Int_t) arbre->GetEntries();
    for (Int_t i = 0; i < nentries_wtn; i++) {
         arbre->GetEntry(i);
-        if (nbtag>0) continue;
+        //btagging
+        csvSF = -1
+        bTagValue=
+        if (tJetHadronFlavour==5)
+            csvSF = reader.eval(BTagEntry::FLAV_B, fabs(eta_2), pt_2, bTagValue);
+        else if( tJetHadronFlavour == 4 )
+            csvSF = reader.eval(BTagEntry::FLAV_C, fabs(eta_2), pt_2, bTagValue);
+
+        else 
+            csvSF = reader.eval(BTagEntry::FLAV_UDSG, fabs(eta_2), pt_2, bTagValue);
+	std::cout << "csvSF=" << csvSF << "  hadronFlavor=" << tJethadronFlavor << " bTagValue=" << bTagValue << std::endl;
+
+        double csvWeight = 1;
+        if (sample!="data_obs" && bTagValue >= 0.8484)
+            csvWeight = 1 - csvSF;
+
+        std::cout << "csvWeight= " << csvWeight << std::endl;
+        if (sample=="data_obs" && bTagValue> 0.8484) continue;
         if (i % 20000 == 0) fprintf(stdout, "\r  Processed events: %8d of %8d ", i, nentries_wtn);
         fflush(stdout);
 	bool print=false;
         if (npv<pumin or npv>=pumax) continue;
-	if (pt_1<23) continue;
+	if (pt_1<26) continue;
 	if (fabs(eta_1)>2.099) continue;
 	if (sample!="data_obs" && !id_m_medium_1) continue;
 	if (sample=="data_obs" && !id_m_medium_1 && run>=278808) continue;
@@ -272,7 +290,7 @@ int main(int argc, char** argv) {
         bool isSingleLep = (passIsoMu22 && matchIsoMu22_1 && filterIsoMu22_1) or (passIsoTkMu22 && matchIsoTkMu22_1 && filterIsoTkMu22_1) or (passIsoMu22eta2p1 && matchIsoMu22eta2p1_1 && filterIsoMu22eta2p1_1) or (passIsoTkMu22eta2p1 && matchIsoTkMu22eta2p1_1 && filterIsoTkMu22eta2p1_1);
 	if (!isSingleLep) continue;
 //FIXME trigger matching 
-//
+///
         bool tauIsolation;
 	if (isolation=="comb3T")
            tauIsolation=byTightCombinedIsolationDeltaBetaCorr3Hits_2;
@@ -402,7 +420,7 @@ int main(int argc, char** argv) {
 	float sf_trk=1.0;
 	if (sample!="data_obs")
 	   sf_trk=(16.7/37.8)*1.0+(20.1/37.8)*h_Trk->Eval(eta_1);
-	float correction=sf_iso*sf_trg*sf_id*sf_trk*LumiWeights_12->weight(npu);
+	float correction=sf_iso*sf_trg*sf_id*sf_trk*LumiWeights_12->weight(npu)*csvWeight;
 //cout<<correction<<" "<<sf_iso<<" "<<sf_trg<<" "<<sf_id<<" "<<sf_trk<<" "<<LumiWeights_12->weight(npu)<<endl;
 	float aweight=weight*correction;
 	if (sample=="data_obs") aweight=1.0;
@@ -473,7 +491,7 @@ int main(int argc, char** argv) {
 	   bool cut_zeta=p_zeta_mis-0.85*pzeta_vis>-25;
 
 	   //************************* Fill histograms **********************
-	   float var=(mytau+mymu).M();
+	   float var=dR(eta_1, phi_1, eta_2, phi_2);
            //float var=mytau.Pt();
 	   //if (variable=="ntracks"){
 	      //var=charged_signalCone_2+charged_isoCone_2;

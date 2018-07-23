@@ -48,7 +48,7 @@ float byLooseCombinedIsolationDeltaBetaCorr3HitsdR03_2, byMediumCombinedIsolatio
 float charged_signalCone_2, charged_isoCone_2, trackpt_2;
 float chargedIso_2, puIso_2, neutralIso_2, photonIso_2;
 float extratau_veto, pt_top1, pt_top2, genweight, dphi_12, dphi_mumet, dphi_taumet;
-float aMCatNLO_weight, numGenJets,jetPt_2;
+float aMCatNLO_weight, numGenJets,jetPt_2, tJetHadronFlavour, j1hadronflavor, j2hadronflavor, jb1hadronflavor,jb1hadronflavor_CSVL, jb2hadronflavor,jb2hadronflavor_CSVL;
 float met_px, met_py;
 float byVLooseIsolationMVArun2v1DBnewDMwLT_2,  byVLooseIsolationMVArun2v1DBoldDMwLT_2,  byVLooseIsolationMVArun2v1DBdR03oldDMwLT_2;
 float byLooseIsolationMVArun2v1DBnewDMwLT_2,  byLooseIsolationMVArun2v1DBoldDMwLT_2,  byLooseIsolationMVArun2v1DBdR03oldDMwLT_2;
@@ -71,6 +71,13 @@ void fillTree(TTree *Run_Tree, HTauTauTree_mt *tree, int entry_tree, bool ismc, 
     tree->GetEntry(entry_tree);
     run = tree->run;
     lumi = tree->lumi;
+    tJetHadronFlavour= tree->tJetHadronFlavour;
+    j1hadronflavor=tree->j1hadronflavor;
+    j2hadronflavor=tree->j2hadronflavor;
+    jb1hadronflavor=tree->jb1hadronflavor;
+    jb1hadronflavor_CSVL=tree->jb1hadronflavor_CSVL;
+    jb2hadronflavor=tree->jb2hadronflavor; 
+    jb2hadronflavor_CSVL=tree->jb2hadronflavor_CSVL;
     evt =tree->evt;
     aMCatNLO_weight = tree->GenWeight;
 

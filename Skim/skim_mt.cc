@@ -58,7 +58,13 @@ int main(int argc, char** argv) {
     Run_Tree->Branch("npv", &npv, "npv/F");
     Run_Tree->Branch("npu", &npu, "npu/F");
     Run_Tree->Branch("amcatNLO_weight", &aMCatNLO_weight, "aMCatNLO_weight/F");
-
+    Run_Tree->Branch("tJetHadronFlavour", &tJetHadronFlavour, "tJetHadronFlavour/F");
+    Run_Tree->Branch("j1hadronflavor", &j1hadronflavor, "j1hadronflavor/F");
+    Run_Tree->Branch("j2hadronflavor", &j2hadronflavor, "j2hadronflavor/F");
+    Run_Tree->Branch("jb1hadronflavor", &jb1hadronflavor, "jb1hadronflavor/F");
+    Run_Tree->Branch("jb1hadronflavor_CSVL", &jb1hadronflavor_CSVL, "jb1hadronflavor_CSVL/F");
+    Run_Tree->Branch("jb2hadronflavor", &jb2hadronflavor, "jb2hadronflavor/F");
+    Run_Tree->Branch("jb2hadronflavor_CSVL", &jb2hadronflavor_CSVL, "jb2hadronflavor_CSVL/F");
     Run_Tree->Branch("pt_1", &pt_1, "pt_1/F");
     Run_Tree->Branch("px_1", &px_1, "px_1/F");
     Run_Tree->Branch("py_1", &py_1, "py_1/F");

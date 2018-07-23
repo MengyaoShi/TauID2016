@@ -108,8 +108,8 @@ public :
    Int_t           isdata;
    Float_t         j1csv;
    Float_t         j1eta;
-/*   Float_t         j1hadronflavor;
-   Float_t         j1partonflavor;
+   Float_t         j1hadronflavor;
+/*   Float_t         j1partonflavor;
 */
    Float_t         j1phi;
    Float_t         j1pt;
@@ -120,8 +120,8 @@ public :
 */
    Float_t         j2csv;
    Float_t         j2eta;
-/*   Float_t         j2hadronflavor;
-   Float_t         j2partonflavor;
+   Float_t         j2hadronflavor;
+/*   Float_t         j2partonflavor;
 */
    Float_t         j2phi;
    Float_t         j2pt;
@@ -133,10 +133,10 @@ public :
    Float_t         jb1csv;
 //   Float_t         jb1csv_CSVL;
    Float_t         jb1eta;
-/*   Float_t         jb1eta_CSVL;
+//   Float_t         jb1eta_CSVL;
    Float_t         jb1hadronflavor;
    Float_t         jb1hadronflavor_CSVL;
-   Float_t         jb1partonflavor;
+/*   Float_t         jb1partonflavor;
    Float_t         jb1partonflavor_CSVL;
 */
 
@@ -157,10 +157,10 @@ public :
    Float_t         jb2csv;
 //   Float_t         jb2csv_CSVL;
    Float_t         jb2eta;
-/*   Float_t         jb2eta_CSVL;
+//   Float_t         jb2eta_CSVL;
    Float_t         jb2hadronflavor;
    Float_t         jb2hadronflavor_CSVL;
-   Float_t         jb2partonflavor;
+/*   Float_t         jb2partonflavor;
    Float_t         jb2partonflavor_CSVL;
 */
    Float_t         jb2phi;
@@ -761,7 +761,7 @@ talUp
    Float_t         tJetEtaEtaMoment;
    Float_t         tJetEtaPhiMoment;
    Float_t         tJetEtaPhiSpread;
-//   Float_t         tJetHadronFlavour;
+   Float_t         tJetHadronFlavour;
    Float_t         tJetPFCISVBtag;
    Float_t         tJetPartonFlavour;
    Float_t         tJetPhiPhiMoment;
@@ -1122,8 +1122,8 @@ talUp
    TBranch        *b_isdata;   //!
    TBranch        *b_j1csv;   //!
    TBranch        *b_j1eta;   //!
-/*   TBranch        *b_j1hadronflavor;   //!
-   TBranch        *b_j1partonflavor;   //!
+   TBranch        *b_j1hadronflavor;   //!
+/*   TBranch        *b_j1partonflavor;   //!
 */
    TBranch        *b_j1phi;   //!
    TBranch        *b_j1pt;   //!
@@ -1134,8 +1134,8 @@ talUp
 */
    TBranch        *b_j2csv;   //!
    TBranch        *b_j2eta;   //!
-/*   TBranch        *b_j2hadronflavor;   //!
-   TBranch        *b_j2partonflavor;   //!
+   TBranch        *b_j2hadronflavor;   //!
+/*   TBranch        *b_j2partonflavor;   //!
 */
    TBranch        *b_j2phi;   //!
    TBranch        *b_j2pt;   //!
@@ -1148,9 +1148,9 @@ talUp
 //   TBranch        *b_jb1csv_CSVL;   //!
    TBranch        *b_jb1eta;   //!
 //   TBranch        *b_jb1eta_CSVL;   //!
-/*   TBranch        *b_jb1hadronflavor;   //!
+   TBranch        *b_jb1hadronflavor;   //!
    TBranch        *b_jb1hadronflavor_CSVL;   //!
-   TBranch        *b_jb1partonflavor;   //!
+/*   TBranch        *b_jb1partonflavor;   //!
    TBranch        *b_jb1partonflavor_CSVL;   //!
 */
    TBranch        *b_jb1phi;   //!
@@ -1170,9 +1170,9 @@ talUp
 //   TBranch        *b_jb2csv_CSVL;   //!
    TBranch        *b_jb2eta;   //!
 //   TBranch        *b_jb2eta_CSVL;   //!
-/*   TBranch        *b_jb2hadronflavor;   //!
+   TBranch        *b_jb2hadronflavor;   //!
    TBranch        *b_jb2hadronflavor_CSVL;   //!
-   TBranch        *b_jb2partonflavor;   //!
+/*   TBranch        *b_jb2partonflavor;   //!
    TBranch        *b_jb2partonflavor_CSVL;   //!
 */
    TBranch        *b_jb2phi;   //!
@@ -1779,7 +1779,7 @@ talUp
    TBranch        *b_tJetEtaEtaMoment;   //!
    TBranch        *b_tJetEtaPhiMoment;   //!
    TBranch        *b_tJetEtaPhiSpread;   //!
-//   TBranch        *b_tJetHadronFlavour;   //!
+   TBranch        *b_tJetHadronFlavour;   //!
    TBranch        *b_tJetPFCISVBtag;   //!
    TBranch        *b_tJetPartonFlavour;   //!
    TBranch        *b_tJetPhiPhiMoment;   //!
@@ -2163,7 +2163,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("isdata", &isdata, &b_isdata);
    _tree->SetBranchAddress("j1csv", &j1csv, &b_j1csv);
    _tree->SetBranchAddress("j1eta", &j1eta, &b_j1eta);
-//   _tree->SetBranchAddress("j1hadronflavor", &j1hadronflavor, &b_j1hadronflavor);
+   _tree->SetBranchAddress("j1hadronflavor", &j1hadronflavor, &b_j1hadronflavor);
 //   _tree->SetBranchAddress("j1partonflavor", &j1partonflavor, &b_j1partonflavor);
    _tree->SetBranchAddress("j1phi", &j1phi, &b_j1phi);
    _tree->SetBranchAddress("j1pt", &j1pt, &b_j1pt);
@@ -2174,8 +2174,8 @@ void HTauTauTree_mt::Init(TTree* tree)
 */
    _tree->SetBranchAddress("j2csv", &j2csv, &b_j2csv);
    _tree->SetBranchAddress("j2eta", &j2eta, &b_j2eta);
-/*   _tree->SetBranchAddress("j2hadronflavor", &j2hadronflavor, &b_j2hadronflavor);
-   _tree->SetBranchAddress("j2partonflavor", &j2partonflavor, &b_j2partonflavor);
+   _tree->SetBranchAddress("j2hadronflavor", &j2hadronflavor, &b_j2hadronflavor);
+/*   _tree->SetBranchAddress("j2partonflavor", &j2partonflavor, &b_j2partonflavor);
 */
    _tree->SetBranchAddress("j2phi", &j2phi, &b_j2phi);
    _tree->SetBranchAddress("j2pt", &j2pt, &b_j2pt);
@@ -2187,10 +2187,10 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("jb1csv", &jb1csv, &b_jb1csv);
 //   _tree->SetBranchAddress("jb1csv_CSVL", &jb1csv_CSVL, &b_jb1csv_CSVL);
    _tree->SetBranchAddress("jb1eta", &jb1eta, &b_jb1eta);
-/*   _tree->SetBranchAddress("jb1eta_CSVL", &jb1eta_CSVL, &b_jb1eta_CSVL);
+//   _tree->SetBranchAddress("jb1eta_CSVL", &jb1eta_CSVL, &b_jb1eta_CSVL);
    _tree->SetBranchAddress("jb1hadronflavor", &jb1hadronflavor, &b_jb1hadronflavor);
    _tree->SetBranchAddress("jb1hadronflavor_CSVL", &jb1hadronflavor_CSVL, &b_jb1hadronflavor_CSVL);
-   _tree->SetBranchAddress("jb1partonflavor", &jb1partonflavor, &b_jb1partonflavor);
+/*   _tree->SetBranchAddress("jb1partonflavor", &jb1partonflavor, &b_jb1partonflavor);
    _tree->SetBranchAddress("jb1partonflavor_CSVL", &jb1partonflavor_CSVL, &b_jb1partonflavor_CSVL);
 */
 
@@ -2210,10 +2210,10 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("jb2csv", &jb2csv, &b_jb2csv);
 //   _tree->SetBranchAddress("jb2csv_CSVL", &jb2csv_CSVL, &b_jb2csv_CSVL);
    _tree->SetBranchAddress("jb2eta", &jb2eta, &b_jb2eta);
-/*   _tree->SetBranchAddress("jb2eta_CSVL", &jb2eta_CSVL, &b_jb2eta_CSVL);
+//   _tree->SetBranchAddress("jb2eta_CSVL", &jb2eta_CSVL, &b_jb2eta_CSVL);
    _tree->SetBranchAddress("jb2hadronflavor", &jb2hadronflavor, &b_jb2hadronflavor);
    _tree->SetBranchAddress("jb2hadronflavor_CSVL", &jb2hadronflavor_CSVL, &b_jb2hadronflavor_CSVL);
-   _tree->SetBranchAddress("jb2partonflavor", &jb2partonflavor, &b_jb2partonflavor);
+/*   _tree->SetBranchAddress("jb2partonflavor", &jb2partonflavor, &b_jb2partonflavor);
    _tree->SetBranchAddress("jb2partonflavor_CSVL", &jb2partonflavor_CSVL, &b_jb2partonflavor_CSVL);
 */
    _tree->SetBranchAddress("jb2phi", &jb2phi, &b_jb2phi);
@@ -2813,7 +2813,7 @@ void HTauTauTree_mt::Init(TTree* tree)
    _tree->SetBranchAddress("tJetEtaEtaMoment", &tJetEtaEtaMoment, &b_tJetEtaEtaMoment);
    _tree->SetBranchAddress("tJetEtaPhiMoment", &tJetEtaPhiMoment, &b_tJetEtaPhiMoment);
    _tree->SetBranchAddress("tJetEtaPhiSpread", &tJetEtaPhiSpread, &b_tJetEtaPhiSpread);
-//   _tree->SetBranchAddress("tJetHadronFlavour", &tJetHadronFlavour, &b_tJetHadronFlavour);
+   _tree->SetBranchAddress("tJetHadronFlavour", &tJetHadronFlavour, &b_tJetHadronFlavour);
    _tree->SetBranchAddress("tJetPFCISVBtag", &tJetPFCISVBtag, &b_tJetPFCISVBtag);
    _tree->SetBranchAddress("tJetPartonFlavour", &tJetPartonFlavour, &b_tJetPartonFlavour);
    _tree->SetBranchAddress("tJetPhiPhiMoment", &tJetPhiPhiMoment, &b_tJetPhiPhiMoment);
