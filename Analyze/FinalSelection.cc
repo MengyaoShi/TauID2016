@@ -258,26 +258,28 @@ int main(int argc, char** argv) {
    int nombre=0;int indexmu=0;int nbmu25=0; int nbextramu=0;
    float n70passOS=0; float n70failOS=0; float n70passSS=0; float n70failSS=0;
    Int_t nentries_wtn = (Int_t) arbre->GetEntries();
+   double csvSF;
    for (Int_t i = 0; i < nentries_wtn; i++) {
         arbre->GetEntry(i);
         //btagging
-        csvSF = -1
-        bTagValue=
+        /*csvSF = -1;
         if (tJetHadronFlavour==5)
-            csvSF = reader.eval(BTagEntry::FLAV_B, fabs(eta_2), pt_2, bTagValue);
+            csvSF = reader.eval_auto_bounds("central",BTagEntry::FLAV_B, fabs(eta_2), pt_2);
         else if( tJetHadronFlavour == 4 )
-            csvSF = reader.eval(BTagEntry::FLAV_C, fabs(eta_2), pt_2, bTagValue);
+            csvSF = reader.eval_auto_bounds("central",BTagEntry::FLAV_C, fabs(eta_2), pt_2);
 
         else 
-            csvSF = reader.eval(BTagEntry::FLAV_UDSG, fabs(eta_2), pt_2, bTagValue);
-	std::cout << "csvSF=" << csvSF << "  hadronFlavor=" << tJethadronFlavor << " bTagValue=" << bTagValue << std::endl;
+            csvSF = reader.eval_auto_bounds("central",BTagEntry::FLAV_UDSG, fabs(eta_2), pt_2);
+	std::cout << "csvSF=" << csvSF << "  hadronFlavor=" << tJetHadronFlavour  << std::endl;
 
         double csvWeight = 1;
         if (sample!="data_obs" && bTagValue >= 0.8484)
             csvWeight = 1 - csvSF;
 
         std::cout << "csvWeight= " << csvWeight << std::endl;
+
         if (sample=="data_obs" && bTagValue> 0.8484) continue;
+*/
         if (i % 20000 == 0) fprintf(stdout, "\r  Processed events: %8d of %8d ", i, nentries_wtn);
         fflush(stdout);
 	bool print=false;
@@ -420,7 +422,7 @@ int main(int argc, char** argv) {
 	float sf_trk=1.0;
 	if (sample!="data_obs")
 	   sf_trk=(16.7/37.8)*1.0+(20.1/37.8)*h_Trk->Eval(eta_1);
-	float correction=sf_iso*sf_trg*sf_id*sf_trk*LumiWeights_12->weight(npu)*csvWeight;
+	float correction=sf_iso*sf_trg*sf_id*sf_trk*LumiWeights_12->weight(npu);
 //cout<<correction<<" "<<sf_iso<<" "<<sf_trg<<" "<<sf_id<<" "<<sf_trk<<" "<<LumiWeights_12->weight(npu)<<endl;
 	float aweight=weight*correction;
 	if (sample=="data_obs") aweight=1.0;
@@ -491,7 +493,8 @@ int main(int argc, char** argv) {
 	   bool cut_zeta=p_zeta_mis-0.85*pzeta_vis>-25;
 
 	   //************************* Fill histograms **********************
-	   float var=dR(eta_1, phi_1, eta_2, phi_2);
+	   float var=(mytau+mymu).M();
+	   //float var=dR(eta_1, phi_1, eta_2, phi_2);
            //float var=mytau.Pt();
 	   //if (variable=="ntracks"){
 	      //var=charged_signalCone_2+charged_isoCone_2;
