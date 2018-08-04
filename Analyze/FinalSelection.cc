@@ -57,6 +57,8 @@ int main(int argc, char** argv) {
     TTree *arbre = (TTree*) f_Double->Get("mutau_tree");
     TH1F* nbevt = (TH1F*) f_Double->Get("nevents");
     float ngen = nbevt->GetBinContent(2);
+    float nFeng =nbevt->GetBinContent(1);
+    std::cout<<"nevents->getBinContent(1)="<<nFeng<<std::endl;
 
     reweight::LumiReWeighting* LumiWeights_12;
     LumiWeights_12 = new reweight::LumiReWeighting("MC_Moriond17_PU25ns_V1.root", "Data_Pileup_2016_271036-284044_80bins.root", "pileup", "pileup");
@@ -94,7 +96,7 @@ int main(int argc, char** argv) {
     arbre->SetBranchAddress("evt", &evt);
     arbre->SetBranchAddress("NUP", &NUP);
     arbre->SetBranchAddress("npv", &npv);
-    arbre->SetBranchAddress("tJetHadronFlavour", &tJetHadronFlavour);
+    //arbre->SetBranchAddress("tJetHadronFlavour", &tJetHadronFlavour);
     arbre->SetBranchAddress("px_1", &px_1);
     arbre->SetBranchAddress("py_1", &py_1);
     arbre->SetBranchAddress("pz_1", &pz_1);
@@ -199,8 +201,8 @@ int main(int argc, char** argv) {
    //float binsPass[] = {40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150};
    //float bins[] = {40,55,70,85,100,115,130,145,160,175,190,205};
    //float binsPass[] = {40,55,70,85,100,115,130};
-   float bins[] = {0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0};
-   float binsPass[] = {0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0};
+   float bins[] = {0,5,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150};
+   float binsPass[] =  {0,5,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150};
    //float bins[] = {40,60,80,100,120,140,160,180,200};
    //float binsPass[] = {40,60,80,100,120,140};
 
@@ -402,21 +404,21 @@ int main(int argc, char** argv) {
         if (sample=="W"){
             weight=25.446;
             if (numGenJets==1) weight=6.8176;
-            else if (numGenJets==2) weight=2.1038;
+            else if (numGenJets==2) weight=2.0995;
             else if (numGenJets==3) weight=0.6889;
             else if (numGenJets==4) weight=0.6900;
         }
 
         if (sample=="ZTT" or sample=="ZLL" or sample=="ZL" or sample=="ZJ" or sample=="DYS" or sample=="DYB" or sample=="DYJ" or sample=="DYS120"){
-            weight=1.4184;
+            weight=4.2081;
             if (numGenJets==1)
-                weight=0.45729;
+                weight=0.5816;
             else if (numGenJets==2)
-                weight=0.4668;
+                weight=0.6160;
             else if (numGenJets==3)
-                weight=0.47995;
+                weight=0.6187;
             else if (numGenJets==4)
-                weight=0.39349;
+                weight=0.4822;
         }
 
 	float sf_trk=1.0;
