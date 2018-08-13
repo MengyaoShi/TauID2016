@@ -393,7 +393,7 @@ int main(int argc, char** argv) {
            Trigger_weightBToF=TriggerWeight_BToF->GetBinContent(binxTrigger_BToF, binyTrigger_BToF);
            Trigger_weightGH=TriggerWeight_GH->GetBinContent(binxTrigger_GH, binyTrigger_GH); 
            //sf_trg=myScaleFactor_trg->get_ScaleFactor(pt_1,eta_1);
-           sf_trg=16.7/37.8*Trigger_weightBToF+20.1/37.8*Trigger_weightGH;
+           sf_trg=20.1/36.8*Trigger_weightBToF+16.7/36.8*Trigger_weightGH;
            sf_id=myScaleFactor_id->get_ScaleFactor(pt_1,eta_1);
 	}
 	if (iso_1>0.15) continue;
@@ -442,7 +442,7 @@ int main(int argc, char** argv) {
 
 	float sf_trk=1.0;
 //	if (sample!="data_obs")
-//	   sf_trk=(16.7/37.8)*1.0+(20.1/37.8)*h_Trk->Eval(eta_1);
+//	   sf_trk=(16.7/36.8)*1.0+(20.1/36.8)*h_Trk->Eval(eta_1);
 	float correction=sf_iso*sf_trg*sf_id*sf_trk*LumiWeights_12->weight(npu);
 //cout<<correction<<" "<<sf_iso<<" "<<sf_trg<<" "<<sf_id<<" "<<sf_trk<<" "<<LumiWeights_12->weight(npu)<<endl;
 	float aweight=weight*correction;
