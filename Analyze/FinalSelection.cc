@@ -249,6 +249,18 @@ int main(int argc, char** argv) {
   reader.load(calib, BTagEntry::FLAV_UDSG, "incl");
   std::cout  << "initialized reader" << std::endl;
 // b tagging ends.
+   double Trigger_weightBToF=1.0;
+   double Trigger_weightGH=1.0;
+   TH2F *TriggerWeight_BToF;
+   TFile *_fileTrigger_BToF=new TFile("EfficienciesAndSF_RunBtoF.root");
+   TFile *_fileTrigger_GH=new TFile("EfficienciesAndSF_Period4.root");
+   TriggerWeight_BToF=(TH2F*)_fileTrigger_BToF->Get("IsoMu24_OR_IsoTkMu24_PtEtaBins/pt_abseta_ratio");
+   TH2F *TriggerWeight_GH;
+   TriggerWeight_GH=(TH2F*)_fileTrigger_GH->Get("IsoMu24_OR_IsoTkMu24_PtEtaBins/pt_abseta_ratio");
+   float binxTrigger_BToF=TriggerWeight_BToF->GetXaxis()->FindBin(pt_1);
+   float binyTrigger_BToF=TriggerWeight_BToF->GetYaxis()->FindBin(fabs(eta_1));
+   
+
    ScaleFactor * myScaleFactor_trg = new ScaleFactor();
    myScaleFactor_trg->init_ScaleFactor("LeptonEfficiencies/Muon/Run2016BtoH/Muon_Mu22OR_eta2p1_eff.root");
    ScaleFactor * myScaleFactor_id = new ScaleFactor();
@@ -374,7 +386,14 @@ int main(int argc, char** argv) {
         float sf_iso=1.0;
 
         if (sample!="data_obs"){
-           sf_trg=myScaleFactor_trg->get_ScaleFactor(pt_1,eta_1);
+           float binxTrigger_BToF=TriggerWeight_BToF->GetXaxis()->FindBin(pt_1);
+           float binyTrigger_BToF=TriggerWeight_BToF->GetYaxis()->FindBin(fabs(eta_1));
+           float binxTrigger_GH=TriggerWeight_GH->GetXaxis()->FindBin(pt_1);
+           float binyTrigger_GH=TriggerWeight_GH->GetYaxis()->FindBin(fabs(eta_1));
+           Trigger_weightBToF=TriggerWeight_BToF->GetBinContent(binxTrigger_BToF, binyTrigger_BToF);
+           Trigger_weightGH=TriggerWeight_GH->GetBinContent(binxTrigger_GH, binyTrigger_GH); 
+           //sf_trg=myScaleFactor_trg->get_ScaleFactor(pt_1,eta_1);
+           sf_trg=16.7/37.8*Trigger_weightBToF+20.1/37.8*Trigger_weightGH;
            sf_id=myScaleFactor_id->get_ScaleFactor(pt_1,eta_1);
 	}
 	if (iso_1>0.15) continue;
@@ -422,8 +441,8 @@ int main(int argc, char** argv) {
         }
 
 	float sf_trk=1.0;
-	if (sample!="data_obs")
-	   sf_trk=(16.7/37.8)*1.0+(20.1/37.8)*h_Trk->Eval(eta_1);
+//	if (sample!="data_obs")
+//	   sf_trk=(16.7/37.8)*1.0+(20.1/37.8)*h_Trk->Eval(eta_1);
 	float correction=sf_iso*sf_trg*sf_id*sf_trk*LumiWeights_12->weight(npu);
 //cout<<correction<<" "<<sf_iso<<" "<<sf_trg<<" "<<sf_id<<" "<<sf_trk<<" "<<LumiWeights_12->weight(npu)<<endl;
 	float aweight=weight*correction;
