@@ -273,6 +273,10 @@ int main(int argc, char** argv) {
    float n70passOS=0; float n70failOS=0; float n70passSS=0; float n70failSS=0;
    Int_t nentries_wtn = (Int_t) arbre->GetEntries();
    double csvSF;
+   int count_PassOS=0;
+   int count_PassSS=0;
+   int count_FailOS=0;
+   int count_FailSS=0;
    for (Int_t i = 0; i < nentries_wtn; i++) {
         arbre->GetEntry(i);
         //btagging
@@ -531,9 +535,14 @@ int main(int argc, char** argv) {
            if (fillSS && cut_zeta && mt<40 && !tauIsolation) //Fail SS
                mtFailSSH[k]->Fill(var,aweight);
 	}
+        if (fillOS && tauIsolation) count_PassOS+=1;
+        if (fillSS && tauIsolation) count_PassSS+=1;
+        if (fillOS && (!tauIsolation)) count_FailOS+=1;
+        if (fillSS && (!tauIsolation)) count_FailSS+=1;
 				
     } // end of loop over events
     cout<<"n70: "<<n70passOS<<" "<<n70failOS<<" "<<n70passSS<<" "<<n70failSS<<endl;
+    cout<<"calculate QCD transfer factor: count_PassOS="<<count_PassOS<<"; count_PassSS="<<count_PassSS<<"; count_FailOS="<<count_FailOS<<"; count_FailSS="<<count_FailSS<<std::endl;
     n70->SetBinContent(1,n70passOS);
     n70->SetBinContent(2,n70failOS);
     n70->SetBinContent(3,n70passSS);
