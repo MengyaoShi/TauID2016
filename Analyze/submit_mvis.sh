@@ -18,8 +18,7 @@
 #sh submit.sh
 #python replace_submit.py --input replace_mvis.sh --etamin 0 --etamax 3 --ptmin 100 --ptmax 4000 --iso MVAoldT --dm all --decaymodefinding old --nvtxmin 0 --nvtxmax 1000
 #sh submit.sh
-python replace_submit.py --input replace_mvis.sh --etamin 0 --etamax 3 --ptmin 40 --ptmax 100 --iso MVAoldT --dm all --decaymodefinding old --nvtxmin 0 --nvtxmax 1000
-sh submit.sh
+python replace_submit.py --input replace_mvis.sh --etamin 0 --etamax 3 --ptmin 40 --ptmax 100 --iso MVAoldT --dm all --decaymodefinding old --nvtxmin 0 --nvtxmax 1000 --switch_bins 1 --switch_var 1 
 #python replace_submit.py --input replace_mvis.sh --etamin 0 --etamax 3 --ptmin 20 --ptmax 4000 --iso MVAoldT --dm 1prong --decaymodefinding old --nvtxmin 0 --nvtxmax 1000
 #sh submit.sh
 #python replace_submit.py --input replace_mvis.sh --etamin 0 --etamax 3 --ptmin 20 --ptmax 4000 --iso MVAoldT --dm 1prong0pizero --decaymodefinding old --nvtxmin 0 --nvtxmax 1000

@@ -23,7 +23,7 @@ Making the datacards. This happens in the "Analyze" directory. You need to check
 
 To run for example for the MVA T WP:  
 
-python replace_submit.py --input replace_mvis.sh --etamin 0 --etamax 3 --ptmin 20 --ptmax 10000 --iso MVAoldT --dm all --decaymodefinding old --nvtxmin 0 --nvtxmax 1000
+python replace_submit.py --input replace_mvis.sh --etamin 0 --etamax 3 --ptmin 20 --ptmax 10000 --iso MVAoldT --dm all --decaymodefinding old --nvtxmin 0 --nvtxmax 1000 --switch_bins 1 --switch_var 1 --plotName invMass
 
 sh submit.sh 
 

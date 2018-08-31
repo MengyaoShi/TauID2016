@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
     std::string variable = *(argv + 7);
     std::string dm = *(argv + 8);
     std::string decaymodefinding = *(argv + 9);
-    float ptmin; float ptmax; float etamin=-10; float etamax=10; float pumin=0; float pumax=200; float tes=0;
+    float ptmin; float ptmax; float etamin=-10; float etamax=10; float pumin=0; float pumax=200; float tes=0; int switch_bins; int switch_var; 
     if (argc > 1) {
         tes = atof(argv[10]);
         ptmin = atof(argv[11]);
@@ -50,6 +50,8 @@ int main(int argc, char** argv) {
         etamax = atof(argv[14]);
         pumin = atof(argv[15]);
         pumax = atof(argv[16]);
+        switch_bins=atof(argv[17]);
+        switch_var=atof(argv[18]);
     }
     string bTagSFShift_="central";
     TFile *f_Double = new TFile(input.c_str());
@@ -201,11 +203,62 @@ int main(int argc, char** argv) {
    //float binsPass[] = {40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150};
    //float bins[] = {40,55,70,85,100,115,130,145,160,175,190,205};
    //float binsPass[] = {40,55,70,85,100,115,130};
-   float bins[] = {0,5,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150};
-   float binsPass[] =  {0,5,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150};
+   float *bins=NULL;
+   float *binsPass=NULL;
+   int num_bins=30;
+   switch(switch_bins)
+   {
+     case 1:
+       {
+         num_bins=30;
+         bins= new float [num_bins];
+         binsPass=new float [num_bins];
+         for(int i=0; i<num_bins; i++){ 
+           bins[i]=5*i;
+           binsPass[i] =  5*i;
+         }
+         break;
+       }
+     case 2:
+       {
+         num_bins=11;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for( int i=0; i<num_bins; i++)
+         {
+            bins[i]=0.5*i;
+            binsPass[i]=0.5*i;
+         }
+         break;
+       }
+     case 3:
+       {
+         num_bins=11;
+         bins=new float[num_bins];
+         binsPass=new float[num_bins];
+         for (int i=0; i<num_bins; i++)
+         {
+            bins[i] = -2.5+i*0.5;
+            binsPass[i]=-2.5+i*0.5;
+         }
+         break;
+       }
+     default :
+       {
+         cout<<"default switch_bins"<<std::endl;
+         num_bins=30;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for (int i=0; i<num_bins; i++)
+         { bins[i]=5*i;
+           binsPass[i] =  5*i;
+         }
+         break;
+       }
+   }
+   
    //float bins[] = {40,60,80,100,120,140,160,180,200};
    //float binsPass[] = {40,60,80,100,120,140};
-
    int  binnum = sizeof(bins)/sizeof(Float_t) - 1;
    int  binnumPass = sizeof(binsPass)/sizeof(Float_t) - 1;
 
@@ -232,6 +285,8 @@ int main(int argc, char** argv) {
         mtFailSSH.push_back(new TH1F (HmtFailSSH.str().c_str(),"InvMa",binnum,bins)); mtFailSSH[k]->Sumw2();
 
    }
+   delete [] binsPass;
+   delete [] bins;
 
    TString postfixTES[8]={"_CMS_scale_t_13TeVDown","_CMS_scale_t_13TeVUp","_CMS_scale_t_1prong_13TeVDown","_CMS_scale_t_1prong_13TeVUp","_CMS_scale_t_1prong1pizero_13TeVDown","_CMS_scale_t_1prong1pizero_13TeVUp","_CMS_scale_t_3prong_13TeVDown","_CMS_scale_t_3prong_13TeVUp"};
    TString postfixLES[6]={"_CMS_scale_faket_13TeVDown","_CMS_scale_faket_13TeVUp","_CMS_scale_faket_1prong_13TeVDown","_CMS_scale_faket_1prong_13TeVUp","_CMS_scale_faket_1prong1pizero_13TeVDown","_CMS_scale_faket_1prong1pizero_13TeVUp"};
@@ -518,7 +573,21 @@ int main(int argc, char** argv) {
 	   bool cut_zeta=p_zeta_mis-0.85*pzeta_vis>-25;
 
 	   //************************* Fill histograms **********************
-	   float var=(mytau+mymu).M();
+	   float var;
+	   switch(switch_var){
+             case 1:
+               { 
+                 var=(mytau+mymu).M();
+                 break;
+               }
+             case 2:{
+               var=mytau.Pt();
+               break;
+               }
+             default :
+               std::cout<<"default switch_var"<<std::endl;
+               var=(mytau+mymu).M();
+           }
 	   //float var=dR(eta_1, phi_1, eta_2, phi_2);
            //float var=mytau.Pt();
 	   //if (variable=="ntracks"){
@@ -542,7 +611,7 @@ int main(int argc, char** argv) {
 				
     } // end of loop over events
     cout<<"n70: "<<n70passOS<<" "<<n70failOS<<" "<<n70passSS<<" "<<n70failSS<<endl;
-    cout<<"calculate QCD transfer factor: count_PassOS="<<count_PassOS<<"; count_PassSS="<<count_PassSS<<"; count_FailOS="<<count_FailOS<<"; count_FailSS="<<count_FailSS<<std::endl;
+    //cout<<"calculate QCD transfer factor: count_PassOS="<<count_PassOS<<"; count_PassSS="<<count_PassSS<<"; count_FailOS="<<count_FailOS<<"; count_FailSS="<<count_FailSS<<std::endl;
     n70->SetBinContent(1,n70passOS);
     n70->SetBinContent(2,n70failOS);
     n70->SetBinContent(3,n70passSS);

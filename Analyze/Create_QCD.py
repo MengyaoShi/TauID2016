@@ -74,9 +74,9 @@ if __name__ == "__main__":
     hSS_fail.Add(fDYS.Get("failSS/DYS"+postfix),-1)
 
     hSS_pass.SetName("QCD"+postfixP)
-    hSS_pass.Scale(1.05*hSS_pass.Integral()/hSS_pass.Integral())
+    hSS_pass.Scale(1.08*hSS_pass.Integral()/hSS_pass.Integral())
     hSS_fail.SetName("QCD"+postfixF)
-    hSS_fail.Scale(1.05*hSS_fail.Integral()/hSS_fail.Integral())
+    hSS_fail.Scale(1.08*hSS_fail.Integral()/hSS_fail.Integral())
 
     for i in range(0,hSS_fail.GetSize()-2):
 	if hSS_fail.GetBinContent(i)<0:
