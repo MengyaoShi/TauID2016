@@ -5,6 +5,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--scale', default="nominal", choices=['nominal', 'up', 'down', 'wup', 'wdown'], help="Which TES?")
+    parser.add_argument('--var', default="invMass", choices=['invMass', 'muPt', 'tauPt', 'muMt', 'tauMt', 'tauMass', 'met', 'muMetMt', 'tauMetMt', 'ZPt', 'muEta', 'tauEta', 'muTauDPhi', 'muTauDR', 'zeta', 'tauDecayMode'], help="Which TES?")
     options = parser.parse_args()
 
     postfix=""
@@ -40,22 +41,22 @@ if __name__ == "__main__":
         facteur=0.90
 
     if options.scale=="up" or options.scale=="down":
-       fDYB=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/DYB.root","r")
-       fDYJ=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/DYJ.root","r")
-       fDYS=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/DYS.root","r")
-       fW=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/W.root","r")
-       fTT=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/TT.root","r")
-       fVV=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/VV.root","r")
-       fData=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/Data.root","r")
+       fDYB=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_"+options.scale+options.var+"/DYB.root","r")
+       fDYJ=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_"+options.scale+options.var+"/DYJ.root","r")
+       fDYS=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_"+options.scale+options.var+"/DYS.root","r")
+       fW=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_"+options.scale+options.var+"/W.root","r")
+       fTT=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_"+options.scale+options.var+"/TT.root","r")
+       fVV=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_"+options.scale+options.var+"/VV.root","r")
+       fData=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_nominal"+options.var+"/Data.root","r")
     else:
-       fDYB=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/DYB.root","r")
-       fDYJ=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/DYJ.root","r")
-       fDYS=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/DYS.root","r")
-       fW=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/W.root","r")
-       fTT=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/TT.root","r")
-       fVV=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/VV.root","r")
-       fData=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/Data.root","r")
-    fout=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+"/QCD.root","recreate")
+       fDYB=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_nominal"+options.var+"/DYB.root","r")
+       fDYJ=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_nominal"+options.var+"/DYJ.root","r")
+       fDYS=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_nominal"+options.var+"/DYS.root","r")
+       fW=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_nominal"+options.var+"/W.root","r")
+       fTT=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_nominal"+options.var+"/TT.root","r")
+       fVV=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_nominal"+options.var+"/VV.root","r")
+       fData=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_nominal"+options.var+"/Data.root","r")
+    fout=ROOT.TFile("/afs/cern.ch/user/f/fengwang/workplace/public/files_"+options.scale+options.var+"/QCD.root","recreate")
 
     hSS_pass=fData.Get("passSS/data_obs")
     hSS_pass.Add(fDYB.Get("passSS/DYB"+postfix),-1)

@@ -23,15 +23,21 @@ if __name__ == "__main__":
     for j in range(0,len(name)):
        print name[j],sample[j],recoil[j]
        submit_File = open("Submit_"+name[j]+".sh" , 'w')
+       #line+="rm -rf "+datadir+"Out_"+name[j]+"\n"
        line+="mkdir -p "+datadir+"Out_"+name[j]+"\n"
-       line+="chmod 777 Submit_"+name[j]+".sh" +"\n"
-       line+="sh Submit_"+name[j]+".sh" +"\n"
+       #line+="chmod 777 Submit_"+name[j]+".sh" +"\n"
+       #line+="sh Submit_"+name[j]+".sh" +"\n"
        f=open( place+sample[j] + ".txt","r")
        command1=""
        ligne=0
+       submitFileLineHead=""
+       submitFileLineHead+="cd /afs/cern.ch/work/m/mshi/private/ZTT/CMSSW_8_0_26_patch1/src/\n"
+       submitFileLineHead+="eval $(scramv1 runtime -sh)\n"
+       submitFileLineHead+="cd /afs/cern.ch/work/m/mshi/private/ZTT/CMSSW_8_0_26_patch1/src/TauID2016/Skim\n"
        for i in f.readlines():
 	   command1=command1+"./skim_mt.exe mc "+datadir+"Out_"+name[j]+"/"+name[j]+str(ligne)+".root " + i.rstrip('\n') + " " + recoil[j] +" \n"
            ligne=ligne+1
+       submit_File.write(submitFileLineHead)
        submit_File.write(command1)
        submit_File.close()
     all_File.write(line)

@@ -22,7 +22,7 @@ if __name__ == "__main__":
     replacements = {'$PTMIN':options.ptmin, '$PTMAX':options.ptmax, '$ETAMIN':options.etamin, '$ETAMAX':options.etamax, '$NVTXMIN':options.nvtxmin, '$NVTXMAX':options.nvtxmax, '$DM':options.dm, '$DECAYMODEFINDING':options.decaymodefinding, '$ISO':options.iso, '$SWITCHBINS':options.switch_bins, '$SWITCHVAR':options.switch_var, '$NAME':options.plotName}
     print options
 
-    with open(options.input, 'r') as infile, open("submit.sh",'w') as outfile:
+    with open(options.input, 'r') as infile, open("submit_" + str(options.plotName) + ".sh",'w') as outfile:
        for line in infile:
            print line
            for src, target in replacements.iteritems():

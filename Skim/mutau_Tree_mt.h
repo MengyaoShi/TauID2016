@@ -59,6 +59,7 @@ float byVVTightIsolationMVArun2v1DBnewDMwLT_2,  byVVTightIsolationMVArun2v1DBold
 float matchIsoMu22eta2p1_1,matchIsoTkMu22eta2p1_1,matchIsoMu22_1,matchIsoTkMu22_1,matchIsoMu24_1,matchIsoTkMu24_1,matchIsoMu19Tau20_1,matchIsoMu21Tau20_1,filterIsoMu22eta2p1_1,filterIsoTkMu22eta2p1_1,filterIsoMu22_1,filterIsoTkMu22_1,filterIsoMu24_1,filterIsoTkMu24_1,filterIsoMu19Tau20_1,filterIsoMu21Tau20_1,passIsoMu22eta2p1,passIsoTkMu22eta2p1,passIsoMu22,passIsoTkMu22,passIsoMu24,passIsoTkMu24,passIsoMu19Tau20,passIsoMu21Tau20,matchIsoMu19Tau20_2,matchIsoMu21Tau20_2,filterIsoMu19Tau20_2,filterIsoMu21Tau20_2;
 float metSig, metcov00, metcov01, metcov10,metcov11, mvaMetcov00, mvaMetcov01,mvaMetcov10,mvaMetcov11;
 float genM,genpT,genpX,genpY,vispX,vispY,filterTau32,pathTau32;
+float tGenCharge, tGenDecayMode, tGenEnergy, tGenEta, tGenIsPrompt, tGenJetEta, tGenJetPt, tGenMotherEnergy, tGenMotherEta, tGenMotherPdgId, tGenMotherPhi, tGenMotherPt, tGenPdgId, tGenPhi, tGenPt, tGenStatus;
 float met_JERDown,met_JESDown,met_UESDown,met_MESDown,met_EESDown,met_TESDown,met_PESDown;
 float met_JERUp,met_JESUp,met_UESUp,met_MESUp,met_EESUp,met_TESUp,met_PESUp;
 float metphi_JERDown,metphi_JESDown,metphi_UESDown,metphi_MESDown,metphi_EESDown,metphi_TESDown,metphi_PESDown;
@@ -106,6 +107,22 @@ void fillTree(TTree *Run_Tree, HTauTauTree_mt *tree, int entry_tree, bool ismc, 
     genpY=tree->genpY;
     genpT=tree->genpT;
     genM=tree->genM;
+    tGenCharge=tree->tGenCharge;
+    tGenDecayMode=tree->tGenDecayMode;
+    tGenEnergy=tree->tGenEnergy;
+    tGenEta=tree->tGenEta;
+    tGenIsPrompt=tree->tGenIsPrompt;
+    tGenJetEta=tree->tGenJetEta;
+    tGenJetPt=tree->tGenJetPt;
+    tGenMotherEnergy=tree->tGenMotherEnergy;
+    tGenMotherEta=tree->tGenMotherEta;
+    tGenMotherPdgId=tree->tGenMotherPdgId;
+    tGenMotherPhi=tree->tGenMotherPhi;
+    tGenMotherPt=tree->tGenMotherPt;
+    tGenPdgId=tree->tGenPdgId;
+    tGenPhi=tree->tGenPhi;
+    tGenPt=tree->tGenPt;
+    tGenStatus=tree->tGenStatus;
     vispX=tree->vispX;
     vispY=tree->vispY;
 

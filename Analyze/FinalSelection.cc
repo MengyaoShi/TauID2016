@@ -208,30 +208,30 @@ int main(int argc, char** argv) {
    int num_bins=30;
    switch(switch_bins)
    {
-     case 1:
+     case 1: // Mass variable
        {
-         num_bins=30;
+         num_bins=31;
          bins= new float [num_bins];
          binsPass=new float [num_bins];
-         for(int i=0; i<num_bins; i++){ 
-           bins[i]=5*i;
-           binsPass[i] =  5*i;
+         for(int i=0; i<num_bins; i++){
+           bins[i] = 5*i;
+           binsPass[i] = 5*i;
          }
          break;
        }
-     case 2:
+     case 2: // MT variable
        {
-         num_bins=11;
+         num_bins=16;
          bins= new float[num_bins];
          binsPass=new float[num_bins];
          for( int i=0; i<num_bins; i++)
          {
-            bins[i]=0.5*i;
-            binsPass[i]=0.5*i;
+            bins[i] = 10*i;
+            binsPass[i] = 10*i;
          }
          break;
        }
-     case 3:
+     case 3: // zeta variable
        {
          num_bins=11;
          bins=new float[num_bins];
@@ -243,10 +243,70 @@ int main(int argc, char** argv) {
          }
          break;
        }
+     case 4: // eta variable [-2.4,2.4]
+       {
+         num_bins=25;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for( int i=0; i<num_bins; i++)
+         {
+            bins[i]= -2.4+0.2*i;
+            binsPass[i] = -2.4+0.2*i;
+         }
+         break;
+       }
+     case 5: // delta phi variable
+       {
+         num_bins=16;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for( int i=0; i<num_bins; i++)
+         {
+            bins[i]= 0.2*i;
+            binsPass[i] = 0.2*i;
+         }
+         break;
+       }
+     case 6: // delta R variable
+       {
+         num_bins=17;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for( int i=0; i<num_bins; i++)
+         {
+            bins[i]= 0.5+0.25*i;
+            binsPass[i] = 0.5+0.25*i;
+         }
+         break;
+       }
+     case 7: // PT variable
+       {
+         num_bins=29;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for( int i=0; i<num_bins; i++)
+         {
+            bins[i]= 10+5*i;
+            binsPass[i] = 10+5*i;
+         }
+         break;
+       }
+     case 8: // tau decay mode variable
+       {
+         num_bins=11;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for( int i=0; i<num_bins; i++)
+         {
+            bins[i] = i;
+            binsPass[i] = i;
+         }
+         break;
+       }
      default :
        {
          cout<<"default switch_bins"<<std::endl;
-         num_bins=30;
+         num_bins=31;
          bins= new float[num_bins];
          binsPass=new float[num_bins];
          for (int i=0; i<num_bins; i++)
@@ -259,8 +319,10 @@ int main(int argc, char** argv) {
    
    //float bins[] = {40,60,80,100,120,140,160,180,200};
    //float binsPass[] = {40,60,80,100,120,140};
-   int  binnum = sizeof(bins)/sizeof(Float_t) - 1;
-   int  binnumPass = sizeof(binsPass)/sizeof(Float_t) - 1;
+   int  binnum = num_bins-1;
+   int  binnumPass = num_bins-1;
+   //int  binnum = sizeof(bins)/sizeof(Float_t) - 1;
+   //int  binnumPass = sizeof(binsPass)/sizeof(Float_t) - 1;
 
    TH1F *n70=new TH1F ("n70", "n70", 6,0,6);
    TH2F *mvaPt=new TH2F ("mvaPt","mvaPt",50,0.5,1.0,50,20,120);
@@ -321,8 +383,8 @@ int main(int argc, char** argv) {
    ScaleFactor * myScaleFactor_id = new ScaleFactor();
    myScaleFactor_id->init_ScaleFactor("LeptonEfficiencies/Muon/Run2016BtoH/Muon_IdIso_IsoLt0p15_2016BtoH_eff.root");
 
-    TFile *f_Trk=new TFile("Tracking_EfficienciesAndSF_BCDEFGH.root");
-    TGraph *h_Trk=(TGraph*) f_Trk->Get("ratio_eff_eta3_dr030e030_corr");
+    //TFile *f_Trk=new TFile("Tracking_EfficienciesAndSF_BCDEFGH.root");
+    //TGraph *h_Trk=(TGraph*) f_Trk->Get("ratio_eff_eta3_dr030e030_corr");
 
    int nombre=0;int indexmu=0;int nbmu25=0; int nbextramu=0;
    float n70passOS=0; float n70failOS=0; float n70passSS=0; float n70failSS=0;
@@ -502,7 +564,8 @@ int main(int argc, char** argv) {
 	float sf_trk=1.0;
 //	if (sample!="data_obs")
 //	   sf_trk=(16.7/36.8)*1.0+(20.1/36.8)*h_Trk->Eval(eta_1);
-	float correction=sf_iso*sf_trg*sf_id*sf_trk*LumiWeights_12->weight(npu);
+	float correction=sf_iso*sf_trg*sf_id*LumiWeights_12->weight(npu);
+	//float correction=sf_iso*sf_trg*sf_id*sf_trk*LumiWeights_12->weight(npu);
 //cout<<correction<<" "<<sf_iso<<" "<<sf_trg<<" "<<sf_id<<" "<<sf_trk<<" "<<LumiWeights_12->weight(npu)<<endl;
 	float aweight=weight*correction;
 	if (sample=="data_obs") aweight=1.0;
@@ -575,18 +638,90 @@ int main(int argc, char** argv) {
 	   //************************* Fill histograms **********************
 	   float var;
 	   switch(switch_var){
-             case 1:
+             case 1: // di-tau visible mass
                { 
-                 var=(mytau+mymu).M();
+                 var = (mytau + mymu).M();
                  break;
                }
-             case 2:{
-               var=mytau.Pt();
-               break;
+             case 2: // mu pt
+               {
+                 var = mymu.Pt();
+                 break;
+               }
+             case 3: // tau_h pt
+               {
+                 var = mytau.Pt();
+                 break;
+               }
+             case 4: // mu MT
+               {
+                 var = mymu.Mt();
+                 break;
+               }
+             case 5: // tau_h MT
+               {
+                 var = mytau.Mt();
+                 break;
+               }
+             case 6: // tau_h mass
+               {
+                 var = mytau.M();
+                 break;
+               }
+             case 7: // MET
+               {
+                 var = mymet.Pt();
+                 break;
+               }
+             case 8: // MT(MET,mu)
+               {
+                 var = (mymu + mymet).Mt();
+                 break;
+               }
+             case 9: // MT(MET,tau_h)
+               {
+                 var = (mytau + mymet).Mt();
+                 break;
+               }
+             case 10: // Z(mu, tau_h) pt
+               {
+                 var = (mymu + mymet + mytau).Pt();
+                 break;
+               }
+             case 11: // mu eta
+               {
+                 var = mymu.Eta();
+                 break;
+               }
+             case 12: // tau_h eta
+               {
+                 var = mytau.Eta();
+                 break;
+               }
+             case 13: // deltaPhi(mu,tau_h)
+               {
+                 var = mymu.DeltaPhi(mytau);
+                 break;
+               }
+             case 14: // deltaR(mu,tau_h)
+               {
+                 var = mymu.DeltaR(mytau);
+                 break;
+               }
+             case 15: // zeta variable
+               {
+                 var = p_zeta_mis-0.85*pzeta_vis;
+                 break;
+               }
+             case 16: // tau decay mode
+               {
+                 var = l2_decayMode;
+                 break;
                }
              default :
                std::cout<<"default switch_var"<<std::endl;
                var=(mytau+mymu).M();
+               break;
            }
 	   //float var=dR(eta_1, phi_1, eta_2, phi_2);
            //float var=mytau.Pt();

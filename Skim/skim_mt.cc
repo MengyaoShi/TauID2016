@@ -85,6 +85,24 @@ int main(int argc, char** argv) {
     Run_Tree->Branch("genpY", &genpY, "genpY/F");
     Run_Tree->Branch("genpT", &genpT, "genpT/F");
     Run_Tree->Branch("genM", &genM, "genM/F");
+    Run_Tree->Branch("tGenCharge", &tGenCharge, "tGenCharge/F");
+    Run_Tree->Branch("tGenDecayMode", &tGenDecayMode, "tGenDecayMode/F");
+    Run_Tree->Branch("tGenEnergy", &tGenEnergy, "tGenEnergy/F");
+    Run_Tree->Branch("tGenEta",&tGenEta, "tGenEta/F");
+    Run_Tree->Branch("tGenIsPrompt",&tGenIsPrompt, "tGenIsPrompt/F");
+    Run_Tree->Branch("tGenJetEta", &tGenJetEta, "tGenJetEta/F");
+   
+    Run_Tree->Branch("tGenJetPt", &tGenJetPt, "tGenJetPt/F");
+    Run_Tree->Branch("tGenMotherEnergy", &tGenMotherEnergy, "tGenMotherEnergy/F");
+    Run_Tree->Branch("tGenMotherEta", &tGenMotherEta, "tGenMotherEta/F");
+    Run_Tree->Branch("tGenMotherPdgId", &tGenMotherPdgId, "tGenMotherPdgId/F");
+    Run_Tree->Branch("tGenMotherPhi", &tGenMotherPhi, "tGenMotherPhi/F");
+    Run_Tree->Branch("tGenMotherPt", &tGenMotherPt, "tGenMotherPt/F");
+    Run_Tree->Branch("tGenPdgId", &tGenPdgId, "tGenPdgId/F");
+    Run_Tree->Branch("tGenPhi", &tGenPhi, "tGenPhi/F");
+    Run_Tree->Branch("tGenPt", &tGenPt, "tGenPt/F");
+    Run_Tree->Branch("tGenStatus", &tGenStatus, "tGenStatus/F");
+
     Run_Tree->Branch("vispX", &vispX, "vispX/F");
     Run_Tree->Branch("vispY", &vispY, "vispY/F");
 
@@ -274,7 +292,7 @@ Run_Tree->Branch("byVLooseIsolationRerunMVArun2v1DBoldDMwLT_2", &byVLooseIsolati
 	if (tree->dimuonVeto>0) continue;
         //if (!tree->tAgainstMuonTight3) continue;//FIXME
         //if (!tree->tAgainstElectronVLooseMVA6) continue;//FIXME
-	if (tree->mRelPFIsoDBDefaultR04>0.15) continue;
+	if (tree->mRelPFIsoDBDefaultR04<0.15) continue;
 	if (evt_now!=evt_before){
 	   mupt_before=tree->mPt;
 	   muiso_before=tree->mRelPFIsoDBDefault;
@@ -287,7 +305,7 @@ Run_Tree->Branch("byVLooseIsolationRerunMVArun2v1DBoldDMwLT_2", &byVLooseIsolati
            bestEntry=iEntry;
 	}
 	if (evt_now==evt_before){
-	   if (tree->mRelPFIsoDBDefault<muiso_before or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt>mupt_before) or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt==mupt_before && tree->tByIsolationMVArun2v1DBoldDMwLTraw>tauiso_before) or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt==mupt_before && tree->tByIsolationMVArun2v1DBoldDMwLTraw==tauiso_before && tree->tPt>taupt_before) ){
+	   if (tree->mRelPFIsoDBDefault>muiso_before or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt>mupt_before) or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt==mupt_before && tree->tByIsolationMVArun2v1DBoldDMwLTraw>tauiso_before) or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt==mupt_before && tree->tByIsolationMVArun2v1DBoldDMwLTraw==tauiso_before && tree->tPt>taupt_before) ){
 		bestEntry=iEntry;
 	        muiso_before=tree->mRelPFIsoDBDefault;
 		mupt_before=tree->mPt;
