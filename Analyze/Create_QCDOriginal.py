@@ -66,9 +66,10 @@ if __name__ == "__main__":
     fout=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+options.var+"/QCD.root","recreate")
     print fDYB
     print fData
-    fratio=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal/testMergeTwo.root")
+    fratio=ROOT.TFile("/afs/cern.ch/work/m/mshi/private/CMSSW_8_1_0/src/auxiliaries/QCDRescaleFactor.root")
 
-    hRatio=fratio.Get("OS/SS Ratio in inverted Muon Iso region")
+    hRatio_pass=fratio.Get("QCDSFPass")
+    hRatio_fail=fratio.Get("QCDSFFail")
 
     hSS_pass=fData.Get("passSS/data_obs")
     hSS_pass.Add(fDYB.Get("passSS/DYB"+postfix),-1)
@@ -90,14 +91,14 @@ if __name__ == "__main__":
     print postfixP
     hSS_fail.SetName("QCD"+postfixF)
 
-    if postfixF=="shapeup":
+    if postfixF=="_QCDShapeUp":
         for i in range(0, hSS_pass.GetSize()):
-            hSS_pass.SetBinContent(i, hRatio.GetBinContent(i)*hSS_pass.GetBinContent(i)+hRatio.GetBinError(i))
-            hSS_fail.SetBinContent(i, hRatio.GetBinContent(i)*hSS_fail.GetBinContent(i)+hRatio.GetBinError(i))
-    if postfixF=="shapedown":
+            hSS_pass.SetBinContent(i, hRatio_fail.GetBinContent(i)*hSS_pass.GetBinContent(i)+hRatio_fail.GetBinError(i)*hSS_pass.GetBinContent(i))
+            hSS_fail.SetBinContent(i, hRatio_fail.GetBinContent(i)*hSS_fail.GetBinContent(i)+hRatio_fail.GetBinError(i)*hSS_fail.GetBinContent(i))
+    if postfixF=="_QCDShapeDown":
         for i in range(0, hSS_pass.GetSize()):
-            hSS_pass.SetBinContent(i, hRatio.GetBinContent(i)*hSS_pass.GetBinContent(i)-hRatio.GetBinError(i))
-            hSS_fail.SetBinContent(i, hRatio.GetBinContent(i)*hSS_fail.GetBinContent(i)-hRatio.GetBinError(i))
+            hSS_pass.SetBinContent(i, hRatio_fail.GetBinContent(i)*hSS_pass.GetBinContent(i)-hRatio_fail.GetBinError(i)*hSS_pass.GetBinContent(i))
+            hSS_fail.SetBinContent(i, hRatio_fail.GetBinContent(i)*hSS_fail.GetBinContent(i)-hRatio_fail.GetBinError(i)*hSS_fail.GetBinContent(i))
 
     for i in range(0,hSS_fail.GetSize()-2):
 	if hSS_fail.GetBinContent(i)<0:
