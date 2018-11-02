@@ -57,13 +57,13 @@ if __name__ == "__main__":
     SFall=(fData.Get("n70").GetBinContent(1)+fData.Get("n70").GetBinContent(2)-fVV.Get("n70").GetBinContent(1)-fVV.Get("n70").GetBinContent(2)-fDYJ.Get("n70").GetBinContent(1)-fDYJ.Get("n70").GetBinContent(2)-fDYB.Get("n70").GetBinContent(1)-fDYB.Get("n70").GetBinContent(2)-fDYS.Get("n70").GetBinContent(1)-fDYS.Get("n70").GetBinContent(2)-fTT.Get("n70").GetBinContent(1)-fTT.Get("n70").GetBinContent(2)-1.05*QCDall)/(fW.Get("n70").GetBinContent(1)+fW.Get("n70").GetBinContent(2))
     print SFpassOS, SFfailOS,SFall
     hWpassOS=fW_.Get("passOS/W"+postfix)
-    hWpassOS.Scale(SFall)
+    hWpassOS.Scale(SFfailOS)
     hWfailOS=fW_.Get("failOS/W"+postfix)
-    hWfailOS.Scale(SFall)
+    hWfailOS.Scale(SFfailOS)
     hWpassSS=fW_.Get("passSS/W"+postfix)
-    hWpassSS.Scale(SFall)
+    hWpassSS.Scale(SFfailOS)
     hWfailSS=fW_.Get("failSS/W"+postfix)
-    hWfailSS.Scale(SFall)
+    hWfailSS.Scale(SFfailOS)
 
     fout.cd()
     dirPassOS=fout.mkdir("passOS")

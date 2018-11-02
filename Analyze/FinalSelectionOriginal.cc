@@ -646,7 +646,7 @@ int main(int argc, char** argv) {
 	   float y_zeta= (mytau.Py()/mytau.Pt()+py_1/pt_1)/norm_zeta;
 	   float p_zeta_mis=mex*x_zeta+mey*y_zeta;
 	   float pzeta_vis=(mytau.Px()+px_1)*x_zeta+(mytau.Py()+py_1)*y_zeta;
-	   bool cut_zeta=p_zeta_mis-0.85*pzeta_vis<-25;
+	   bool cut_zeta=p_zeta_mis-0.85*pzeta_vis>-25;
 
 	   //************************* Fill histograms **********************
 	   float var;
@@ -741,15 +741,15 @@ int main(int argc, char** argv) {
 	   //if (variable=="ntracks"){
 	      //var=charged_signalCone_2+charged_isoCone_2;
 	   //}
-           if (fillOS && cut_zeta && mt<40 && tauIsolation) {//Pass OS
+           if (fillOS && cut_zeta && tauIsolation) {//Pass OS
                mtPassH[k]->Fill(var,aweight);
 	       mvaPt->Fill(byIsolationMVA3oldDMwLTraw_2,mytau.Pt());
 	   }
-           if (fillSS && cut_zeta && mt<40 &&  tauIsolation) //Pass SS
+           if (fillSS && cut_zeta &&  tauIsolation) //Pass SS
                mtPassSSH[k]->Fill(var,aweight);
-           if (fillOS && cut_zeta && mt<40 && !tauIsolation) //Fail OS
+           if (fillOS && cut_zeta && !tauIsolation) //Fail OS
                mtFailH[k]->Fill(var,aweight);
-           if (fillSS && cut_zeta && mt<40 && !tauIsolation) //Fail SS
+           if (fillSS && cut_zeta && !tauIsolation) //Fail SS
                mtFailSSH[k]->Fill(var,aweight);
 	}
         if (fillOS && tauIsolation) count_PassOS+=1;
@@ -788,10 +788,11 @@ int main(int argc, char** argv) {
        if (tes==2)
           postfix=postfixLES[k];
        passOS->cd();
-       mtPassH[k]->SetBinContent(binnum+1,0);
+/*       mtPassH[k]->SetBinContent(binnum+1,0);
        mtPassH[k]->SetBinError(binnum+1,0);
        mtPassH[k]->SetBinContent(0,0);
        mtPassH[k]->SetBinError(0,0);
+*/
        for (int l=0; l<binnum;++l){
 	   if (mtPassH[k]->GetBinContent(l+1)<0)
 	      mtPassH[k]->SetBinContent(l+1,0);
@@ -799,10 +800,11 @@ int main(int argc, char** argv) {
        mtPassH[k]->SetName(name.c_str()+postfix);
        mtPassH[k]->Write();
        failOS->cd();
-       mtFailH[k]->SetBinContent(binnum+1,0);
+/*       mtFailH[k]->SetBinContent(binnum+1,0);
        mtFailH[k]->SetBinError(binnum+1,0);
        mtFailH[k]->SetBinContent(0,0);
        mtFailH[k]->SetBinError(0,0);
+*/
        for (int l=0; l<binnum;++l){
            if (mtFailH[k]->GetBinContent(l+1)<0)
               mtFailH[k]->SetBinContent(l+1,0);
@@ -810,10 +812,11 @@ int main(int argc, char** argv) {
        mtFailH[k]->SetName(name.c_str()+postfix);
        mtFailH[k]->Write();
        passSS->cd();
-       mtPassSSH[k]->SetBinContent(binnum+1,0);
+/*       mtPassSSH[k]->SetBinContent(binnum+1,0);
        mtPassSSH[k]->SetBinError(binnum+1,0);
        mtPassSSH[k]->SetBinContent(0,0);
        mtPassSSH[k]->SetBinError(0,0);
+*/
        for (int l=0; l<binnum;++l){
            if (mtPassSSH[k]->GetBinContent(l+1)<0)
               mtPassSSH[k]->SetBinContent(l+1,0);
@@ -821,10 +824,11 @@ int main(int argc, char** argv) {
        mtPassSSH[k]->SetName(name.c_str()+postfix);
        mtPassSSH[k]->Write();
        failSS->cd();
-       mtFailSSH[k]->SetBinContent(binnum+1,0);
+/*       mtFailSSH[k]->SetBinContent(binnum+1,0);
        mtFailSSH[k]->SetBinError(binnum+1,0);
        mtFailSSH[k]->SetBinContent(0,0);
        mtFailSSH[k]->SetBinError(0,0);
+*/
        for (int l=0; l<binnum;++l){
            if (mtFailSSH[k]->GetBinContent(l+1)<0)
               mtFailSSH[k]->SetBinContent(l+1,0);
