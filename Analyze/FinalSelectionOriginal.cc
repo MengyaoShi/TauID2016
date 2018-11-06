@@ -60,7 +60,7 @@ int main(int argc, char** argv) {
     TH1F* nbevt = (TH1F*) f_Double->Get("nevents");
     float ngen = nbevt->GetBinContent(2);
     float nFeng =nbevt->GetBinContent(1);
-    std::cout<<"nevents->getBinContent(1)="<<nFeng<<std::endl;
+    std::cout<<"nevents->getBinContent(1)="<<nFeng<<"; nevents->getBinContent(2)="<<ngen<<std::endl;
 
     reweight::LumiReWeighting* LumiWeights_12;
     LumiWeights_12 = new reweight::LumiReWeighting("MC_Moriond17_PU25ns_V1.root", "Data_Pileup_2016_271036-284044_80bins.root", "pileup", "pileup");
@@ -555,23 +555,23 @@ int main(int argc, char** argv) {
         if (dm=="3prong" && l2_decayMode<8) continue;
 
         if (sample=="W"){
-            weight=25.446;
-            if (numGenJets==1) weight=6.8176;
-            else if (numGenJets==2) weight=2.0995;
-            else if (numGenJets==3) weight=0.6889;
-            else if (numGenJets==4) weight=0.6900;
+            weight=84.0;
+            if (numGenJets==1) weight=84.0;
+            else if (numGenJets==2) weight=4.30;
+            else if (numGenJets==3) weight=2.06;
+            else if (numGenJets==4) weight=2.27;
         }
 
         if (sample=="ZTT" or sample=="ZLL" or sample=="ZL" or sample=="ZJ" or sample=="DYS" or sample=="DYB" or sample=="DYJ" or sample=="DYS120"){
-            weight=4.2081;
+            weight=18.9;
             if (numGenJets==1)
-                weight=0.5816;
+                weight=0.747;
             else if (numGenJets==2)
-                weight=0.6160;
+                weight=0.842;
             else if (numGenJets==3)
-                weight=0.6187;
+                weight=18.9;
             else if (numGenJets==4)
-                weight=0.4822;
+                weight=18.9;
         }
 
 	float sf_trk=1.0;
@@ -688,7 +688,7 @@ int main(int argc, char** argv) {
                }
              case 8: // MT(MET,mu)
                {
-                 var = (mymu + mymet).Mt();
+                 var = mt;
                  break;
                }
              case 9: // MT(MET,tau_h)
