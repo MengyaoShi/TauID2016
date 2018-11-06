@@ -27,7 +27,7 @@ if __name__ == "__main__":
     fVV=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+options.var+"/VV.root","r")
     fData=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal"+options.var+"/Data.root","r")
     fout=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+anti+options.scale+options.var+"/W.root","recreate")
-
+    print anti+options.scale+options.var
     fW_=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+anti+options.scale+options.var+"/Wunscaled.root","r")
     print options.scale
     print fData.Get("n70").GetBinContent(3)
