@@ -315,7 +315,18 @@ int main(int argc, char** argv) {
          }
          break;
        }
-
+     case 10: //number of jets
+       {
+         num_bins=5;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for( int i=0; i<num_bins; i++)
+         {
+            bins[i] = i;
+            binsPass[i] = i;
+         }
+         break;
+       }
      default :
        {
          cout<<"default switch_bins"<<std::endl;
@@ -557,9 +568,9 @@ int main(int argc, char** argv) {
         if (sample=="W"){
             weight=84.0;
             if (numGenJets==1) weight=84.0;
-            else if (numGenJets==2) weight=4.30;
-            else if (numGenJets==3) weight=2.06;
-            else if (numGenJets==4) weight=2.27;
+            else if (numGenJets==2) weight=84.0;
+            else if (numGenJets==3) weight=84.0;
+            else if (numGenJets==4) weight=84.0;
         }
 
         if (sample=="ZTT" or sample=="ZLL" or sample=="ZL" or sample=="ZJ" or sample=="DYS" or sample=="DYB" or sample=="DYJ" or sample=="DYS120"){
@@ -731,6 +742,11 @@ int main(int argc, char** argv) {
                  var = l2_decayMode;
                  break;
                }
+             case 17:
+               {
+                 var= jetVeto30;
+                 break;
+               }
              default :
                std::cout<<"default switch_var"<<std::endl;
                var=(mytau+mymu).M();
@@ -741,15 +757,15 @@ int main(int argc, char** argv) {
 	   //if (variable=="ntracks"){
 	      //var=charged_signalCone_2+charged_isoCone_2;
 	   //}
-           if (fillOS && cut_zeta && tauIsolation) {//Pass OS
+           if (fillOS && cut_zeta && mt<40 && tauIsolation) {//Pass OS
                mtPassH[k]->Fill(var,aweight);
 	       mvaPt->Fill(byIsolationMVA3oldDMwLTraw_2,mytau.Pt());
 	   }
-           if (fillSS && cut_zeta &&  tauIsolation) //Pass SS
+           if (fillSS && cut_zeta && mt<40 &&  tauIsolation) //Pass SS
                mtPassSSH[k]->Fill(var,aweight);
-           if (fillOS && cut_zeta && !tauIsolation) //Fail OS
+           if (fillOS && cut_zeta && mt<40 && !tauIsolation) //Fail OS
                mtFailH[k]->Fill(var,aweight);
-           if (fillSS && cut_zeta && !tauIsolation) //Fail SS
+           if (fillSS && cut_zeta && mt<40 && !tauIsolation) //Fail SS
                mtFailSSH[k]->Fill(var,aweight);
 	}
         if (fillOS && tauIsolation) count_PassOS+=1;

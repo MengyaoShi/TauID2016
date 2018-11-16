@@ -4,7 +4,8 @@
   float byCombinedIsolationDeltaBetaCorrRaw3Hits_2, byIsolationMVA3oldDMwLTraw_2;
   float pt_1,pt_2,px_1,px_2,py_1,py_2,pz_1,pz_2,eta_1,eta_2,phi_1,phi_2,iso_1,e_1,e_2,m_1,m_2;
   float tJetHadronFlavour;
-  //float pu_weight, trg_weight, amcatNLO_weight;
+  float jetVeto30; 
+ //float pu_weight, trg_weight, amcatNLO_weight;
   //bool dilepton_veto, extraelec_veto, extramuon_veto;
   bool isZmt;
   int nbtag;
