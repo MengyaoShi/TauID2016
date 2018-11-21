@@ -9,6 +9,10 @@ rm -rf /afs/cern.ch/work/m/mshi/public/files_wupmuPt/
 mkdir /afs/cern.ch/work/m/mshi/public/files_wupmuPt/
 rm -rf /afs/cern.ch/work/m/mshi/public/files_wdownmuPt/
 mkdir /afs/cern.ch/work/m/mshi/public/files_wdownmuPt/
+rm -rf /afs/cern.ch/work/m/mshi/public/files_shapeupmuPt/
+mkdir /afs/cern.ch/work/m/mshi/public/files_shapeupmuPt/
+rm -rf /afs/cern.ch/work/m/mshi/public/files_shapedownmuPt/
+mkdir /afs/cern.ch/work/m/mshi/public/files_shapedownmuPt/
 rm -rf /afs/cern.ch/work/m/mshi/public/files_mvismuPt/
 mkdir /afs/cern.ch/work/m/mshi/public/files_mvismuPt/
 
@@ -35,11 +39,12 @@ hadd -f /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYS.root /afs/cern.ch/
 
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/TT.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/TT.root TT TT iso MVAoldM mvis all old 0 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/Wincl.root W W iso MVAoldM mvis all old 0 10 20 0 3 0 2000 7 2
+./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W1.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W1.root W W iso MVAoldM mvis all old 0 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W2.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W2.root W W iso MVAoldM mvis all old 0 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W3.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W3.root W W iso MVAoldM mvis all old 0 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W4.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W4.root W W iso MVAoldM mvis all old 0 10 20 0 3 0 2000 7 2
 
-hadd -f /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/Wunscaled.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/Wincl.root
+hadd -f /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/Wunscaled.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W4.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W3.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W2.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W1.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/Wincl.root
 
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_t_antitop.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/ST_t_antitop.root ST_t_antitop VV iso MVAoldM mvis all old 0 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_tW_antitop.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/ST_tW_antitop.root ST_tW_antitop VV iso MVAoldM mvis all old 0 10 20 0 3 0 2000 7 2
@@ -80,11 +85,13 @@ hadd -f /afs/cern.ch/work/m/mshi/public/files_upmuPt/DYB.root /afs/cern.ch/work/
 
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/TT.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/TT.root TT TT iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/Wincl.root W W iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
+./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W1.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/W1.root W W iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W2.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/W2.root W W iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W3.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/W3.root W W iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W4.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/W4.root W W iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
 
-hadd -f /afs/cern.ch/work/m/mshi/public/files_upmuPt/Wunscaled.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/Wincl.root
+hadd -f /afs/cern.ch/work/m/mshi/public/files_upmuPt/Wunscaled.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/W4.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/W3.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/W2.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/W1.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/Wincl.root
+
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_t_antitop.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/ST_t_antitop.root ST_t_antitop VV iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_tW_antitop.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/ST_tW_antitop.root ST_tW_antitop VV iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_t_top.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/ST_t_top.root ST_t_top VV iso MVAoldM mvis all old 1 10 20 0 3 0 2000 7 2
@@ -112,12 +119,12 @@ python Scale_WOriginal.py --scale nominal --anti iso --var muPt
 python Create_QCDOriginal.py --scale nominal --var muPt
 python Create_QCDOriginal.py --scale wup --var muPt
 python Create_QCDOriginal.py --scale wdown --var muPt
-python Create_QCDOriginal.py --scale shapeup
-python Create_QCDOriginal.py --scale shapedown
+python Create_QCDOriginal.py --scale shapeup --var muPt
+python Create_QCDOriginal.py --scale shapedown --var muPt
 
 python Scale_processOriginal.py --input /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W.root --output /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W_wnorm.root --hist W --postfixP _Wnorm --postfixF _Wnorm --factor 0.10
 
-hadd -f /afs/cern.ch/work/m/mshi/public/files_mvismuPt/final_nominal.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/Data.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYS.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYB.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/TT.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/QCD.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/VV.root /afs/cern.ch/work/m/mshi/public/files_wupmuPt/QCD.root /afs/cern.ch/work/m/mshi/public/files_wdownmuPt/QCD.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W_wnorm.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYJ.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYB_muD.root 
+hadd -f /afs/cern.ch/work/m/mshi/public/files_mvismuPt/final_nominal.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/Data.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYS.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYB.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/TT.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/QCD.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/VV.root /afs/cern.ch/work/m/mshi/public/files_wupmuPt/QCD.root /afs/cern.ch/work/m/mshi/public/files_wdownmuPt/QCD.root /afs/cern.ch/work/m/mshi/public/files_shapeupmuPt/QCD.root /afs/cern.ch/work/m/mshi/public/files_shapedownmuPt/QCD.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/W_wnorm.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYJ.root /afs/cern.ch/work/m/mshi/public/files_nominalmuPt/DYB_muD.root 
 hadd -f /afs/cern.ch/work/m/mshi/public/files_mvismuPt/final_up.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/DYS.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/DYB.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/TT.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/VV.root /afs/cern.ch/work/m/mshi/public/files_upmuPt/DYJ.root
 hadd -f /afs/cern.ch/work/m/mshi/public/files_mvismuPt/final.root /afs/cern.ch/work/m/mshi/public/files_mvismuPt/final_nominal.root /afs/cern.ch/work/m/mshi/public/files_mvismuPt/final_up.root
 

@@ -9,6 +9,10 @@ rm -rf /afs/cern.ch/work/m/mshi/public/files_wup$NAME/
 mkdir /afs/cern.ch/work/m/mshi/public/files_wup$NAME/
 rm -rf /afs/cern.ch/work/m/mshi/public/files_wdown$NAME/
 mkdir /afs/cern.ch/work/m/mshi/public/files_wdown$NAME/
+rm -rf /afs/cern.ch/work/m/mshi/public/files_shapeup$NAME/
+mkdir /afs/cern.ch/work/m/mshi/public/files_shapeup$NAME/
+rm -rf /afs/cern.ch/work/m/mshi/public/files_shapedown$NAME/
+mkdir /afs/cern.ch/work/m/mshi/public/files_shapedown$NAME/
 rm -rf /afs/cern.ch/work/m/mshi/public/files_mvis$NAME/
 mkdir /afs/cern.ch/work/m/mshi/public/files_mvis$NAME/
 
@@ -35,11 +39,12 @@ hadd -f /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYS.root /afs/cern.ch
 
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/TT.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/TT.root TT TT iso $ISO mvis $DM $DECAYMODEFINDING 0 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/Wincl.root W W iso $ISO mvis $DM $DECAYMODEFINDING 0 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
+./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W1.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W1.root W W iso $ISO mvis $DM $DECAYMODEFINDING 0 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W2.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W2.root W W iso $ISO mvis $DM $DECAYMODEFINDING 0 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W3.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W3.root W W iso $ISO mvis $DM $DECAYMODEFINDING 0 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W4.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W4.root W W iso $ISO mvis $DM $DECAYMODEFINDING 0 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 
-hadd -f /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/Wunscaled.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/Wincl.root
+hadd -f /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/Wunscaled.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W4.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W3.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W2.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W1.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/Wincl.root
 
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_t_antitop.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/ST_t_antitop.root ST_t_antitop VV iso $ISO mvis $DM $DECAYMODEFINDING 0 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_tW_antitop.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/ST_tW_antitop.root ST_tW_antitop VV iso $ISO mvis $DM $DECAYMODEFINDING 0 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
@@ -80,11 +85,13 @@ hadd -f /afs/cern.ch/work/m/mshi/public/files_up$NAME/DYB.root /afs/cern.ch/work
 
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/TT.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/TT.root TT TT iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/Wincl.root W W iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
+./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W1.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/W1.root W W iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W2.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/W2.root W W iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W3.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/W3.root W W iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/W4.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/W4.root W W iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 
-hadd -f /afs/cern.ch/work/m/mshi/public/files_up$NAME/Wunscaled.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/Wincl.root
+hadd -f /afs/cern.ch/work/m/mshi/public/files_up$NAME/Wunscaled.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/W4.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/W3.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/W2.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/W1.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/Wincl.root
+
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_t_antitop.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/ST_t_antitop.root ST_t_antitop VV iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_tW_antitop.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/ST_tW_antitop.root ST_tW_antitop VV iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
 ./FinalSelectionOriginal.exe /afs/cern.ch/work/m/mshi/public/AnalyzeInput/ST_t_top.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/ST_t_top.root ST_t_top VV iso $ISO mvis $DM $DECAYMODEFINDING 1 $PTMIN $PTMAX $ETAMIN $ETAMAX 0 2000 $SWITCHBINS $SWITCHVAR
@@ -112,12 +119,12 @@ python Scale_WOriginal.py --scale nominal --anti iso --var $NAME
 python Create_QCDOriginal.py --scale nominal --var $NAME
 python Create_QCDOriginal.py --scale wup --var $NAME
 python Create_QCDOriginal.py --scale wdown --var $NAME
-python Create_QCDOriginal.py --scale shapeup
-python Create_QCDOriginal.py --scale shapedown
+python Create_QCDOriginal.py --scale shapeup --var $NAME
+python Create_QCDOriginal.py --scale shapedown --var $NAME
 
 python Scale_processOriginal.py --input /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W.root --output /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W_wnorm.root --hist W --postfixP _Wnorm --postfixF _Wnorm --factor 0.10
 
-hadd -f /afs/cern.ch/work/m/mshi/public/files_mvis$NAME/final_nominal.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/Data.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYS.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYB.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/TT.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/QCD.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/VV.root /afs/cern.ch/work/m/mshi/public/files_wup$NAME/QCD.root /afs/cern.ch/work/m/mshi/public/files_wdown$NAME/QCD.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W_wnorm.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYJ.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYB_muD.root 
+hadd -f /afs/cern.ch/work/m/mshi/public/files_mvis$NAME/final_nominal.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/Data.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYS.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYB.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/TT.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/QCD.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/VV.root /afs/cern.ch/work/m/mshi/public/files_wup$NAME/QCD.root /afs/cern.ch/work/m/mshi/public/files_wdown$NAME/QCD.root /afs/cern.ch/work/m/mshi/public/files_shapeup$NAME/QCD.root /afs/cern.ch/work/m/mshi/public/files_shapedown$NAME/QCD.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/W_wnorm.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYJ.root /afs/cern.ch/work/m/mshi/public/files_nominal$NAME/DYB_muD.root 
 hadd -f /afs/cern.ch/work/m/mshi/public/files_mvis$NAME/final_up.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/DYS.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/DYB.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/TT.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/VV.root /afs/cern.ch/work/m/mshi/public/files_up$NAME/DYJ.root
 hadd -f /afs/cern.ch/work/m/mshi/public/files_mvis$NAME/final.root /afs/cern.ch/work/m/mshi/public/files_mvis$NAME/final_nominal.root /afs/cern.ch/work/m/mshi/public/files_mvis$NAME/final_up.root
 

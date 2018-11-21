@@ -5,7 +5,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--scale', default="nominal", choices=['nominal', 'up', 'down', 'wup', 'wdown', 'shapeup','shapedown'], help="Which TES?")
-    parser.add_argument('--var', default="invMass", choices=['invMass', 'muPt', 'tauPt', 'muMt', 'tauMt', 'tauMass', 'met', 'muMetMt', 'tauMetMt', 'ZPt', 'muEta', 'tauEta', 'muTauDPhi', 'muTauDR', 'zeta', 'tauDecayMode'], help="Which TES?")
+    parser.add_argument('--var', default="invMass", choices=['invMass', 'muPt', 'tauPt', 'muMt', 'tauMt', 'tauMass', 'met', 'muMetMt', 'tauMetMt', 'ZPt', 'muEta', 'tauEta', 'muTauDPhi', 'muTauDR', 'zeta', 'tauDecayMode','numJets'], help="Which TES?")
     options = parser.parse_args()
 
     postfix=""
@@ -64,8 +64,7 @@ if __name__ == "__main__":
        fVV=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal"+options.var+"/VV.root","r")
        fData=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_nominal"+options.var+"/Data.root","r")
     fout=ROOT.TFile("/afs/cern.ch/work/m/mshi/public/files_"+options.scale+options.var+"/QCD.root","recreate")
-    print fDYB
-    print fData
+    print fout
     fratio=ROOT.TFile("/afs/cern.ch/work/m/mshi/private/CMSSW_8_1_0/src/auxiliaries/QCDRescaleFactor.root")
 
     hRatio_pass=fratio.Get("QCDSFPass")

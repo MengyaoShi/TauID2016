@@ -233,13 +233,13 @@ int main(int argc, char** argv) {
        }
      case 3: // zeta variable
        {
-         num_bins=11;
+         num_bins=51;
          bins=new float[num_bins];
          binsPass=new float[num_bins];
          for (int i=0; i<num_bins; i++)
          {
-            bins[i] = -2.5+i*0.5;
-            binsPass[i]=-2.5+i*0.5;
+            bins[i] = -25+i;
+            binsPass[i]=-25+i;
          }
          break;
        }
@@ -324,6 +324,18 @@ int main(int argc, char** argv) {
          {
             bins[i] = i;
             binsPass[i] = i;
+         }
+         break;
+       }
+     case 11: //tau mass
+       {
+         num_bins=11;
+         bins= new float[num_bins];
+         binsPass=new float[num_bins];
+         for( int i=0; i<num_bins; i++)
+         {
+            bins[i] = 0.2*i;
+            binsPass[i] = 0.2*i;
          }
          break;
        }
@@ -567,22 +579,22 @@ int main(int argc, char** argv) {
 
         if (sample=="W"){
             weight=84.0;
-            if (numGenJets==1) weight=84.0;
-            else if (numGenJets==2) weight=84.0;
-            else if (numGenJets==3) weight=84.0;
-            else if (numGenJets==4) weight=84.0;
+            if (numGenJets==1) weight=83.7;
+            else if (numGenJets==2) weight=43.0;
+            else if (numGenJets==3) weight=20.6;
+            else if (numGenJets==4) weight=22.7;
         }
 
         if (sample=="ZTT" or sample=="ZLL" or sample=="ZL" or sample=="ZJ" or sample=="DYS" or sample=="DYB" or sample=="DYJ" or sample=="DYS120"){
-            weight=18.9;
+            weight=4.17;
             if (numGenJets==1)
-                weight=0.747;
+                weight=0.579;
             else if (numGenJets==2)
-                weight=0.842;
+                weight=0.605;
             else if (numGenJets==3)
-                weight=18.9;
+                weight=0.732;
             else if (numGenJets==4)
-                weight=18.9;
+                weight=0.482;
         }
 
 	float sf_trk=1.0;
@@ -757,15 +769,15 @@ int main(int argc, char** argv) {
 	   //if (variable=="ntracks"){
 	      //var=charged_signalCone_2+charged_isoCone_2;
 	   //}
-           if (fillOS && cut_zeta && mt<40 && tauIsolation) {//Pass OS
+           if (fillOS && cut_zeta && tauIsolation) {//Pass OS
                mtPassH[k]->Fill(var,aweight);
 	       mvaPt->Fill(byIsolationMVA3oldDMwLTraw_2,mytau.Pt());
 	   }
-           if (fillSS && cut_zeta && mt<40 &&  tauIsolation) //Pass SS
+           if (fillSS && cut_zeta && tauIsolation) //Pass SS
                mtPassSSH[k]->Fill(var,aweight);
-           if (fillOS && cut_zeta && mt<40 && !tauIsolation) //Fail OS
+           if (fillOS && cut_zeta && !tauIsolation) //Fail OS
                mtFailH[k]->Fill(var,aweight);
-           if (fillSS && cut_zeta && mt<40 && !tauIsolation) //Fail SS
+           if (fillSS && cut_zeta && !tauIsolation) //Fail SS
                mtFailSSH[k]->Fill(var,aweight);
 	}
         if (fillOS && tauIsolation) count_PassOS+=1;
