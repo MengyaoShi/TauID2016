@@ -292,7 +292,7 @@ Run_Tree->Branch("byVLooseIsolationRerunMVArun2v1DBoldDMwLT_2", &byVLooseIsolati
 	if (tree->dimuonVeto>0) continue;
         //if (!tree->tAgainstMuonTight3) continue;//FIXME
         //if (!tree->tAgainstElectronVLooseMVA6) continue;//FIXME
-	if (tree->mRelPFIsoDBDefaultR04<0.15) continue;
+	if (tree->mRelPFIsoDBDefaultR04>0.15) continue;
 	if (evt_now!=evt_before){
 	   mupt_before=tree->mPt;
 	   muiso_before=tree->mRelPFIsoDBDefault;
@@ -305,7 +305,7 @@ Run_Tree->Branch("byVLooseIsolationRerunMVArun2v1DBoldDMwLT_2", &byVLooseIsolati
            bestEntry=iEntry;
 	}
 	if (evt_now==evt_before){
-	   if (tree->mRelPFIsoDBDefault>muiso_before or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt>mupt_before) or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt==mupt_before && tree->tByIsolationMVArun2v1DBoldDMwLTraw>tauiso_before) or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt==mupt_before && tree->tByIsolationMVArun2v1DBoldDMwLTraw==tauiso_before && tree->tPt>taupt_before) ){
+	   if (tree->mRelPFIsoDBDefault<muiso_before or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt>mupt_before) or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt==mupt_before && tree->tByIsolationMVArun2v1DBoldDMwLTraw>tauiso_before) or (tree->mRelPFIsoDBDefault==muiso_before && tree->mPt==mupt_before && tree->tByIsolationMVArun2v1DBoldDMwLTraw==tauiso_before && tree->tPt>taupt_before) ){
 		bestEntry=iEntry;
 	        muiso_before=tree->mRelPFIsoDBDefault;
 		mupt_before=tree->mPt;
